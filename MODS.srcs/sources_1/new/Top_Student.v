@@ -22,11 +22,12 @@ module Top_Student (
     );
 
     // Clocks
-    wire clk1p0, clk6p25m, clk12p5m, clk25m;
-    flexible_clock_module clk1p0_mod(.clk(clk), .m(32'd49999999), .flex_clk(clk1p0));
+    wire clk6p25m;
     flexible_clock_module clk6p25m_mod(.clk(clk), .m(32'd7), .flex_clk(clk6p25m));
-    flexible_clock_module clk12p5m_mod(.clk(clk), .m(32'd3), .flex_clk(clk12p5m));
-    flexible_clock_module clk25m_mod(.clk(clk), .m(32'd1), .flex_clk(clk25m));
+//    wire clk1p0, clk12p5m, clk25m;
+//    flexible_clock_module clk1p0_mod(.clk(clk), .m(32'd49999999), .flex_clk(clk1p0));
+//    flexible_clock_module clk12p5m_mod(.clk(clk), .m(32'd3), .flex_clk(clk12p5m));
+//    flexible_clock_module clk25m_mod(.clk(clk), .m(32'd1), .flex_clk(clk25m));
     
     // 3.A Oled_Display.v Module
     wire [15:0] oled_data;
@@ -79,17 +80,16 @@ module Top_Student (
 //         .colour_chooser(oled_data)
 //     );
      
-     wire [31:0] x;
-     wire [31:0] y;
-     assign x = pixel_index % 96;
-     assign y = pixel_index / 96;
-     assign oled_data = ((x >= 9 && x <= 19)  ? 16'hF800 : 16'h07E0);
-     
 //      always @ (*) begin
 //         oled_data <= sw4 ? 16'hF800 : 16'h07E0;
 //         led[15] <= left;
 //         led[14] <= middle;
 //         led[13] <= right;
 //      end
+
+     wire [6:0] x;
+     wire [5:0] y;
+     pixel_index_to_xy pixel_index_to_xy_mod(.pixel_index(pixel_index), .x(x), .y(y));
+     assign oled_data = ((x >= 9 && x <= 19)  ? 16'hF800 : 16'h07E0);
 
 endmodule

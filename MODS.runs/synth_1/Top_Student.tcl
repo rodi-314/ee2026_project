@@ -34,6 +34,7 @@ add_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/so
 read_verilog -library xil_defaultlib {
   {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
   {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v}
+  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/pixel_index_to_xy.v}
   {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
