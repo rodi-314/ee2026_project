@@ -48,23 +48,31 @@ module task_4b(
     );
     
     always @ (posedge clk25m) begin
+    
+        // Within middle square range
         if (x >= 43 && x < 53) begin
+            // 1st (top) square
             if (y >= 5 && y < 15) begin
                 oled_data <= s1_oled_data;
             end
+            // 2nd square
             else if (y >= 20 && y < 30) begin
                 oled_data <= s2_oled_data;
             end
+            // 3rd square
             else if (y >= 35 && y < 45) begin
                 oled_data <= s3_oled_data;
             end
+            // 4th square
             else if (y >= 50 && y < 60) begin
                 oled_data <= s4_oled_data;
             end
+            // Outside range
             else begin
                 oled_data <= 16'h0000;
             end
         end
+        // Outside range
         else begin
             oled_data <= 16'h0000;
         end

@@ -25,12 +25,14 @@ module s123_input(input clk25m, btn, output reg [1:0] sx_counter = 0);
     reg button_pressed = 0;
 
     always @ (posedge clk25m) begin
+        // When button is pressed
         if (btn && !button_pressed) begin
-            sx_counter <= sx_counter + 1;
             button_pressed = 1;
         end
+        // When button is released
         else if (!btn && button_pressed) begin
             button_pressed = 0;
+            sx_counter <= sx_counter + 1;
         end
     end
     

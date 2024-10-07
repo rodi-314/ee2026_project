@@ -79,7 +79,8 @@ module Top_Student(
 //         .seg(seg), 
 //         .colour_chooser(oled_data)
 //     );
-     
+
+     // 3.A & 3.B Setup Code
 //      always @ (*) begin
 //         oled_data <= sw4 ? 16'hF800 : 16'h07E0;
 //         led[15] <= left;
