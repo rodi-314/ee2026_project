@@ -206,3 +206,11 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Oct  8 02:49:30 2024] Launched synth_1...
+Run output will be captured here: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.runs/synth_1/runme.log
+[Tue Oct  8 02:49:30 2024] Launched impl_1...
+Run output will be captured here: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.runs/impl_1/runme.log
