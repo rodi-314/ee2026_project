@@ -11,14 +11,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Top_Student (
-    input clk, 
-    input btnC, btnU, btnL, btnR, btnD, 
-    input [15:0] sw,
-    output [7:0] JX,  
-    output [15:0] led,
-    output [6:0] seg,
-    inout ps2_clk, ps2_data
+module Top_Student(
+        input clk, 
+        input btnC, btnU, btnL, btnR, btnD, 
+        input [15:0] sw,
+        output [7:0] JX,  
+        output [15:0] led,
+        output [6:0] seg,
+        inout ps2_clk, ps2_data
     );
 
     // Clocks
@@ -90,6 +90,9 @@ module Top_Student (
      wire [6:0] x;
      wire [5:0] y;
      pixel_index_to_xy pixel_index_to_xy_mod(.pixel_index(pixel_index), .x(x), .y(y));
-     assign oled_data = ((x >= 9 && x <= 19)  ? 16'hF800 : 16'h07E0);
+     task_4b task_4b_mod(
+        .clk(clk), .btnU(btnU), .btnC(btnC), .btnD(btnD),
+        .x(x), .y(y), .oled_data(oled_data)
+     );
 
 endmodule

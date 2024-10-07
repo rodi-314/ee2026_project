@@ -1,0 +1,100 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 5232
+License: Customer
+
+Current time: 	Tue Oct 08 06:06:02 SGT 2024
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1536x960
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 592 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	rodi3
+User home directory: C:/Users/rodi3
+User working directory: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/rodi3/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/rodi3/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/rodi3/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/vivado.log
+Vivado journal file location: 	C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/vivado.jou
+Engine tmp dir: 	C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/.Xil/Vivado-5232-Roderick
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	248 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 628 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 54 MB (+54613kb) [00:00:12]
+// [Engine Memory]: 486 MB (+357812kb) [00:00:12]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\rodi3\iCloudDrive\NUS Y2S1\EE2026\Project\MODS\MODS.xpr. Version: Vivado v2018.2 
+// bx (ck):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 77 MB (+20934kb) [00:00:14]
+// [Engine Memory]: 586 MB (+80018kb) [00:00:14]
+// [GUI Memory]: 89 MB (+8486kb) [00:00:15]
+// [Engine Memory]: 622 MB (+6302kb) [00:00:16]
+// Tcl Message: open_project {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 637 MB. GUI used memory: 43 MB. Current time: 10/8/24 6:06:02 AM SGT
+// Project name: MODS; location: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 94 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
