@@ -2,14 +2,19 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Oct  7 14:28:30 2024
-# Process ID: 27424
-# Current directory: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17488 C:\Users\rodi3\iCloudDrive\NUS Y2S1\EE2026\Project\MODS.xpr\MODS\MODS.xpr
-# Log file: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/vivado.log
-# Journal file: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS\vivado.jou
+# Start of session at: Mon Oct  7 16:45:03 2024
+# Process ID: 13136
+# Current directory: C:/Users/rodi3/OneDrive/Documents/MODS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37988 C:\Users\rodi3\OneDrive\Documents\MODS\MODS.xpr
+# Log file: C:/Users/rodi3/OneDrive/Documents/MODS/vivado.log
+# Journal file: C:/Users/rodi3/OneDrive/Documents/MODS\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.xpr}
+open_project C:/Users/rodi3/OneDrive/Documents/MODS/MODS.xpr
 update_compile_order -fileset sources_1
-reset_run impl_1
+reset_run synth_1
+reset_run blk_mem_gen_const_synth_1
+reset_run blk_mem_gen_img_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1

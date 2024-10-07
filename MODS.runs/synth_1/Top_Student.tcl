@@ -23,43 +23,43 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/rodi3/OneDrive/Documents/MODS/MODS.cache/wt [current_project]
+set_property parent.project_path C:/Users/rodi3/OneDrive/Documents/MODS/MODS.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/rodi3/OneDrive/Documents/MODS/MODS.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/imports/res/weights.coe}}
-add_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/imports/res/00.coe}}
+add_files C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/imports/res/weights.coe
+add_files C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/imports/res/00.coe
 read_verilog -library xil_defaultlib {
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/CanvasTransfer.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/clk12p5m.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/clk1p0.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/clk25m.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/clk6p25m.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/module_pack.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/neural_net.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/paint.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/ss_display.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/new/Top_Student.v}
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/CanvasTransfer.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/clk12p5m.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/clk1p0.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/clk25m.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/clk6p25m.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/module_pack.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/neural_net.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/paint.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/ss_display.v
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/new/Top_Student.v
 }
 read_vhdl -library xil_defaultlib {
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd}
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd
+  C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd
 }
-read_ip -quiet {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter_ooc.xdc}}]
+read_ip -quiet C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter.xci
+set_property used_in_implementation false [get_files -all c:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_inter/blk_mem_gen_inter_ooc.xdc]
 
-read_ip -quiet {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc}}]
+read_ip -quiet C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const_ooc.xdc}}]
+read_ip -quiet C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const.xci
+set_property used_in_implementation false [get_files -all c:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_const/blk_mem_gen_const_ooc.xdc]
 
-read_ip -quiet {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img_ooc.xdc}}]
+read_ip -quiet C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img.xci
+set_property used_in_implementation false [get_files -all c:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/sources_1/ip/blk_mem_gen_img/blk_mem_gen_img_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -69,8 +69,8 @@ set_property used_in_implementation false [get_files -all {{c:/Users/rodi3/iClou
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS.xpr/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc}}]
+read_xdc C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/rodi3/OneDrive/Documents/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
