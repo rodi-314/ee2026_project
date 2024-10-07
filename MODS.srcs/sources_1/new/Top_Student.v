@@ -21,10 +21,10 @@ module Top_Student (
 
     // Clocks
     wire clk1p0, clk6p25m, clk12p5m, clk25m;
-    clk1p0 clk1p0_mod(.clk(clk), .clk1p0(clk1p0));
-    clk6p25m clk6p25m_mod(.clk(clk), .clk6p25m(clk6p25m));
-    clk12p5m clk12p5m_mod(.clk(clk), .clk12p5m(clk12p5m));
-    clk25m clk25m_mod(.clk(clk), .clk25m(clk25m));
+    flexible_clock_module clk1p0_mod(.clk(clk), .m(32'd49999999), .flex_clk(clk1p0));
+    flexible_clock_module clk6p25m_mod(.clk(clk), .m(32'd7), .flex_clk(clk6p25m));
+    flexible_clock_module clk12p5m_mod(.clk(clk), .m(32'd3), .flex_clk(clk12p5m));
+    flexible_clock_module clk25m_mod(.clk(clk), .m(32'd1), .flex_clk(clk25m));
     
     // 3.A 
     wire [15:0] oled_data;
@@ -81,7 +81,7 @@ module Top_Student (
 //     wire y;
 //     assign x = pixel_index % 96;
 //     assign y = pixel_index / 96;
-//     assign oled_data = (pixel_index  ? 16'hF800 : 16'h07E0);
+//     assign oled_data = ((x >= 9 && x <= 19)  ? 16'hF800 : 16'h07E0);
      
 //      always @ (*) begin
 //         oled_data <= sw4 ? 16'hF800 : 16'h07E0;

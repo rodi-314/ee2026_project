@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Oct  7 16:48:18 2024
+| Date         : Mon Oct  7 17:45:35 2024
 | Host         : Roderick running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    68 |
-| Unused register locations in slices containing registers |   100 |
+| Number of unique control sets                            |    66 |
+| Unused register locations in slices containing registers |    92 |
 +----------------------------------------------------------+-------+
 
 
@@ -36,7 +36,7 @@ Table of Contents
 +--------+--------------+
 |      2 |            1 |
 |      6 |            1 |
-|      8 |            7 |
+|      8 |            5 |
 |     10 |            1 |
 |     12 |            2 |
 |     14 |            5 |
@@ -50,12 +50,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             274 |           93 |
-| No           | No                    | Yes                    |            2324 |          311 |
-| No           | Yes                   | No                     |             602 |           91 |
-| Yes          | No                    | No                     |             114 |           17 |
+| No           | No                    | No                     |             282 |           93 |
+| No           | No                    | Yes                    |            2324 |          325 |
+| No           | Yes                   | No                     |             594 |           88 |
+| Yes          | No                    | No                     |             114 |           20 |
 | Yes          | No                    | Yes                    |             170 |           27 |
-| Yes          | Yes                   | No                     |             496 |          106 |
+| Yes          | Yes                   | No                     |             496 |          111 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -66,73 +66,71 @@ Table of Contents
 |                Clock Signal               |                        Enable Signal                        |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
 +-------------------------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 | ~clk6p25m_BUFG                            |                                                             |                                                             |                1 |              2 |
-|  MouseCtl_mod/state0                      |                                                             |                                                             |                2 |              6 |
+|  MouseCtl_mod/state0                      |                                                             |                                                             |                1 |              6 |
 |  paint_mod/clk_s                          |                                                             |                                                             |                2 |              8 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/shift_frame                  | MouseCtl_mod/Inst_Ps2Interface/reset_bit_count              |                1 |              8 |
 |  clk_25                                   |                                                             | paint_mod/nn_inst/nn_rst                                    |                3 |              8 |
-|  clk_IBUF_BUFG                            |                                                             | MouseCtl_mod/Inst_Ps2Interface/data_inter0                  |                1 |              8 |
 |  clk_25                                   | paint_mod/nn_inst/nn1/FSM_sequential_state[1]_i_1_n_0       | paint_mod/nn_inst/nn_algo_rst                               |                3 |              8 |
-|  clk_IBUF_BUFG                            |                                                             | MouseCtl_mod/Inst_Ps2Interface/clk_inter0                   |                1 |              8 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/shift_frame                  | MouseCtl_mod/Inst_Ps2Interface/reset_bit_count              |                2 |              8 |
 |  clk_25                                   | paint_mod/nn_inst/nn1/digit[3]_i_1_n_0                      | paint_mod/nn_inst/nn_algo_rst                               |                2 |              8 |
 |  paint_mod/colour_chooser_reg[15]_i_2_n_0 |                                                             |                                                             |                2 |             10 |
 |  clk_25                                   | paint_mod/nn_inst/nn1/i[5]_i_1_n_0                          | paint_mod/nn_inst/nn_algo_rst                               |                3 |             12 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/right_down_reg               | reset_IBUF                                                  |                3 |             12 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/right_down_reg               | reset_IBUF                                                  |                2 |             12 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | MouseCtl_mod/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0 |                3 |             14 |
 |  clk_25                                   | paint_mod/nn_inst/nn1/addr_inter0                           | paint_mod/nn_inst/nn_algo_rst                               |                5 |             14 |
+|  clk6p25m_BUFG                            |                                                             |                                                             |                3 |             14 |
 |  clk_25                                   | paint_mod/nn_inst/nn1/next_out_valid                        | paint_mod/nn_inst/nn_algo_rst                               |                3 |             14 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | MouseCtl_mod/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0 |                1 |             14 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/ps2_data_h_reg_inv_0         |                                                             |                4 |             14 |
-|  clk6p25m_BUFG                            |                                                             |                                                             |                4 |             14 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/ps2_data_h_reg_inv_0         |                                                             |                3 |             14 |
 |  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/x_inc_reg[0][0]              | reset_IBUF                                                  |                2 |             16 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/E[0]                         | reset_IBUF                                                  |                2 |             16 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/tx_data[7]_i_1_n_0                             |                                                             |                4 |             16 |
 |  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/load_rx_data                 |                                                             |                2 |             16 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/tx_data[7]_i_1_n_0                             |                                                             |                3 |             16 |
-|  clk_25                                   | paint_mod/nn_inst/nn1/addr_img0                             | paint_mod/nn_inst/nn_algo_rst                               |                3 |             20 |
-|  clk_25                                   | paint_mod/nn_inst/nn1/j[9]_i_1_n_0                          | paint_mod/nn_inst/nn_algo_rst                               |                4 |             20 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                             |                2 |             20 |
-|  clk6p25m_BUFG                            |                                                             | paint_mod/h_cnt[9]_i_1_n_0                                  |                4 |             20 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | MouseCtl_mod/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                3 |             22 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/E[0]                         | reset_IBUF                                                  |                2 |             16 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                             |                3 |             20 |
+|  clk_25                                   | paint_mod/nn_inst/nn1/j[9]_i_1_n_0                          | paint_mod/nn_inst/nn_algo_rst                               |                3 |             20 |
+|  clk_25                                   | paint_mod/nn_inst/nn1/addr_img0                             | paint_mod/nn_inst/nn_algo_rst                               |                4 |             20 |
+|  clk6p25m_BUFG                            |                                                             | paint_mod/h_cnt[9]_i_1_n_0                                  |                3 |             20 |
 |  clk_25                                   | paint_mod/nn_inst/imgw_valid_i_1_n_0                        | paint_mod/nn_inst/nn_rst                                    |                5 |             22 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/x_new_reg_n_0                                  |                                                             |                3 |             24 |
-|  clk_IBUF_BUFG                            | MouseCtl_mod/y_new_reg_n_0                                  |                                                             |                3 |             24 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | MouseCtl_mod/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                4 |             22 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/y_new_reg_n_0                                  |                                                             |                4 |             24 |
+|  clk_IBUF_BUFG                            | MouseCtl_mod/x_new_reg_n_0                                  |                                                             |                4 |             24 |
 |  clk_IBUF_BUFG                            | MouseCtl_mod/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0 | MouseCtl_mod/Inst_Ps2Interface/clear                        |                4 |             28 |
-|  clk_IBUF_BUFG                            |                                                             | paint_mod/nn_inst/nn_rst_i_1_n_0                            |                6 |             30 |
-|  clk_25                                   | paint_mod/nn_inst/nn1/addr_const[15]_i_1_n_0                | paint_mod/nn_inst/nn_algo_rst                               |               10 |             32 |
-|  clk_IBUF_BUFG                            |                                                             | paint_mod/mouse_reset                                       |                5 |             32 |
-| ~clk6p25m_BUFG                            |                                                             | reset_IBUF                                                  |                4 |             34 |
-|  MouseCtl_mod/left                        |                                                             |                                                             |               12 |             36 |
+|  clk_IBUF_BUFG                            |                                                             | paint_mod/nn_inst/nn_rst_i_1_n_0                            |                7 |             30 |
+|  clk_25                                   | paint_mod/nn_inst/nn1/addr_const[15]_i_1_n_0                | paint_mod/nn_inst/nn_algo_rst                               |                9 |             32 |
+|  clk_IBUF_BUFG                            |                                                             | paint_mod/mouse_reset                                       |                7 |             32 |
+| ~clk6p25m_BUFG                            |                                                             | reset_IBUF                                                  |                3 |             34 |
+|  MouseCtl_mod/left                        |                                                             |                                                             |                9 |             36 |
 | ~clk6p25m_BUFG                            | Oled_Display/delay[0]_i_1_n_0                               | reset_IBUF                                                  |                5 |             40 |
-|  clk_25                                   | paint_mod/nn_inst/nn1/digit_valid                           | paint_mod/nn_inst/nn_rst                                    |                6 |             40 |
-|  clk_IBUF_BUFG                            |                                                             | MouseCtl_mod/reset_timeout_cnt_reg_n_0                      |                5 |             48 |
+|  clk_25                                   | paint_mod/nn_inst/nn1/digit_valid                           | paint_mod/nn_inst/nn_rst                                    |                5 |             40 |
+|  clk_IBUF_BUFG                            |                                                             | MouseCtl_mod/reset_timeout_cnt_reg_n_0                      |                7 |             48 |
 |  clk_IBUF_BUFG                            |                                                             | MouseCtl_mod/reset_periodic_check_cnt__0                    |               12 |             52 |
-|  clk_IBUF_BUFG                            |                                                             | clk12p5m_mod/COUNT[31]_i_1__2_n_0                           |                8 |             62 |
-|  clk_IBUF_BUFG                            |                                                             | clk1p0_mod/COUNT[31]_i_1_n_0                                |                8 |             62 |
-|  clk_IBUF_BUFG                            |                                                             | clk25m_mod/COUNT[31]_i_1__1_n_0                             |                8 |             62 |
-|  clk_IBUF_BUFG                            |                                                             | clk6p25m_mod/COUNT[31]_i_1__0_n_0                           |                8 |             62 |
-| ~clk6p25m_BUFG                            | Oled_Display/FSM_onehot_state[31]_i_1_n_0                   | reset_IBUF                                                  |                9 |             64 |
+|  clk_IBUF_BUFG                            |                                                             | clk25m_mod/COUNT[0]_i_1__2_n_0                              |                8 |             64 |
+|  clk_IBUF_BUFG                            |                                                             | clk12p5m_mod/COUNT[0]_i_1__1_n_0                            |                8 |             64 |
+| ~clk6p25m_BUFG                            | Oled_Display/FSM_onehot_state[31]_i_1_n_0                   | reset_IBUF                                                  |                8 |             64 |
 |  clk_IBUF_BUFG                            |                                                             | paint_mod/reset_count[31]_i_1_n_0                           |                9 |             64 |
-|  clk_IBUF_BUFG                            | paint_mod/nn_inst/ct_inst/nextDY                            | paint_mod/mouse_reset                                       |                9 |             64 |
+|  clk_IBUF_BUFG                            |                                                             | clk6p25m_mod/COUNT[0]_i_1__0_n_0                            |                8 |             64 |
+|  clk_IBUF_BUFG                            |                                                             | clk1p0_mod/clear                                            |                8 |             64 |
+|  clk_IBUF_BUFG                            | paint_mod/nn_inst/ct_inst/nextDY                            | paint_mod/mouse_reset                                       |               11 |             64 |
 |  clk_IBUF_BUFG                            | paint_mod/nn_inst/nn_rst_i_1_n_0                            | paint_mod/nn_inst/rst_counter                               |                8 |             64 |
-|  clk_25                                   |                                                             |                                                             |               29 |             66 |
-| ~clk6p25m_BUFG                            |                                                             | Oled_Display/spi_word[39]_i_1_n_0                           |               17 |             90 |
-|  clk_IBUF_BUFG                            |                                                             | reset_IBUF                                                  |               21 |            118 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[1][0]                           |               19 |            128 |
+|  clk_25                                   |                                                             |                                                             |               28 |             66 |
+| ~clk6p25m_BUFG                            |                                                             | Oled_Display/spi_word[39]_i_1_n_0                           |               15 |             90 |
+|  clk_IBUF_BUFG                            |                                                             | reset_IBUF                                                  |               18 |            118 |
+|  clk_25                                   | paint_mod/nn_inst/nn1/val_out[63]_i_1_n_0                   | paint_mod/nn_inst/nn_algo_rst                               |               46 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[193][1]                         |               16 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[1][0]                           |               17 |            128 |
 |  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[65][0]                          |               17 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[1][2]                           |               16 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[129][2]                         |               18 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[257][2]                         |               16 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[257][1]                         |               16 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[1][1]                           |               18 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[193][2]                         |               17 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[129][0]                         |               15 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[257][1]                         |               19 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[129][2]                         |               17 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[257][2]                         |               14 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[257][0]                         |               19 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[129][1]                         |               17 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[1][1]                           |               16 |            128 |
 |  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[193][0]                         |               17 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[193][1]                         |               17 |            128 |
-|  clk_25                                   | paint_mod/nn_inst/nn1/val_out[63]_i_1_n_0                   | paint_mod/nn_inst/nn_algo_rst                               |               41 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[257][0]                         |               16 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[65][1]                          |               17 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[129][1]                         |               18 |            128 |
-|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[65][2]                          |               17 |            128 |
-|  clk_IBUF_BUFG                            |                                                             |                                                             |               41 |            132 |
-|  clockMouse                               |                                                             | MouseCtl_mod/right                                          |               28 |            246 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[65][1]                          |               21 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[1][2]                           |               22 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[65][2]                          |               21 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[129][0]                         |               18 |            128 |
+|  clockMouse                               |                                                             | MouseCtl_mod/pixel_data_reg[193][2]                         |               14 |            128 |
+|  clk_IBUF_BUFG                            |                                                             |                                                             |               47 |            140 |
+|  clockMouse                               |                                                             | MouseCtl_mod/right                                          |               32 |            246 |
 +-------------------------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 
