@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Oct  7 17:43:03 2024
-# Process ID: 36968
+# Start of session at: Tue Oct  8 02:16:05 2024
+# Process ID: 26192
 # Current directory: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.runs/synth_1/Top_Student.vds
