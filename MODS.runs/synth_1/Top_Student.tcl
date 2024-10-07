@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,6 +34,7 @@ add_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/so
 add_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/imports/res/00.coe}}
 read_verilog -library xil_defaultlib {
   {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
+  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/debouncer_200ms.v}
   {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v}
   {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/pixel_index_to_xy.v}
   {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_control.v}

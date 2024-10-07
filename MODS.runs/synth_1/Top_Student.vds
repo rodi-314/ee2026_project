@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Oct  8 06:14:57 2024
-# Process ID: 7244
+# Start of session at: Tue Oct  8 07:46:20 2024
+# Process ID: 27224
 # Current directory: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.runs/synth_1/Top_Student.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 41716 
+INFO: Helper process launched with PID 33668 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 356.582 ; gain = 99.484
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 356.094 ; gain = 98.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
@@ -81,15 +81,17 @@ INFO: [Synth 8-6157] synthesizing module 'pixel_index_to_xy' [C:/Users/rodi3/iCl
 INFO: [Synth 8-6155] done synthesizing module 'pixel_index_to_xy' (3#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/pixel_index_to_xy.v:23]
 INFO: [Synth 8-6157] synthesizing module 'task_4b' [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/task_4b.v:23]
 INFO: [Synth 8-6157] synthesizing module 's123_input' [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_input.v:23]
-INFO: [Synth 8-6155] done synthesizing module 's123_input' (4#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_input.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debouncer_200ms' [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/debouncer_200ms.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer_200ms' (4#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/debouncer_200ms.v:23]
+INFO: [Synth 8-6155] done synthesizing module 's123_input' (5#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_input.v:23]
 INFO: [Synth 8-6157] synthesizing module 's123_control' [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_control.v:23]
-INFO: [Synth 8-6155] done synthesizing module 's123_control' (5#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 's123_control' (6#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_control.v:23]
 INFO: [Synth 8-6157] synthesizing module 's4_control' [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s4_control.v:23]
-INFO: [Synth 8-6155] done synthesizing module 's4_control' (6#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s4_control.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'task_4b' (7#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/task_4b.v:23]
+INFO: [Synth 8-6155] done synthesizing module 's4_control' (7#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s4_control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'task_4b' (8#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/task_4b.v:23]
 WARNING: [Synth 8-3848] Net led in module/entity Top_Student does not have driver. [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:19]
 WARNING: [Synth 8-3848] Net seg in module/entity Top_Student does not have driver. [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (8#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (9#1) [C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3331] design s4_control has unconnected port clk25m
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JX[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
@@ -136,7 +138,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 411.434 ; gain = 154.336
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 411.559 ; gain = 154.109
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -149,10 +151,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 411.434 ; gain = 154.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 411.559 ; gain = 154.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 411.434 ; gain = 154.336
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 411.559 ; gain = 154.109
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -168,22 +170,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 723.160 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 741.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 723.160 ; gain = 466.062
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 741.566 ; gain = 484.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 723.160 ; gain = 466.062
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 741.566 ; gain = 484.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 723.160 ; gain = 466.062
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 741.566 ; gain = 484.117
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -228,7 +230,7 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 723.160 ; gain = 466.062
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 741.566 ; gain = 484.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,7 +252,7 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 4     
 	                6 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
 	  32 Input     32 Bit        Muxes := 1     
@@ -263,7 +265,7 @@ Detailed RTL Component Info :
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -336,11 +338,13 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "Oled_Display/fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "clk6p25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "Oled_Display/fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "task_4b_mod/clk25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3917] design Top_Student has port JX[7] driven by constant 1
+INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clk25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s1_input_mod/debouncer_200ms_mod/clk1m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s2_input_mod/debouncer_200ms_mod/clk1m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s3_input_mod/debouncer_200ms_mod/clk1m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JX[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
@@ -438,7 +442,7 @@ INFO: [Synth 8-3886] merging instance 'task_4b_mod/oled_data_reg[12]' (FD) to 't
 INFO: [Synth 8-3886] merging instance 'task_4b_mod/oled_data_reg[13]' (FD) to 'task_4b_mod/oled_data_reg[14]'
 INFO: [Synth 8-3886] merging instance 'task_4b_mod/oled_data_reg[14]' (FD) to 'task_4b_mod/oled_data_reg[15]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 723.160 ; gain = 466.062
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 741.566 ; gain = 484.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -450,13 +454,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 733.703 ; gain = 476.605
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 741.566 ; gain = 484.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 753.969 ; gain = 496.871
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 761.828 ; gain = 504.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -468,7 +472,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:32 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -492,7 +496,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:33 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -505,7 +509,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:33 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -517,25 +521,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -552,46 +556,52 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    41|
-|3     |LUT1   |    14|
-|4     |LUT2   |    63|
-|5     |LUT3   |    68|
-|6     |LUT4   |    40|
-|7     |LUT5   |    46|
-|8     |LUT6   |   110|
+|2     |CARRY4 |    83|
+|3     |LUT1   |    23|
+|4     |LUT2   |    67|
+|5     |LUT3   |    84|
+|6     |LUT4   |    49|
+|7     |LUT5   |    48|
+|8     |LUT6   |   139|
 |9     |MUXF7  |     2|
 |10    |FDE_1  |    32|
-|11    |FDRE   |   170|
+|11    |FDRE   |   323|
 |12    |IBUF   |     4|
 |13    |OBUF   |     7|
 |14    |OBUFT  |    24|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+------------------------+------------------------+------+
-|      |Instance                |Module                  |Cells |
-+------+------------------------+------------------------+------+
-|1     |top                     |                        |   623|
-|2     |  Oled_Display          |Oled_Display            |   404|
-|3     |  clk6p25m_mod          |flexible_clock_module   |    52|
-|4     |  pixel_index_to_xy_mod |pixel_index_to_xy       |    37|
-|5     |  task_4b_mod           |task_4b                 |    92|
-|6     |    clk25m_mod          |flexible_clock_module_0 |    50|
-|7     |    s1_control_mod      |s123_control            |     3|
-|8     |    s1_input_mod        |s123_input              |     9|
-|9     |    s2_control_mod      |s123_control_1          |     5|
-|10    |    s2_input_mod        |s123_input_2            |     8|
-|11    |    s3_control_mod      |s123_control_3          |     3|
-|12    |    s3_input_mod        |s123_input_4            |     8|
-+------+------------------------+------------------------+------+
++------+--------------------------+------------------------+------+
+|      |Instance                  |Module                  |Cells |
++------+--------------------------+------------------------+------+
+|1     |top                       |                        |   887|
+|2     |  Oled_Display            |Oled_Display            |   404|
+|3     |  clk6p25m_mod            |flexible_clock_module   |    64|
+|4     |  pixel_index_to_xy_mod   |pixel_index_to_xy       |    37|
+|5     |  task_4b_mod             |task_4b                 |   344|
+|6     |    clk25m_mod            |flexible_clock_module_0 |    50|
+|7     |    s1_control_mod        |s123_control            |     3|
+|8     |    s1_input_mod          |s123_input              |    93|
+|9     |      debouncer_200ms_mod |debouncer_200ms_8       |    84|
+|10    |        clk1m_mod         |flexible_clock_module_9 |    51|
+|11    |    s2_control_mod        |s123_control_1          |     5|
+|12    |    s2_input_mod          |s123_input_2            |    92|
+|13    |      debouncer_200ms_mod |debouncer_200ms_6       |    84|
+|14    |        clk1m_mod         |flexible_clock_module_7 |    51|
+|15    |    s3_control_mod        |s123_control_3          |     3|
+|16    |    s3_input_mod          |s123_input_4            |    92|
+|17    |      debouncer_200ms_mod |debouncer_200ms         |    84|
+|18    |        clk1m_mod         |flexible_clock_module_5 |    51|
++------+--------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 774.883 ; gain = 517.434
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 45 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 766.637 ; gain = 197.812
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 766.637 ; gain = 509.539
+Synthesis finished with 0 errors, 0 critical warnings and 44 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 774.883 ; gain = 187.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 774.883 ; gain = 517.434
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 121 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -600,11 +610,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE_1 => FDRE (inverted pins: C): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-92 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+97 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 766.637 ; gain = 522.387
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 774.883 ; gain = 530.293
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 766.637 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 06:15:26 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 774.883 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 07:47:01 2024...

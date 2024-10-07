@@ -88,9 +88,12 @@ module Top_Student(
 //         led[13] <= right;
 //      end
 
+    // Convert pixel_index to xy coordinates
      wire [6:0] x;
      wire [5:0] y;
      pixel_index_to_xy pixel_index_to_xy_mod(.pixel_index(pixel_index), .x(x), .y(y));
+     
+     // 4.A
      task_4b task_4b_mod(
         .clk(clk), .btnU(btnU), .btnC(btnC), .btnD(btnD),
         .x(x), .y(y), .oled_data(oled_data)

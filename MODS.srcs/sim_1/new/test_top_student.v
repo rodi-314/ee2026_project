@@ -47,7 +47,7 @@ module test_top_student(
         btnC = 0;
         btnD = 0;
         
-        btnU = 1; #100000000;
+        btnU = 1; #250000000;
         btnU = 0; #100000000;
         btnC = 1; #100000000;
         btnC = 0; #100000000;
@@ -67,7 +67,6 @@ module test_top_student(
         btnC = 0; #100000000;
         btnD = 1; #100000000;
         btnD = 0; #100000000;
-        
     end
     
     always begin
