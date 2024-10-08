@@ -23,7 +23,7 @@
 module s123_input(input clk, btn, output reg [1:0] sx_counter = 0);
 
     wire clk2k;
-    flexible_clock_module clk10k_mod(.clk(clk), .m(32'd24999), .flex_clk(clk2k));
+    flexible_clock_module clk2k_mod(.clk(clk), .m(32'd24999), .flex_clk(clk2k));
 
     reg button_pressed = 0;
     wire [31:0] time_after_press;
