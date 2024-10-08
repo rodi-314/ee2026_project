@@ -18,3 +18,20 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.2/data/ip'.
 open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 893.312 ; gain = 146.254
+update_compile_order -fileset sources_1
+close [ open C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/taskA.v w ]
+add_files C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/taskA.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/taskB.v w ]
+add_files C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/taskB.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/clk_divider.v w ]
+add_files C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/clk_divider.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/debounce.v w ]
+add_files C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/debounce.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/start.v w ]
+add_files C:/Users/notbr/ee2026_project/MODS.srcs/sources_1/new/start.v
+update_compile_order -fileset sources_1

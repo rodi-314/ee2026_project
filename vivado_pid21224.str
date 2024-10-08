@@ -326,3 +326,4 @@ closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 1); // k (j, ck)
 collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), A : taskA (taskA.v)]", 4); // B (D, ck)
 expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, taskB (taskB.v)]", 5); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, taskB (taskB.v)]", 5); // B (D, ck)
