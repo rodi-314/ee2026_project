@@ -98,8 +98,8 @@ module task_4c(
         else
             oled_data = 16'h0000;
             
-        trigger_forward = (btnC) ? (1 ^ moving_back) : (0 | trigger_forward);
-        trigger_backward = (btnU) ? 1 : (0 | trigger_backward);
+        trigger_forward = (btnC) ? (1 ^ moving_back) : (trigger_forward ^ moving_back);
+        trigger_backward = (btnU) ? (1 & moving_back) : (trigger_backward & moving_back);
     end
     
     always @ (posedge clk10) begin
@@ -144,7 +144,6 @@ module task_4c(
                         TR_corner = 1'b0;
                         BR_corner = 1'b0;
                         moving_back = 1'b1;
-                        trigger_forward = 1'b0;
                         post_first = 1'b1;
                         pause <= 0;
                         end
@@ -179,7 +178,6 @@ module task_4c(
             else begin
                 if (section_3_x_L_rev < 3) begin
                     moving_back = 1'b0;
-                    trigger_backward = 1'b0;
                     TR_corner = 1'b0;
                     BR_corner = 1'b0;
                     init_square_x_R = 17;
