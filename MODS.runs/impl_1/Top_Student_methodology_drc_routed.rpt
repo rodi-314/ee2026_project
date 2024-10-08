@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Oct  8 07:48:50 2024
+| Date         : Tue Oct  8 13:50:36 2024
 | Host         : Roderick running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
 | Design       : Top_Student
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 198
+             Violations found: 171
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell   | 190        |
+| TIMING-17 | Warning  | Non-clocked sequential cell   | 163        |
 | TIMING-18 | Warning  | Missing input or output delay | 8          |
 +-----------+----------+-------------------------------+------------+
 
@@ -650,335 +650,200 @@ Related violations: <none>
 
 TIMING-17#124 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[10]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#125 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[11]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#126 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[12]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#127 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[13]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#128 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[14]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#129 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[15]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#130 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[16]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#131 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[17]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#132 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[1]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/sx_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#133 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[2]/C is not reached by a timing clock
+The clock pin task_4b_mod/s1_input_mod/sx_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#134 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[3]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_control_mod/sx_oled_data_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#135 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[4]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_control_mod/sx_oled_data_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#136 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[5]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_control_mod/sx_oled_data_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#137 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[6]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/button_pressed_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#138 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[7]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#139 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[8]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#140 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter_reg[9]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#141 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/sx_counter_reg[0]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#142 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s1_input_mod/sx_counter_reg[1]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#143 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_control_mod/sx_oled_data_reg[10]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#144 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_control_mod/sx_oled_data_reg[15]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#145 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_control_mod/sx_oled_data_reg[4]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#146 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/button_pressed_reg/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#147 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[0]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/sx_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#148 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[10]/C is not reached by a timing clock
+The clock pin task_4b_mod/s2_input_mod/sx_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#149 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[11]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_control_mod/sx_oled_data_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#150 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[12]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_control_mod/sx_oled_data_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#151 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[13]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_control_mod/sx_oled_data_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#152 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[14]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/button_pressed_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#153 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[15]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#154 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[16]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#155 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[17]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#156 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[1]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#157 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[2]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#158 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[3]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#159 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[4]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#160 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[5]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#161 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[6]/C is not reached by a timing clock
+The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#162 Warning
 Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#163 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#164 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#165 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/sx_counter_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#166 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s2_input_mod/sx_counter_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#167 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_control_mod/sx_oled_data_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#168 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_control_mod/sx_oled_data_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#169 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_control_mod/sx_oled_data_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#170 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/button_pressed_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#171 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#172 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#173 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#174 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#175 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#176 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#177 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#178 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#179 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#180 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#181 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#182 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#183 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#184 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#185 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#186 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#187 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#188 Warning
-Non-clocked sequential cell  
-The clock pin task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#189 Warning
-Non-clocked sequential cell  
 The clock pin task_4b_mod/s3_input_mod/sx_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#190 Warning
+TIMING-17#163 Warning
 Non-clocked sequential cell  
 The clock pin task_4b_mod/s3_input_mod/sx_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>

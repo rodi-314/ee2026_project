@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Oct  8 07:48:16 2024
+| Date         : Tue Oct  8 13:50:19 2024
 | Host         : Roderick running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    15 |
-| Unused register locations in slices containing registers |    42 |
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    48 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,6 +35,7 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            1 |
+|      6 |            3 |
 |     10 |            1 |
 |    16+ |           13 |
 +--------+--------------+
@@ -46,36 +47,39 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              54 |           13 |
+| No           | No                    | No                     |              54 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             444 |           59 |
+| No           | Yes                   | No                     |             444 |           62 |
 | Yes          | No                    | No                     |             104 |           15 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             108 |           15 |
+| Yes          | Yes                   | No                     |              54 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
-|                         Clock Signal                        |                            Enable Signal                           |                              Set/Reset Signal                              | Slice Load Count | Bel Load Count |
-+-------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
-| ~clk6p25m_BUFG                                              |                                                                    |                                                                            |                1 |              2 |
-|  clk_IBUF_BUFG                                              |                                                                    |                                                                            |                5 |             10 |
-| ~clk6p25m_BUFG                                              |                                                                    | Oled_Display/frame_counter[16]_i_1_n_0                                     |                5 |             34 |
-|  task_4b_mod/s2_input_mod/debouncer_200ms_mod/clk1m_mod/I20 | task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter[0]_i_2__0_n_0 | task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter[0]_i_1__0_n_0         |                5 |             36 |
-|  task_4b_mod/s3_input_mod/debouncer_200ms_mod/clk1m_mod/I22 | task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter[0]_i_2__1_n_0 | task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter[0]_i_1__1_n_0         |                5 |             36 |
-|  task_4b_mod/s1_input_mod/debouncer_200ms_mod/clk1m_mod/I18 | task_4b_mod/s1_input_mod/debouncer_200ms_mod/sel                   | task_4b_mod/s1_input_mod/debouncer_200ms_mod/clear                         |                5 |             36 |
-| ~clk6p25m_BUFG                                              | Oled_Display/delay[0]_i_1_n_0                                      |                                                                            |                5 |             40 |
-|  task_4b_mod/clk25m_mod/CLK                                 |                                                                    |                                                                            |                7 |             42 |
-|  clk_IBUF_BUFG                                              |                                                                    | task_4b_mod/s3_input_mod/debouncer_200ms_mod/clk1m_mod/COUNT[0]_i_1__2_n_0 |                8 |             64 |
-|  clk_IBUF_BUFG                                              |                                                                    | clk6p25m_mod/clear                                                         |                8 |             64 |
-|  clk_IBUF_BUFG                                              |                                                                    | task_4b_mod/clk25m_mod/COUNT[0]_i_1_n_0                                    |                8 |             64 |
-|  clk_IBUF_BUFG                                              |                                                                    | task_4b_mod/s1_input_mod/debouncer_200ms_mod/clk1m_mod/COUNT[0]_i_1__0_n_0 |                8 |             64 |
-|  clk_IBUF_BUFG                                              |                                                                    | task_4b_mod/s2_input_mod/debouncer_200ms_mod/clk1m_mod/COUNT[0]_i_1__1_n_0 |                8 |             64 |
-| ~clk6p25m_BUFG                                              | Oled_Display/FSM_onehot_state[31]_i_1_n_0                          |                                                                            |               10 |             64 |
-| ~clk6p25m_BUFG                                              |                                                                    | Oled_Display/spi_word[39]_i_1_n_0                                          |               14 |             90 |
-+-------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
++-----------------------------------------------------+--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+|                     Clock Signal                    |                            Enable Signal                           |                          Set/Reset Signal                          | Slice Load Count | Bel Load Count |
++-----------------------------------------------------+--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+| ~clk6p25m_BUFG                                      |                                                                    |                                                                    |                1 |              2 |
+|  task_4b_mod/s1_input_mod/clk10k_mod/counter_reg[8] |                                                                    |                                                                    |                2 |              6 |
+|  task_4b_mod/s2_input_mod/clk10k_mod/counter_reg[8] |                                                                    |                                                                    |                2 |              6 |
+|  task_4b_mod/s3_input_mod/clk10k_mod/counter_reg[8] |                                                                    |                                                                    |                2 |              6 |
+|  clk_IBUF_BUFG                                      |                                                                    |                                                                    |                5 |             10 |
+|  task_4b_mod/s1_input_mod/clk10k_mod/counter_reg[8] | task_4b_mod/s1_input_mod/debouncer_200ms_mod/counter[8]_i_2_n_0    | task_4b_mod/s1_input_mod/debouncer_200ms_mod/clear                 |                3 |             18 |
+|  task_4b_mod/s2_input_mod/clk10k_mod/counter_reg[8] | task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter[8]_i_2__0_n_0 | task_4b_mod/s2_input_mod/debouncer_200ms_mod/counter[8]_i_1__0_n_0 |                3 |             18 |
+|  task_4b_mod/s3_input_mod/clk10k_mod/counter_reg[8] | task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter[8]_i_2__1_n_0 | task_4b_mod/s3_input_mod/debouncer_200ms_mod/counter[8]_i_1__1_n_0 |                3 |             18 |
+|  task_4b_mod/clk25m_mod/CLK                         |                                                                    |                                                                    |                4 |             24 |
+| ~clk6p25m_BUFG                                      |                                                                    | Oled_Display/frame_counter[16]_i_1_n_0                             |                5 |             34 |
+| ~clk6p25m_BUFG                                      | Oled_Display/delay[0]_i_1_n_0                                      |                                                                    |                5 |             40 |
+|  clk_IBUF_BUFG                                      |                                                                    | task_4b_mod/s1_input_mod/clk10k_mod/COUNT[0]_i_1_n_0               |                8 |             64 |
+|  clk_IBUF_BUFG                                      |                                                                    | task_4b_mod/s2_input_mod/clk10k_mod/COUNT[0]_i_1__0_n_0            |                8 |             64 |
+|  clk_IBUF_BUFG                                      |                                                                    | task_4b_mod/s3_input_mod/clk10k_mod/COUNT[0]_i_1__1_n_0            |                8 |             64 |
+|  clk_IBUF_BUFG                                      |                                                                    | clk6p25m_mod/clear                                                 |                8 |             64 |
+|  clk_IBUF_BUFG                                      |                                                                    | task_4b_mod/clk25m_mod/COUNT[0]_i_1__2_n_0                         |                8 |             64 |
+| ~clk6p25m_BUFG                                      | Oled_Display/FSM_onehot_state[31]_i_1_n_0                          |                                                                    |               10 |             64 |
+| ~clk6p25m_BUFG                                      |                                                                    | Oled_Display/spi_word[39]_i_1_n_0                                  |               17 |             90 |
++-----------------------------------------------------+--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
 
 

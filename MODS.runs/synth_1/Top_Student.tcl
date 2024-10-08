@@ -18,30 +18,29 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/imports/res/weights.coe}}
-add_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/imports/res/00.coe}}
+add_files {{C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/res/weights.coe}}
+add_files {{C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/res/00.coe}}
 read_verilog -library xil_defaultlib {
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/debouncer_200ms.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/pixel_index_to_xy.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_control.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s123_input.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/s4_control.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/task_4b.v}
-  {C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/debouncer_200ms.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/pixel_index_to_xy.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/s123_control.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/s123_input.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/s4_control.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/task_4b.v}
+  {C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/Top_Student.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -51,8 +50,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/rodi3/iCloudDrive/NUS Y2S1/EE2026/Project/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc}}]
+read_xdc {{C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/constrs_1/new/basys3_constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/rodi3/OneDrive/Documents/EE2026 Project/ee2026_project/MODS.srcs/constrs_1/new/basys3_constraints.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

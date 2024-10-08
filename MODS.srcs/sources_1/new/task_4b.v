@@ -31,9 +31,9 @@ module task_4b(
     flexible_clock_module clk25m_mod(.clk(clk), .m(32'd1), .flex_clk(clk25m));
     
     wire [1:0] s1_counter, s2_counter, s3_counter;
-    s123_input s1_input_mod(.clk(clk), .clk25m(clk25m), .btn(btnU), .sx_counter(s1_counter));
-    s123_input s2_input_mod(.clk(clk), .clk25m(clk25m), .btn(btnC), .sx_counter(s2_counter));
-    s123_input s3_input_mod(.clk(clk), .clk25m(clk25m), .btn(btnD), .sx_counter(s3_counter));
+    s123_input s1_input_mod(.clk(clk), .btn(btnU), .sx_counter(s1_counter));
+    s123_input s2_input_mod(.clk(clk), .btn(btnC), .sx_counter(s2_counter));
+    s123_input s3_input_mod(.clk(clk), .btn(btnD), .sx_counter(s3_counter));
     
     wire [15:0] s1_oled_data, s2_oled_data, s3_oled_data, s4_oled_data;
     s123_control s1_control_mod(.clk25m(clk25m), .sx_counter(s1_counter), .sx_oled_data(s1_oled_data));

@@ -20,13 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module debouncer_200ms(input clk, button_pressed, output reg [31:0] counter = 0);
+module debouncer_200ms(input clk2k, button_pressed, output reg [31:0] counter = 0);
 
-    wire clk1m;
-    flexible_clock_module clk1m_mod(.clk(clk), .m(32'd49), .flex_clk(clk1m));
-
-    always @ (posedge clk1m) begin
-        counter <= button_pressed ? (counter < 200000 ? counter + 1 : counter) : 0;
+    always @ (posedge clk2k) begin
+        counter <= button_pressed ? (counter < 400 ? counter + 1 : counter) : 0;
     end
 
 endmodule
