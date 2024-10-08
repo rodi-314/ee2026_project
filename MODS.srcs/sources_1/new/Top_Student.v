@@ -94,8 +94,14 @@ module Top_Student(
      pixel_index_to_xy pixel_index_to_xy_mod(.pixel_index(pixel_index), .x(x), .y(y));
      
      // 4.A
-     task_4b task_4b_mod(
+     /*task_4b task_4b_mod(
         .clk(clk), .btnU(btnU), .btnC(btnC), .btnD(btnD),
+        .x(x), .y(y), .oled_data(oled_data)
+     );*/
+     
+     // 4.D
+     task_4d task_4d_mod(
+        .clk(clk), .btnU(btnU), .btnC(btnC), .btnD(btnD), .btnR(btnR), .btnL(btnL),
         .x(x), .y(y), .oled_data(oled_data)
      );
 
