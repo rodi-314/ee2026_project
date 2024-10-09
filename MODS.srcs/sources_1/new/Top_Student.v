@@ -20,10 +20,11 @@ module Top_Student(
     );
 
     // Clocks
-    wire clk6p25m, clk7Hz, clk1Hz;
+    wire clk6p25m, clk7Hz, clk1Hz, clk6Hz;
     flexible_clock_module clk6p25m_mod(.clk(clk), .m(32'd7), .flex_clk(clk6p25m));
     flexible_clock_module clk7Hz_mod (.clk(clk), .m(7142856), .flex_clk(clk7Hz));
     flexible_clock_module clk1Hz_mod (.clk(clk), .m(49999999), .flex_clk(clk1Hz));
+    flexible_clock_module clk6Hz_mod (.clk(clk), .m(8333332), .flex_clk(clk6Hz));
     
     // 3.A Oled_Display.v Module
     reg [15:0] oled_data;
@@ -50,7 +51,7 @@ module Top_Student(
      assign password[0] = (sw == 16'h11C5) ? 1 : 0;
      assign password[1] = (sw == 16'h2161) ? 1 : 0;
      assign password[2] = (sw == 16'h13C5) ? 1 : 0;
-     assign password[3] = (sw == 16'h14C5) ? 1 : 0;
+     assign password[3] = (sw == 16'h8135) ? 1 : 0;
      
      // Modules
      start S (clk, pixel_index, outputS);
@@ -59,6 +60,7 @@ module Top_Student(
          .clk(clk), .btnU(btnU), .btnC(btnC), .btnD(btnD), .restart(restart),
          .x(x), .y(y), .oled_data(outputB)
      );
+     taskD D (clk, btnC, btnU, btnR, btnL, btnD, x, y, restart_wire, outputD);
      
      always @ (*) begin
          if (!password) begin
@@ -68,22 +70,13 @@ module Top_Student(
          end
          else if (password[0]) begin
              restart = 0;
+             led = (1'b1 << 12) + (clk6Hz << 8) + (clk6Hz << 7) + (clk6Hz << 6) + (clk6Hz << 2) + (clk6Hz);
              oled_data = outputA;
-             led[0] = clk7Hz;
-             led[2] = clk7Hz;
-             led[6] = clk7Hz;
-             led[7] = clk7Hz;
-             led[8] = clk7Hz;
-             led[12] = 1'b1;
          end
          else if (password[1]) begin
              restart = 0;
+             led = (1'b1 << 13) + (clk1Hz << 8) + (clk1Hz << 6) + (clk1Hz << 5) + (clk1Hz);
              oled_data = outputB;
-             led[0] = clk1Hz;
-             led[5] = clk1Hz;
-             led[6] = clk1Hz;
-             led[8] = clk1Hz;
-             led[13] = 1'b1;
          end
          else if (password[2]) begin
              restart = 0;
@@ -91,7 +84,8 @@ module Top_Student(
          end
          else if (password[3]) begin
              restart = 0;
-             oled_data = outputS;
+             led = (1'b1 << 15) + (clk6Hz << 8) + (clk6Hz << 5) + (clk6Hz << 4) + (clk6Hz << 2) + (clk6Hz);
+             oled_data = outputD;
          end
      end
 
