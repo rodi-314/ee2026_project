@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Oct 10 00:13:58 2024
+| Date             : Thu Oct 10 01:23:52 2024
 | Host             : Roderick running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     1472 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      644 |     20800 |            3.10 |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |     1474 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      652 |     20800 |            3.13 |
 |   CARRY4       |    <0.001 |      138 |      8150 |            1.69 |
-|   Register     |    <0.001 |      501 |     41600 |            1.20 |
+|   Register     |    <0.001 |      497 |     41600 |            1.19 |
 |   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
-|   Others       |     0.000 |       51 |       --- |             --- |
+|   Others       |     0.000 |       49 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |     0.001 |     1104 |       --- |             --- |
+| Signals        |     0.001 |     1105 |       --- |             --- |
 | DSPs           |     0.000 |        2 |        90 |            2.22 |
 | I/O            |     0.005 |       44 |       106 |           41.51 |
 | Static Power   |     0.072 |          |           |                 |
@@ -154,7 +154,6 @@ Table of Contents
 |   clk6p25m_mod            |    <0.001 |
 |   clk7Hz_mod              |    <0.001 |
 |   pixel_index_to_xy_mod   |    <0.001 |
-|   restart_reg             |    <0.001 |
 |   task_4b_mod             |     0.002 |
 |     clk25m_mod            |    <0.001 |
 |     s1_control_mod        |     0.000 |

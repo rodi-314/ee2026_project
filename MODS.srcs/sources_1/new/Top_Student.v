@@ -67,31 +67,39 @@ module Top_Student(
              led = sw;
          end
          else if (password[0]) begin
-             restart = 0;
-             oled_data = outputA;
-             led[0] = clk7Hz;
-             led[2] = clk7Hz;
-             led[6] = clk7Hz;
-             led[7] = clk7Hz;
-             led[8] = clk7Hz;
-             led[12] = 1'b1;
+             restart <= 0;
+             oled_data <= outputA;
+             led[0] <= clk7Hz;
+             led[1] <= 1'b0;
+             led[2] <= clk7Hz;
+             led[5:3] <= 3'b000;
+             led[6] <= clk7Hz;
+             led[7] <= clk7Hz;
+             led[8] <= clk7Hz;
+             led[11:9] <= 3'b000;
+             led[12] <= 1'b1;
+             led[15:13] <= 3'b000;
          end
          else if (password[1]) begin
-             restart = 0;
-             oled_data = outputB;
-             led[0] = clk1Hz;
-             led[5] = clk1Hz;
-             led[6] = clk1Hz;
-             led[8] = clk1Hz;
-             led[13] = 1'b1;
+             restart <= 0;
+             oled_data <= outputB;
+             led[0] <= clk1Hz;
+             led[4:1] <= 4'b0000;
+             led[5] <= clk1Hz;
+             led[6] <= clk1Hz;
+             led[7] <= 1'b0;
+             led[8] <= clk1Hz;
+             led[12:9] <= 4'b0000;
+             led[13] <= 1'b1;
+             led[15:14] <= 2'b00;
          end
          else if (password[2]) begin
-             restart = 0;
-             oled_data = outputS;
+             restart <= 0;
+             oled_data <= outputS;
          end
          else if (password[3]) begin
-             restart = 0;
-             oled_data = outputS;
+             restart <= 0;
+             oled_data <= outputS;
          end
      end
 
