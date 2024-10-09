@@ -2,37 +2,28 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Oct 10 00:49:30 2024
-# Process ID: 23456
-# Current directory: C:/Users/notbr/ee2026_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7904 C:\Users\notbr\ee2026_project\MODS.xpr
-# Log file: C:/Users/notbr/ee2026_project/vivado.log
-# Journal file: C:/Users/notbr/ee2026_project\vivado.jou
+# Start of session at: Thu Oct 10 05:45:49 2024
+# Process ID: 11840
+# Current directory: C:/Users/eleme/ee2026_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17172 C:\Users\eleme\ee2026_project\MODS.xpr
+# Log file: C:/Users/eleme/ee2026_project/vivado.log
+# Journal file: C:/Users/eleme/ee2026_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/notbr/ee2026_project/MODS.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/rodi3/Documents/EE2026 Project/ee2026_project' since last save.
+open_project C:/Users/eleme/ee2026_project/MODS.xpr
 Scanning sources...
 Finished scanning sources
-WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
-WARNING: [Project 1-509] GeneratedRun file for 'blk_mem_gen_const_synth_1' not found
-WARNING: [Project 1-509] GeneratedRun file for 'blk_mem_gen_img_synth_1' not found
-WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 777.602 ; gain = 84.684
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/EE2026/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 885.293 ; gain = 160.281
 update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 6
-[Thu Oct 10 00:51:07 2024] Launched synth_1...
-Run output will be captured here: C:/Users/notbr/ee2026_project/MODS.runs/synth_1/runme.log
-reset_run impl_1
-launch_runs impl_1 -jobs 6
-[Thu Oct 10 00:52:04 2024] Launched impl_1...
-Run output will be captured here: C:/Users/notbr/ee2026_project/MODS.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Thu Oct 10 00:53:31 2024] Launched impl_1...
-Run output will be captured here: C:/Users/notbr/ee2026_project/MODS.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Oct 10 05:46:22 2024] Launched synth_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/synth_1/runme.log
+[Thu Oct 10 05:46:23 2024] Launched impl_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/impl_1/runme.log
 open_hw
 connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -45,8 +36,8 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183715097A
-set_property PROGRAM.FILE {C:/Users/notbr/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A285E8A
+set_property PROGRAM.FILE {C:/Users/eleme/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
@@ -57,7 +48,7 @@ Resolution:
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/notbr/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/eleme/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
@@ -68,5 +59,145 @@ Resolution:
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Oct 10 05:52:51 2024] Launched synth_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/synth_1/runme.log
+[Thu Oct 10 05:52:51 2024] Launched impl_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A285E8A
+set_property PROGRAM.FILE {C:/Users/eleme/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/eleme/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A285E8A
+set_property PROGRAM.FILE {C:/Users/eleme/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/eleme/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A285E8A
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Oct 10 06:04:00 2024] Launched synth_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/synth_1/runme.log
+[Thu Oct 10 06:04:00 2024] Launched impl_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A285E8A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/eleme/ee2026_project/MODS.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A285E8A
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Oct 10 06:09:08 2024] Launched synth_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/synth_1/runme.log
+[Thu Oct 10 06:09:08 2024] Launched impl_1...
+Run output will be captured here: C:/Users/eleme/ee2026_project/MODS.runs/impl_1/runme.log
+archive_project C:/Users/eleme/Week_8_S1_03.xpr.zip -temp_dir C:/Users/eleme/ee2026_project/.Xil/Vivado-11840-srfl0 -force -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/eleme/ee2026_project/.Xil/Vivado-11840-srfl0' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/EE2026/Vivado/2018.2/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'blk_mem_gen_const_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'blk_mem_gen_img_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-133] re-setting run 'blk_mem_gen_const_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'blk_mem_gen_img_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'blk_mem_gen_const'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'blk_mem_gen_const'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'blk_mem_gen_img'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'blk_mem_gen_img'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [Coretcl 2-1209] Adding archive summary file to the project...
+INFO: [Coretcl 2-1214] Preparing project files for archive...
+INFO: [Coretcl 2-1210] Compressing project files and data...
+INFO: [Coretcl 2-1215] Project archived (C:/Users/eleme/Week_8_S1_03.xpr.zip)
+INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
+archive_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1651.137 ; gain = 25.066
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 10 01:00:00 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 10 06:12:17 2024...

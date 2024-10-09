@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Oct 10 01:59:38 2024
-| Host             : LEGION-5 running 64-bit major release  (build 9200)
+| Date             : Thu Oct 10 06:10:58 2024
+| Host             : srfl0 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.078        |
+| Total On-Chip Power (W)  | 0.091        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.007        |
+| Dynamic (W)              | 0.020        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.6         |
-| Junction Temperature (C) | 25.4         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,17 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     1743 |       --- |             --- |
-|   LUT as Logic |     0.001 |      791 |     20800 |            3.80 |
-|   CARRY4       |    <0.001 |      164 |      8150 |            2.01 |
-|   Register     |    <0.001 |      583 |     41600 |            1.40 |
-|   Others       |     0.000 |       55 |       --- |             --- |
-|   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |     0.002 |     1298 |       --- |             --- |
+| Slice Logic    |     0.002 |     2265 |       --- |             --- |
+|   LUT as Logic |     0.001 |     1053 |     20800 |            5.06 |
+|   CARRY4       |    <0.001 |      202 |      8150 |            2.48 |
+|   Register     |    <0.001 |      726 |     41600 |            1.75 |
+|   Others       |     0.000 |       61 |       --- |             --- |
+|   BUFG         |     0.000 |        2 |        32 |            6.25 |
+|   F7/F8 Muxes  |     0.000 |        3 |     32600 |           <0.01 |
+| Signals        |     0.002 |     1680 |       --- |             --- |
 | DSPs           |     0.000 |        2 |        90 |            2.22 |
-| I/O            |    <0.001 |       46 |       106 |           43.40 |
+| I/O            |     0.013 |       46 |       106 |           43.40 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.078 |          |           |                 |
+| Total          |     0.091 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.006 |      0.010 |
+| Vccint    |       1.000 |     0.017 |       0.007 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,7 +143,7 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| Top_Student               |     0.007 |
+| Top_Student               |     0.020 |
 |   A                       |    <0.001 |
 |     debouncer             |    <0.001 |
 |     u2                    |    <0.001 |
@@ -155,6 +156,7 @@ Table of Contents
 |   clk1Hz_mod              |    <0.001 |
 |   clk6Hz_mod              |    <0.001 |
 |   clk6p25m_mod            |    <0.001 |
+|   clk7Hz_mod              |    <0.001 |
 |   restart_reg             |    <0.001 |
 |   task_4b_mod             |     0.002 |
 |     clk25m_mod            |    <0.001 |
@@ -170,6 +172,9 @@ Table of Contents
 |     s3_input_mod          |    <0.001 |
 |       clk2k_mod           |    <0.001 |
 |       debouncer_200ms_mod |    <0.001 |
+|   task_4c_mod             |    <0.001 |
+|     clk10_mod             |    <0.001 |
+|     clk25m_mod            |    <0.001 |
 +---------------------------+-----------+
 
 
