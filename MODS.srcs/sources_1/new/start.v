@@ -22,14 +22,9 @@
 
 module start(
     input CLOCK,
-    output [7:0] JBa
+    input [12:0] pixel_index,
+    output reg [15:0] oled_data
     );
-    
-    wire clk6p25m, clk2kHz, frame_begin, sending_pixels, sample_pixel;
-    wire [12:0] pixel_index;
-    reg [15:0] oled_data;
-    clk_divider u1 (CLOCK, 7, clk6p25m); 
-    Oled_Display oled (clk6p25m, 0, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data, JBa[0], JBa[1], JBa[3], JBa[4], JBa[5], JBa[6], JBa[7]);
     
  // Define coordinates for each segment based on your OLED size and resolution
    wire [6:0] x = pixel_index % 96;  // 96 is the width of the OLED screen
