@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module s123_input(input clk, btn, output reg [1:0] sx_counter = 0);
+module s123_input(input clk, btn, restart, output reg [1:0] sx_counter = 0);
 
     wire clk2k;
     flexible_clock_module clk2k_mod(.clk(clk), .m(32'd24999), .flex_clk(clk2k));
@@ -30,6 +30,9 @@ module s123_input(input clk, btn, output reg [1:0] sx_counter = 0);
     debouncer_200ms debouncer_200ms_mod(.clk2k(clk2k), .button_pressed(button_pressed), .counter(time_after_press));
 
     always @ (posedge clk2k) begin
+        if (restart) begin
+            sx_counter <= 0;
+        end
         // When button is pressed
         if (btn && !button_pressed) begin
             sx_counter <= sx_counter + 1;

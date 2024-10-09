@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Oct  9 21:57:02 2024
-| Host             : Nitro5 running 64-bit major release  (build 9200)
+| Date             : Thu Oct 10 00:13:58 2024
+| Host             : Roderick running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.075        |
+| Total On-Chip Power (W)  | 0.082        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.003        |
+| Dynamic (W)              | 0.010        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1291 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      618 |     20800 |            2.97 |
-|   CARRY4       |    <0.001 |       93 |      8150 |            1.14 |
-|   Register     |    <0.001 |      432 |     41600 |            1.04 |
-|   F7/F8 Muxes  |    <0.001 |        3 |     32600 |           <0.01 |
-|   Others       |     0.000 |       30 |       --- |             --- |
-|   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |    <0.001 |     1005 |       --- |             --- |
+| Slice Logic    |     0.001 |     1472 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      644 |     20800 |            3.10 |
+|   CARRY4       |    <0.001 |      138 |      8150 |            1.69 |
+|   Register     |    <0.001 |      501 |     41600 |            1.20 |
+|   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
+|   Others       |     0.000 |       51 |       --- |             --- |
+|   BUFG         |     0.000 |        1 |        32 |            3.13 |
+| Signals        |     0.001 |     1104 |       --- |             --- |
 | DSPs           |     0.000 |        2 |        90 |            2.22 |
-| I/O            |    <0.001 |       43 |       106 |           40.57 |
+| I/O            |     0.005 |       44 |       106 |           41.51 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.075 |          |           |                 |
+| Total          |     0.082 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
+| Vccint    |       1.000 |     0.015 |       0.005 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -130,7 +130,7 @@ Table of Contents
 +-------------+--------+-----------------+
 | Clock       | Domain | Constraint (ns) |
 +-------------+--------+-----------------+
-| sys_clk_pin | CLOCK  |            10.0 |
+| sys_clk_pin | clk    |            10.0 |
 +-------------+--------+-----------------+
 
 
@@ -140,21 +140,35 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------+-----------+
-| Name          | Power (W) |
-+---------------+-----------+
-| Top_Student   |     0.003 |
-|   A           |     0.002 |
-|     debouncer |    <0.001 |
-|     oled      |    <0.001 |
-|     u1        |    <0.001 |
-|     u2        |    <0.001 |
-|     u3        |    <0.001 |
-|   S           |    <0.001 |
-|     oled      |    <0.001 |
-|     u1        |    <0.001 |
-|   clk7hz      |    <0.001 |
-|   restart_reg |    <0.001 |
-+---------------+-----------+
++---------------------------+-----------+
+| Name                      | Power (W) |
++---------------------------+-----------+
+| Top_Student               |     0.010 |
+|   A                       |    <0.001 |
+|     debouncer             |    <0.001 |
+|     u2                    |    <0.001 |
+|     u3                    |    <0.001 |
+|   Oled_Display            |    <0.001 |
+|   S                       |    <0.001 |
+|   clk1Hz_mod              |    <0.001 |
+|   clk6p25m_mod            |    <0.001 |
+|   clk7Hz_mod              |    <0.001 |
+|   pixel_index_to_xy_mod   |    <0.001 |
+|   restart_reg             |    <0.001 |
+|   task_4b_mod             |     0.002 |
+|     clk25m_mod            |    <0.001 |
+|     s1_control_mod        |     0.000 |
+|     s1_input_mod          |    <0.001 |
+|       clk2k_mod           |    <0.001 |
+|       debouncer_200ms_mod |    <0.001 |
+|     s2_control_mod        |     0.000 |
+|     s2_input_mod          |    <0.001 |
+|       clk2k_mod           |    <0.001 |
+|       debouncer_200ms_mod |    <0.001 |
+|     s3_control_mod        |     0.000 |
+|     s3_input_mod          |    <0.001 |
+|       clk2k_mod           |    <0.001 |
+|       debouncer_200ms_mod |    <0.001 |
++---------------------------+-----------+
 
 

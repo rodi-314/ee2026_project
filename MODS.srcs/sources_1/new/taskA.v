@@ -25,19 +25,16 @@ module taskA(
     input pbC,
     input pbU,
     input restart,
-    output [7:0] JBa
+    input [12:0] pixel_index,
+    output reg [15:0] oled_data
     );
     
-    wire clk6p25m, clk_25MHz, clk2kHz, frame_begin, sending_pixels, sample_pixel, wire_upMode;
-    wire [12:0] pixel_index;
-    reg [15:0] oled_data;
+    wire clk_25MHz, clk2kHz, wire_upMode;
     wire [2:0] pattern;
     reg upMode = 0;
     assign wire_upMode = upMode;
-    clk_divider u1 (CLOCK, 7, clk6p25m); 
     clk_divider u2 (CLOCK, 1, clk_25MHz);
     clk_divider u3 (CLOCK, 24999, clk2kHz);
-    Oled_Display oled (clk6p25m, 0, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data, JBa[0], JBa[1], JBa[3], JBa[4], JBa[5], JBa[6], JBa[7]);
     debounce debouncer (clk2kHz, pbC, wire_upMode, pattern);
     
     wire [6:0] x = pixel_index % 96;
