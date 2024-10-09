@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Oct  9 03:08:58 2024
+| Date         : Wed Oct  9 21:57:01 2024
 | Host         : Nitro5 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
 | Design       : Top_Student
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 273
+             Violations found: 274
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell   | 249        |
 | TIMING-18 | Warning  | Missing input or output delay | 8          |
-| TIMING-20 | Warning  | Non-clocked latch             | 16         |
+| TIMING-20 | Warning  | Non-clocked latch             | 17         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -1397,6 +1397,11 @@ Related violations: <none>
 TIMING-20#16 Warning
 Non-clocked latch  
 The latch led_reg[9] cannot be properly analyzed as its control pin led_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch restart_reg/L7 (in restart_reg macro) cannot be properly analyzed as its control pin restart_reg/L7/G is not reached by a timing clock
 Related violations: <none>
 
 

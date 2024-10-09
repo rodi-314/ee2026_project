@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Oct  9 03:08:33 2024
+| Date         : Wed Oct  9 21:56:36 2024
 | Host         : Nitro5 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    22 |
-| Unused register locations in slices containing registers |    50 |
+| Unused register locations in slices containing registers |    56 |
 +----------------------------------------------------------+-------+
 
 
@@ -36,8 +36,7 @@ Table of Contents
 +--------+--------------+
 |      2 |            1 |
 |      4 |            2 |
-|      8 |            1 |
-|     10 |            2 |
+|     10 |            3 |
 |     12 |            1 |
 |    16+ |           15 |
 +--------+--------------+
@@ -49,43 +48,43 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              70 |           22 |
+| No           | No                    | No                     |              74 |           27 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |             564 |           86 |
-| Yes          | No                    | No                     |             210 |           26 |
+| Yes          | No                    | No                     |             208 |           28 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              18 |            2 |
+| Yes          | Yes                   | No                     |              18 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------+----------------------------------------+-------------------------------------+------------------+----------------+
-|       Clock Signal      |              Enable Signal             |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
-+-------------------------+----------------------------------------+-------------------------------------+------------------+----------------+
-|  A/u3/counter_reg[8]    | A/upMode                               |                                     |                1 |              2 |
-| ~clk6p25m_0             |                                        |                                     |                2 |              4 |
-| ~clk6p25m               |                                        |                                     |                2 |              4 |
-|  A/u3/counter_reg[8]    |                                        |                                     |                3 |              8 |
-|  A/u2/oled_data_reg[15] |                                        |                                     |                2 |             10 |
-|  led_reg[8]_i_2_n_0     |                                        |                                     |                2 |             10 |
-|  CLOCK_IBUF_BUFG        |                                        |                                     |                5 |             12 |
-|  A/u3/counter_reg[8]    | A/debouncer/counter                    | A/debouncer/counter[8]_i_1_n_0      |                2 |             18 |
-|  led_reg[15]_i_1_n_0    |                                        |                                     |                6 |             22 |
-| ~clk6p25m_0             |                                        | S/oled/frame_counter[16]_i_1_n_0    |                4 |             32 |
-| ~clk6p25m               |                                        | A/oled/frame_counter[16]_i_1__0_n_0 |                4 |             32 |
-| ~clk6p25m_0             | S/oled/delay[0]_i_1_n_0                |                                     |                5 |             40 |
-| ~clk6p25m               | A/oled/delay[0]_i_1__0_n_0             |                                     |                5 |             40 |
-|  CLOCK_IBUF_BUFG        |                                        | A/u1/clear                          |                8 |             64 |
-|  CLOCK_IBUF_BUFG        |                                        | A/u2/count[0]_i_1__2_n_0            |                8 |             64 |
-|  CLOCK_IBUF_BUFG        |                                        | A/u3/count[0]_i_1__1_n_0            |                8 |             64 |
-|  CLOCK_IBUF_BUFG        |                                        | clk7hz/clear                        |                8 |             64 |
-|  CLOCK_IBUF_BUFG        |                                        | S/u1/clear                          |                8 |             64 |
-| ~clk6p25m_0             | S/oled/FSM_onehot_state[31]_i_1_n_0    |                                     |                7 |             64 |
-| ~clk6p25m               | A/oled/FSM_onehot_state[31]_i_1__0_n_0 |                                     |                8 |             64 |
-| ~clk6p25m_0             |                                        | S/oled/spi_word[39]_i_1_n_0         |               20 |             90 |
-| ~clk6p25m               |                                        | A/oled/spi_word[39]_i_1__0_n_0      |               18 |             90 |
-+-------------------------+----------------------------------------+-------------------------------------+------------------+----------------+
++----------------------+----------------------------------------+-------------------------------------+------------------+----------------+
+|     Clock Signal     |              Enable Signal             |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++----------------------+----------------------------------------+-------------------------------------+------------------+----------------+
+|  restart_reg/G0      |                                        |                                     |                1 |              2 |
+| ~clk6p25m            |                                        |                                     |                2 |              4 |
+| ~clk6p25m_0          |                                        |                                     |                2 |              4 |
+|  A/u2/CLK            |                                        |                                     |                2 |             10 |
+|  A/u3/counter_reg[8] |                                        |                                     |                2 |             10 |
+|  led_reg[8]_i_2_n_0  |                                        |                                     |                4 |             10 |
+|  CLOCK_IBUF_BUFG     |                                        |                                     |                6 |             12 |
+|  A/u3/counter_reg[8] | A/debouncer/counter                    | A/debouncer/counter[8]_i_1_n_0      |                4 |             18 |
+|  led_reg[15]_i_1_n_0 |                                        |                                     |                8 |             22 |
+| ~clk6p25m            |                                        | A/oled/frame_counter[16]_i_1__0_n_0 |                4 |             32 |
+| ~clk6p25m_0          |                                        | S/oled/frame_counter[16]_i_1_n_0    |                4 |             32 |
+| ~clk6p25m            | A/oled/delay[0]_i_1__0_n_0             |                                     |                5 |             40 |
+| ~clk6p25m_0          | S/oled/delay[0]_i_1_n_0                |                                     |                5 |             40 |
+|  CLOCK_IBUF_BUFG     |                                        | A/u1/clear                          |                8 |             64 |
+|  CLOCK_IBUF_BUFG     |                                        | A/u2/count[0]_i_1__1_n_0            |                8 |             64 |
+|  CLOCK_IBUF_BUFG     |                                        | A/u3/count[0]_i_1__2_n_0            |                8 |             64 |
+|  CLOCK_IBUF_BUFG     |                                        | clk7hz/clear                        |                8 |             64 |
+|  CLOCK_IBUF_BUFG     |                                        | S/u1/clear                          |                8 |             64 |
+| ~clk6p25m            | A/oled/FSM_onehot_state[31]_i_1__0_n_0 |                                     |                9 |             64 |
+| ~clk6p25m_0          | S/oled/FSM_onehot_state[31]_i_1_n_0    |                                     |                9 |             64 |
+| ~clk6p25m            |                                        | A/oled/spi_word[39]_i_1__0_n_0      |               19 |             90 |
+| ~clk6p25m_0          |                                        | S/oled/spi_word[39]_i_1_n_0         |               19 |             90 |
++----------------------+----------------------------------------+-------------------------------------+------------------+----------------+
 
 

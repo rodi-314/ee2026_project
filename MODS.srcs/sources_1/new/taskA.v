@@ -24,6 +24,7 @@ module taskA(
     input CLOCK,
     input pbC,
     input pbU,
+    input restart,
     output [7:0] JBa
     );
     
@@ -49,51 +50,56 @@ module taskA(
     wire [13:0] circle = (x - x_centre)*(x - x_centre) + (y - y_centre)*(y - y_centre);
     always@(posedge clk_25MHz) begin
         oled_data = 16'h0000;
-        if ((x >= 2 && x <= 4 && y >= 2 && y <= 59) || (x >= 90 && x <= 92 && y >= 2 && y <= 59) || (x >= 2 && x <= 92 && y >= 2 && y <= 4) || (x >= 2 && x <= 92 && y >= 57 && y <= 59)) begin
-            oled_data = 16'hF800;
+        if (restart) begin
+            upMode = 0;
         end
-        if (pbU) begin
-            upMode = 1;
-        end
-        if (upMode) begin
-            if (circle <= outer_radius*outer_radius && circle >= inner_radius*inner_radius) begin
-                oled_data = 16'hFD60;
+        else begin
+            if ((x >= 2 && x <= 4 && y >= 2 && y <= 59) || (x >= 90 && x <= 92 && y >= 2 && y <= 59) || (x >= 2 && x <= 92 && y >= 2 && y <= 4) || (x >= 2 && x <= 92 && y >= 57 && y <= 59)) begin
+                oled_data = 16'hF800;
             end
-        end
-        if (pattern >= 4 && pattern <= 6) begin
-            if (circle <= outer_radius*outer_radius && circle >= inner_radius*inner_radius) begin
-                oled_data = 16'hFFFF;
+            if (pbU) begin
+                upMode = 1;
             end
-        end
-        if (pattern) begin
-            if (pattern == 1) begin
-                if (circle <= small_radius*small_radius) begin
-                    oled_data = 16'h07E0;
-                end
-            end
-            else if (pattern == 2) begin
-                if (circle <= small_radius*small_radius) begin
+            if (upMode) begin
+                if (circle <= outer_radius*outer_radius && circle >= inner_radius*inner_radius) begin
                     oled_data = 16'hFD60;
                 end
             end
-            else if (pattern == 3) begin
-                if (circle <= small_radius*small_radius) begin
-                    oled_data = 16'hF800;
+            if (pattern >= 4 && pattern <= 6) begin
+                if (circle <= outer_radius*outer_radius && circle >= inner_radius*inner_radius) begin
+                    oled_data = 16'hFFFF;
                 end
             end
-            else if (pattern == 4) begin
-                if ((x >= 45 && x <= 51) && (y >= 29 && y <= 35)) begin
-                    oled_data = 16'h07E0;
+            if (pattern) begin
+                if (pattern == 1) begin
+                    if (circle <= small_radius*small_radius) begin
+                        oled_data = 16'h07E0;
+                    end
                 end
-            end
-            else if (pattern == 5) begin
-                if ((x >= 45 && x <= 51) && (y >= 29 && y <= 35)) begin
-                    oled_data = 16'hFD60;
+                else if (pattern == 2) begin
+                    if (circle <= small_radius*small_radius) begin
+                        oled_data = 16'hFD60;
+                    end
                 end
-            end
-            else if (pattern == 6) begin
-                if ((x >= 45 && x <= 51) && (y >= 29 && y <= 35)) begin
-                    oled_data = 16'hF800;
+                else if (pattern == 3) begin
+                    if (circle <= small_radius*small_radius) begin
+                        oled_data = 16'hF800;
+                    end
+                end
+                else if (pattern == 4) begin
+                    if ((x >= 45 && x <= 51) && (y >= 29 && y <= 35)) begin
+                        oled_data = 16'h07E0;
+                    end
+                end
+                else if (pattern == 5) begin
+                    if ((x >= 45 && x <= 51) && (y >= 29 && y <= 35)) begin
+                        oled_data = 16'hFD60;
+                    end
+                end
+                else if (pattern == 6) begin
+                    if ((x >= 45 && x <= 51) && (y >= 29 && y <= 35)) begin
+                        oled_data = 16'hF800;
+                    end
                 end
             end
         end

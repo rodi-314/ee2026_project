@@ -50,6 +50,12 @@ module debounce(
             end
             pbC_prev <= pbC;
         end
+        else begin
+            pattern <= 0;
+            counter <= 0;
+            active <= 0;
+            pbC_prev <= 0;
+        end
     end
     
 endmodule
