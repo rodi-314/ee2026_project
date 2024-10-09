@@ -32,21 +32,20 @@ module start(
 
    // Define boundaries for the segments of each digit
    // Adjust these coordinates based on your specific OLED resolution and position
-   parameter X_OFFSET_0 = 10;  // X offset for the '0' digit
-   parameter X_OFFSET_3 = 50;  // X offset for the '3' digit
+   reg [6:0] X_OFFSET_0 = 12;  // X offset for the '0' digit
+   reg [6:0] X_OFFSET_3 = 52;  // X offset for the '3' digit
 
    // Segments for the '0' digit
-   wire seg0_top = (x >= X_OFFSET_0 + 0 && x <= X_OFFSET_0 + 8) && (y >= 10 && y <= 12);
-   wire seg0_bottom = (x >= X_OFFSET_0 + 0 && x <= X_OFFSET_0 + 8) && (y >= 50 && y <= 52);
-   wire seg0_top_left = (x >= X_OFFSET_0 + 0 && x <= X_OFFSET_0 + 2) && (y >= 10 && y <= 50);
-   wire seg0_top_right = (x >= X_OFFSET_0 + 6 && x <= X_OFFSET_0 + 8) && (y >= 10 && y <= 50);
+   wire seg0_top = (x >= X_OFFSET_0 && x <= X_OFFSET_0 + 30) && (y >= 5 && y <= 10);
+   wire seg0_bottom = (x >= X_OFFSET_0 && x <= X_OFFSET_0 + 30) && (y >= 53 && y <= 58);
+   wire seg0_top_left = (x >= X_OFFSET_0 && x <= X_OFFSET_0 + 5) && (y >= 5 && y <= 58);
+   wire seg0_top_right = (x >= X_OFFSET_0 + 25 && x <= X_OFFSET_0 + 30) && (y >= 5 && y <= 58);
 
    // Segments for the '3' digit
-   wire seg3_top = (x >= X_OFFSET_3 + 0 && x <= X_OFFSET_3 + 8) && (y >= 10 && y <= 12);
-   wire seg3_middle = (x >= X_OFFSET_3 + 0 && x <= X_OFFSET_3 + 8) && (y >= 30 && y <= 32);
-   wire seg3_bottom = (x >= X_OFFSET_3 + 0 && x <= X_OFFSET_3 + 8) && (y >= 50 && y <= 52);
-   wire seg3_top_right = (x >= X_OFFSET_3 + 6 && x <= X_OFFSET_3 + 8) && (y >= 10 && y <= 32);
-   wire seg3_bottom_right = (x >= X_OFFSET_3 + 6 && x <= X_OFFSET_3 + 8) && (y >= 32 && y <= 50);
+   wire seg3_top = (x >= X_OFFSET_3 && x <= X_OFFSET_3 + 27) && (y >= 5 && y <= 10);
+   wire seg3_middle = (x >= X_OFFSET_3 && x <= X_OFFSET_3 + 27) && (y >= 28 && y <= 34);
+   wire seg3_bottom = (x >= X_OFFSET_3 && x <= X_OFFSET_3 + 27) && (y >= 53 && y <= 58);
+   wire seg3_top_right = (x >= X_OFFSET_3 + 22 && x <= X_OFFSET_3 + 27) && (y >= 5 && y <= 58);
 
    always @(posedge CLOCK) begin
        // Set the default background color (black)
@@ -58,7 +57,7 @@ module start(
        end
 
        // Display '3'
-       if (seg3_top || seg3_middle || seg3_bottom || seg3_top_right || seg3_bottom_right) begin
+       if (seg3_top || seg3_middle || seg3_bottom || seg3_top_right) begin
            oled_data = 16'hFFFF; // White color for the segments
        end
    end
