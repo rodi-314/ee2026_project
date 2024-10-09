@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Oct  9 21:57:11 2024">
+<application name="pa" timeStamp="Wed Oct  9 22:05:47 2024">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="08b9292cd5be4639a5b80e0b4edebc16" type="ProjectID"/>
 <property name="ProjectIteration" value="89" type="ProjectIteration"/>
@@ -20,17 +20,17 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddCfgMem" value="2" type="JavaHandler"/>
 <property name="AddSources" value="21" type="JavaHandler"/>
 <property name="ArchiveProject" value="4" type="JavaHandler"/>
-<property name="AutoConnectTarget" value="23" type="JavaHandler"/>
+<property name="AutoConnectTarget" value="28" type="JavaHandler"/>
 <property name="CloseProject" value="4" type="JavaHandler"/>
 <property name="EditDelete" value="7" type="JavaHandler"/>
 <property name="EditPaste" value="2" type="JavaHandler"/>
 <property name="EditUndo" value="1" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="78" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="79" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="114" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="120" type="JavaHandler"/>
 <property name="OpenProject" value="9" type="JavaHandler"/>
-<property name="OpenRecentTarget" value="29" type="JavaHandler"/>
-<property name="ProgramDevice" value="82" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="34" type="JavaHandler"/>
+<property name="ProgramDevice" value="83" type="JavaHandler"/>
 <property name="RecustomizeCore" value="4" type="JavaHandler"/>
 <property name="RunBitgen" value="92" type="JavaHandler"/>
 <property name="RunImplementation" value="9" type="JavaHandler"/>
@@ -56,8 +56,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ArchiveProjectDialog_ARCHIVE_NAME" value="1" type="GuiHandlerData"/>
 <property name="ArchiveProjectDialog_CHOOSE_ARCHIVE_LOCATION" value="1" type="GuiHandlerData"/>
 <property name="ArchiveProjectDialog_INCLUDE_CONFIGURATION_SETTINGS" value="5" type="GuiHandlerData"/>
-<property name="BaseDialog_CANCEL" value="7" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="242" type="GuiHandlerData"/>
+<property name="BaseDialog_CANCEL" value="8" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="243" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="16" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_MESSAGES" value="1" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OK" value="23" type="GuiHandlerData"/>
@@ -69,7 +69,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="FPGAChooser_PACKAGE" value="1" type="GuiHandlerData"/>
 <property name="FPGAChooser_SPEED" value="1" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="502" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="292" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="298" type="GuiHandlerData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="HACGCCoeFileWidget_BROWSE" value="2" type="GuiHandlerData"/>
 <property name="HCodeEditor_BLANK_OPERATIONS" value="4" type="GuiHandlerData"/>
@@ -94,7 +94,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MsgView_ERROR_MESSAGES" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_ADD_SOURCES" value="15" type="GuiHandlerData"/>
 <property name="PACommandNames_ARCHIVE_PROJECT" value="3" type="GuiHandlerData"/>
-<property name="PACommandNames_AUTO_CONNECT_TARGET" value="24" type="GuiHandlerData"/>
+<property name="PACommandNames_AUTO_CONNECT_TARGET" value="29" type="GuiHandlerData"/>
 <property name="PACommandNames_AUTO_UPDATE_HIER" value="4" type="GuiHandlerData"/>
 <property name="PACommandNames_CLOSE_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_GOTO_NETLIST_DESIGN" value="1" type="GuiHandlerData"/>
@@ -114,7 +114,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_WRITE_PROJECT_TCL" value="1" type="GuiHandlerData"/>
 <property name="PAViews_CODE" value="17" type="GuiHandlerData"/>
 <property name="PAViews_PROJECT_SUMMARY" value="3" type="GuiHandlerData"/>
-<property name="ProgramFpgaDialog_PROGRAM" value="78" type="GuiHandlerData"/>
+<property name="ProgramFpgaDialog_PROGRAM" value="79" type="GuiHandlerData"/>
 <property name="ProgressDialog_CANCEL" value="1" type="GuiHandlerData"/>
 <property name="ProjectNameChooser_CHOOSE_PROJECT_LOCATION" value="1" type="GuiHandlerData"/>
 <property name="ProjectNameChooser_PROJECT_NAME" value="4" type="GuiHandlerData"/>
@@ -134,8 +134,13 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SrcChooserPanel_SCAN_AND_ADD_RTL_INCLUDE_FILES_INTO" value="1" type="GuiHandlerData"/>
 <property name="SrcMenu_IP_HIERARCHY" value="4" type="GuiHandlerData"/>
 <property name="SyntheticaStateMonitor_CANCEL" value="1" type="GuiHandlerData"/>
-<property name="TaskBanner_CLOSE" value="5" type="GuiHandlerData"/>
+<property name="TaskBanner_CLOSE" value="6" type="GuiHandlerData"/>
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="22" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="37" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="29" type="TclMode"/>
 </item>
 </section>
 </application>
