@@ -49,8 +49,8 @@ module Top_Student(
      wire restart_wire;
      assign restart_wire = restart;
      assign password[0] = (sw == 16'h11C5) ? 1 : 0;
-     assign password[1] = (sw == 16'h2161) ? 1 : 0;
-     assign password[2] = (sw == 16'h13C5) ? 1 : 0;
+     assign password[1] = (sw == 16'h2165) ? 1 : 0;
+     assign password[2] = (sw == 16'h40D6) ? 1 : 0;
      assign password[3] = (sw == 16'h8135) ? 1 : 0;
      
      // Modules
@@ -60,6 +60,9 @@ module Top_Student(
          .clk(clk), .btnU(btnU), .btnC(btnC), .btnD(btnD), .restart(restart),
          .x(x), .y(y), .oled_data(outputB)
      );
+     task_4c task_4c_mod(.clk(clk), .btnU(btnU), .btnC(btnC), .restart(restart),
+              .x(x), .y(y), .oled_data(outputC));
+              
      taskD D (clk, btnC, btnU, btnR, btnL, btnD, x, y, restart_wire, outputD);
      
      always @ (*) begin
@@ -75,12 +78,13 @@ module Top_Student(
          end
          else if (password[1]) begin
              restart = 0;
-             led = (1'b1 << 13) + (clk1Hz << 8) + (clk1Hz << 6) + (clk1Hz << 5) + (clk1Hz);
+             led = (1'b1 << 13) + (clk1Hz << 8) + (clk1Hz << 6) + (clk1Hz << 5) + (clk1Hz << 2) + (clk1Hz);
              oled_data = outputB;
          end
          else if (password[2]) begin
-             restart <= 0;
-             oled_data <= outputS;
+             restart = 0;
+             led = (1'b1 << 14) + (clk7Hz << 7) + (clk7Hz << 6) + (clk7Hz << 4) + (clk7Hz << 2) + (clk7Hz << 1);
+             oled_data = outputC;
          end
          else if (password[3]) begin
              restart = 0;

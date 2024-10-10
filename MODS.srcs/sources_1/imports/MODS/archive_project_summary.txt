@@ -42,7 +42,7 @@
 Section (1) - PROJECT INFORMATION
 ---------------------------------
 Name      = MODS
-Directory = C:/Users/elegst/Documents/EE2026 Project/2023-24 Sem 1/To provide/MODS
+Directory = C:/Users/eleme/ee2026_project
 
 WARNING: Please verify the compiled library directory path for the following property in the
          current project. The path may point to an invalid location after opening this project.
@@ -58,6 +58,8 @@ Section (2) - INCLUDED RUNS
 The run results were included for the following runs in the archived project:-
 
 <synth_1>
+<blk_mem_gen_const_synth_1>
+<blk_mem_gen_img_synth_1>
 <impl_1>
 
 Section (3) - ARCHIVED SOURCES
@@ -86,6 +88,12 @@ Section (3.2) - REMOTE SOURCES
 ------------------------------
 List of referenced 'remote' design files that were 'imported' into the archived project:-
 
+<blk_mem_gen_const>
+None
+
+<blk_mem_gen_img>
+None
+
 <constrs_1>
 None
 
@@ -93,23 +101,44 @@ None
 None
 
 <sources_1>
-C:/Users/elegst/Documents/EE2026 Project/2023-24 Sem 1/To provide/MODS/res/weights.coe
-C:/Users/elegst/Documents/EE2026 Project/2023-24 Sem 1/To provide/MODS/res/00.coe
+C:/Users/eleme/ee2026_project/archive_project_summary.txt
 
 Section (3.3) - SOURCES SUMMARY
 -------------------------------
 List of all the source files present in the archived project:-
 
 <sources_1>
+./MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
+./MODS.srcs/sources_1/new/clk_divider.v
+./MODS.srcs/sources_1/new/debounce.v
+./MODS.srcs/sources_1/new/debouncer_200ms.v
+./MODS.srcs/sources_1/new/flexible_clock_module.v
+./MODS.srcs/sources_1/new/pixel_index_to_xy.v
+./MODS.srcs/sources_1/new/s123_control.v
+./MODS.srcs/sources_1/new/s123_input.v
+./MODS.srcs/sources_1/new/s4_control.v
+./MODS.srcs/sources_1/new/start.v
+./MODS.srcs/sources_1/new/taskA.v
+./MODS.srcs/sources_1/new/task_4b.v
+./MODS.srcs/sources_1/new/task_4c.v
+./MODS.srcs/sources_1/new/task_4d.v
 ./MODS.srcs/sources_1/new/Top_Student.v
 ./MODS.srcs/sources_1/imports/MouseAudioDisplay/archive_project_summary.txt
 ./MODS.srcs/sources_1/imports/res/weights.coe
 ./MODS.srcs/sources_1/imports/res/00.coe
+./MODS.srcs/sources_1/imports/MODS/archive_project_summary.txt
+./MODS.srcs/sources_1/imports/ee2026_project/archive_project_summary.txt
 
 <constrs_1>
-None
+./MODS.srcs/constrs_1/new/basys3_constraints.xdc
 
 <sim_1>
+./MODS.srcs/sim_1/new/test_top_student.v
+
+<blk_mem_gen_const>
+None
+
+<blk_mem_gen_img>
 None
 
 Section (3.4) - REMOTE IP DEFINITIONS
@@ -119,13 +148,19 @@ List of all the remote IP's present in the archived project:-
 <sources_1>
 None
 
+<blk_mem_gen_const>
+None
+
+<blk_mem_gen_img>
+None
+
 Section (4) - JOURNAL/LOG FILES
 -------------------------------
 List of Journal/Log files that were added to the archived project:-
 
-Source File = C:/Users/elegst/Documents/EE2026 Project/2023-24 Sem 1/To provide/MODS/vivado.jou
+Source File = C:/Users/eleme/ee2026_project/vivado.jou
 Archived Location = ./MODS/vivado.jou
 
-Source File = C:/Users/elegst/Documents/EE2026 Project/2023-24 Sem 1/To provide/MODS/vivado.log
+Source File = C:/Users/eleme/ee2026_project/vivado.log
 Archived Location = ./MODS/vivado.log
 
