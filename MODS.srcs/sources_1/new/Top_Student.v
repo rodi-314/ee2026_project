@@ -90,6 +90,46 @@ module Top_Student (
      wire [6:0] x;
      wire [5:0] y;
      pixel_index_to_xy pixel_index_to_xy_mod(.pixel_index(pixel_index), .x(x), .y(y));
-     assign oled_data = ((x >= 9 && x <= 19)  ? 16'hF800 : 16'h07E0);
+     
+     wire [7:0] random_number;   
+     lfsr lfsr_mod (clk, 0, random_number);
+     
+     integer index = 0;
+     integer tile, duplicate;
+     reg [5:0] draw_pile[135:0];
+     initial begin  
+        for (duplicate = 0; duplicate < 4; duplicate = duplicate + 1) begin
+            for (tile = 1; tile < 10; tile = tile + 1) begin
+                draw_pile[index] = tile;
+                index = index + 1;
+            end
+            for (tile = 11; tile < 20; tile = tile + 1) begin
+                draw_pile[index] = tile;
+                index = index + 1;
+            end
+            for (tile = 21; tile < 30; tile = tile + 1) begin
+                draw_pile[index] = tile;
+                index = index + 1;
+            end
+            for (tile = 30; tile < 37; tile = tile + 1) begin
+                draw_pile[index] = tile;
+                index = index + 1;
+            end
+        end
+     end
+     
+    integer shuffle_index, tile_index, tile_value, move_index;
+    always @ (*) begin
+        if (btnC) begin
+            for (shuffle_index = 136; shuffle_index > 1; shuffle_index = shuffle_index - 1) begin
+                tile_index = random_number % shuffle_index;
+                tile_value = draw_pile[tile_index];
+                for (move_index = tile_index; move_index < shuffle_index - 1; move_index = move_index + 1) begin
+                    draw_pile[move_index] = draw_pile[move_index + 1];
+                end
+                draw_pile[shuffle_index - 1] = tile_value;
+            end
+        end
+    end
 
 endmodule

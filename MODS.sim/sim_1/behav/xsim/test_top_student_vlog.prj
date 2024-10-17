@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../MODS.srcs/sources_1/imports/Desktop/Oled_Display.v" \
+"../../../../MODS.srcs/sources_1/new/Top_Student.v" \
+"../../../../MODS.srcs/sources_1/new/flexible_clock_module.v" \
+"../../../../MODS.srcs/sources_1/new/lfsr.v" \
+"../../../../MODS.srcs/sources_1/new/pixel_index_to_xy.v" \
+"../../../../MODS.srcs/sim_1/new/test_top_student.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
