@@ -23,12 +23,12 @@ module Top_Student (
     );
 
     // Clocks
-    wire clk6p25m, clk1m, clk1p0;
+    wire clk6p25m, clk1m, clk1k, clk1p0;
     flexible_clock_module clk6p25m_mod(.clk(clk), .m(32'd7), .flex_clk(clk6p25m));
     flexible_clock_module clk1m_mod(.clk(clk), .m(32'd49), .flex_clk(clk1m));
+    flexible_clock_module clk1k_mod(.clk(clk), .m(32'd49999), .flex_clk(clk1k));
     flexible_clock_module clk1p0_mod(.clk(clk), .m(32'd49999999), .flex_clk(clk1p0));
-//    wire clk1p0, clk12p5m, clk25m;
-
+//    wire clk12p5m, clk25m;
 //    flexible_clock_module clk12p5m_mod(.clk(clk), .m(32'd3), .flex_clk(clk12p5m));
 //    flexible_clock_module clk25m_mod(.clk(clk), .m(32'd1), .flex_clk(clk25m));
     
@@ -82,13 +82,6 @@ module Top_Student (
 //         .seg(seg), 
 //         .colour_chooser(oled_data)
 //     );
-     
-//      always @ (*) begin
-//         oled_data <= sw4 ? 16'hF800 : 16'h07E0;
-//         led[15] <= left;
-//         led[14] <= middle;
-//         led[13] <= right;
-//      end
 
     wire [6:0] x;
     wire [5:0] y;
@@ -97,35 +90,49 @@ module Top_Student (
     wire [7:0] random_number;   
     lfsr lfsr_mod (clk, 0, random_number);
     
-    integer index = 0;
-    integer tile, duplicate;
-    reg [5:0] draw_pile[135:0];
-//    initial begin
-//        $readmemb("C:/Users/rodi3/Documents/EE2026 Project/mahjong_game_logic/ee2026_project/MODS.srcs/sources_1/new/tiles.txt", draw_pile);
-//    end
-     
-    integer shuffle_index, tile_index, tile_value, move_index;
+    reg [5:0] draw_pile[135:0]; 
+    reg [7:0] shuffle_index, move_index;
+    reg [5:0] tile_value;
     reg button_pressed = 0;
     reg round_start = 1;
     reg initialised = 0;
     
+    // Shuffle all tiles in draw pile
     always @ (posedge clk1m) begin
         if (!initialised) begin
-            $readmemb("tiles.txt", draw_pile);
+            $readmemb("C:/Users/rodi3/Documents/EE2026 Project/mahjong_game_logic/ee2026_project/MODS.srcs/sources_1/new/tiles.txt", draw_pile);
+            initialised = 1;
+//            for (duplicate = 0; duplicate < 4; duplicate = duplicate + 1) begin
+//                for (tile = 1; tile < 10; tile = tile + 1) begin
+//                    draw_pile[index] = tile;
+//                    index = index + 1;
+//                end
+//                for (tile = 11; tile < 20; tile = tile + 1) begin
+//                    draw_pile[index] = tile;
+//                    index = index + 1;
+//                end
+//                for (tile = 21; tile < 30; tile = tile + 1) begin
+//                    draw_pile[index] = tile;
+//                    index = index + 1;
+//                end
+//                for (tile = 30; tile < 37; tile = tile + 1) begin
+//                    draw_pile[index] = tile;
+//                    index = index + 1;
+//                end
+//            end
         end
-        if (btnC && !button_pressed) begin
+        if (sw[0] && !button_pressed) begin
             button_pressed = 1;
             shuffle_index = 136;
         end
-        else if (!btnC && button_pressed && shuffle_index == 1) begin
+        else if (!sw[0] && button_pressed && shuffle_index == 1) begin
             button_pressed = 0;
         end
         
         if (shuffle_index > 1) begin
             if (round_start) begin
-                tile_index = random_number % shuffle_index;
-                tile_value = draw_pile[tile_index];
-                move_index = tile_index;
+                move_index = random_number % shuffle_index;
+                tile_value = draw_pile[move_index];
                 round_start = 0;
             end
             if (move_index == shuffle_index - 1) begin
@@ -140,58 +147,40 @@ module Top_Student (
         end
     end
     
-    integer counter = 0;
+    // Incrementing counter to show 13 drawn tiles
+    reg [3:0] hand_index = 0;
     always @ (posedge clk1p0) begin
-        led = draw_pile[counter];            
-        
-//        an = 4'b1110;
-//        case (draw_pile[counter] % 10)
-//            0: seg = 7'b1000000;
-//            1: seg = 7'b1111001;
-//            2: seg = 7'b1000100;
-//            3: seg = 7'b0110000;
-//            4: seg = 7'b0011001;
-//            5: seg = 7'b0010010;
-//            6: seg = 7'b0000010;
-//            7: seg = 7'b1111000;
-//            8: seg = 7'b0000000;
-//            9: seg = 7'b0010000;
-//        endcase
-        
-//        an = 4'b1101;
-//        case (draw_pile[counter] / 10)
-//            0: seg = 7'b1000000;
-//            1: seg = 7'b1111001;
-//            2: seg = 7'b1000100;
-//            3: seg = 7'b0110000;
-//            4: seg = 7'b0011001;
-//            5: seg = 7'b0010010;
-//            6: seg = 7'b0000010;
-//            7: seg = 7'b1111000;
-//            8: seg = 7'b0000000;
-//            9: seg = 7'b0010000;
-//        endcase
-        if (counter < 13) begin
-            counter = counter + 1;
+        hand_index = (hand_index < 12) ? hand_index + 1 : 0;
+    end
+    
+    // Show shuffled drawn tiles in hand on 7-segment display and LEDs
+    reg counter = 0;
+    reg [3:0] digit;
+    always @ (posedge clk1k) begin
+        if (!button_pressed) begin
+            if (!counter) begin
+                an = 4'b1110;
+                digit = draw_pile[hand_index] % 10;
+            end
+            else begin
+                an = 4'b1101;
+                digit = draw_pile[hand_index] / 10;
+            end
+            case (digit)
+                0: seg = 7'b1000000;
+                1: seg = 7'b1111001;
+                2: seg = 7'b0100100;
+                3: seg = 7'b0110000;
+                4: seg = 7'b0011001;
+                5: seg = 7'b0010010;
+                6: seg = 7'b0000010;
+                7: seg = 7'b1111000;
+                8: seg = 7'b0000000;
+                9: seg = 7'b0010000;
+            endcase
+            led = draw_pile[hand_index];   
+            counter = !counter;
         end
-        else begin
-            counter = 0;
-        end
-    end 
-    
-    
-    
-//    always @ (*) begin
-//        if (btnC) begin
-//            for (shuffle_index = 136; shuffle_index > 1; shuffle_index = shuffle_index - 1) begin
-//                tile_index = random_number % shuffle_index;
-//                tile_value = draw_pile[tile_index];
-//                for (move_index = tile_index; move_index < shuffle_index - 1; move_index = move_index + 1) begin
-//                    draw_pile[move_index] = draw_pile[move_index + 1];
-//                end
-//                draw_pile[shuffle_index - 1] = tile_value;
-//            end
-//        end
-//    end
+    end
 
 endmodule

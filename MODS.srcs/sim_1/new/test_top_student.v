@@ -43,8 +43,12 @@ module test_top_student(
     
     initial begin
         clk = 0;
-        btnC = 0;
-        btnC = 1; #100;
+        btnC = 0; #100;
+        btnC = 1; #1000000;
+        btnC = 0; #5000000;
+        btnC = 1; #1000000;
+        btnC = 0; #1000;
+        btnC = 1; #10000000;
         btnC = 0; #1000;
     end
     
