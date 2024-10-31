@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.runs/synth_1'
+HD_PWD='C:/Users/rodi3/Documents/EE2026 Project/mahjong_game_logic/ee2026_project/MODS.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
