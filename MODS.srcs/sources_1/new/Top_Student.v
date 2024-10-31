@@ -87,16 +87,19 @@ module Top_Student (
     wire [5:0] y;
     pixel_index_to_xy pixel_index_to_xy_mod(.pixel_index(pixel_index), .x(x), .y(y));
     
-    wire [7:0] random_number;   
-    lfsr lfsr_mod (clk, 0, random_number);
+    wire [7:0] lfsr;   
+    lfsr lfsr_mod (clk, 0, lfsr);
     
     reg [5:0] draw_pile[135:0]; 
-    reg [7:0] shuffle_index, move_index;
+    reg [7:0] shuffle_index, move_index, random_number;
     reg [5:0] tile_value;
     reg button_pressed = 0;
     reg round_start = 1;
     reg initialised = 0;
     
+//    reg [2:0] duplicate;
+//    reg [5:0] tile;
+//    reg [7:0] index;
     // Shuffle all tiles in draw pile
     always @ (posedge clk1m) begin
         if (!initialised) begin
@@ -121,7 +124,7 @@ module Top_Student (
 //                end
 //            end
         end
-        if (sw[0] && !button_pressed) begin
+        if (btnC && !button_pressed) begin
             button_pressed = 1;
             shuffle_index = 136;
         end
@@ -129,6 +132,7 @@ module Top_Student (
             button_pressed = 0;
         end
         
+        random_number <= lfsr;
         if (shuffle_index > 1) begin
             if (round_start) begin
                 move_index = random_number % shuffle_index;
@@ -148,9 +152,9 @@ module Top_Student (
     end
     
     // Incrementing counter to show 13 drawn tiles
-    reg [3:0] hand_index = 0;
+    reg [15:0] hand_index = 0;
     always @ (posedge clk1p0) begin
-        hand_index = (hand_index < 12) ? hand_index + 1 : 0;
+        hand_index = (hand_index == 135) ? 0: (btnD ? 0 : hand_index + 1);
     end
     
     // Show shuffled drawn tiles in hand on 7-segment display and LEDs
@@ -178,7 +182,8 @@ module Top_Student (
                 8: seg = 7'b0000000;
                 9: seg = 7'b0010000;
             endcase
-            led = draw_pile[hand_index];   
+//            led = draw_pile[hand_index];   
+            led = hand_index;
             counter = !counter;
         end
     end

@@ -15,3 +15,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/rodi3/Documents/EE2026 Pro
 INFO: [VRFC 10-311] analyzing module pixel_index_to_xy
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/rodi3/Documents/EE2026 Project/mahjong_game_logic/ee2026_project/MODS.srcs/sim_1/new/test_top_student.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_top_student
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/rodi3/Documents/EE2026 Project/mahjong_game_logic/ee2026_project/MODS.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

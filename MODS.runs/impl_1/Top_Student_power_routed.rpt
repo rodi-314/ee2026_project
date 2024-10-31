@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Fri Oct 18 04:28:18 2024
+| Date             : Wed Oct 30 07:20:02 2024
 | Host             : Roderick running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.079        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.008        |
+| Dynamic (W)              | 0.007        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.002 |        3 |       --- |             --- |
-| Slice Logic              |     0.002 |      852 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      368 |     20800 |            1.77 |
-|   LUT as Distributed RAM |    <0.001 |       56 |      9600 |            0.58 |
-|   CARRY4                 |    <0.001 |       65 |      8150 |            0.80 |
-|   Register               |    <0.001 |      299 |     41600 |            0.72 |
+| Slice Logic              |     0.002 |      920 |       --- |             --- |
+|   LUT as Logic           |     0.002 |      379 |     20800 |            1.82 |
+|   LUT as Distributed RAM |    <0.001 |       72 |      9600 |            0.75 |
+|   CARRY4                 |    <0.001 |       69 |      8150 |            0.85 |
+|   Register               |    <0.001 |      329 |     41600 |            0.79 |
 |   Others                 |     0.000 |       15 |       --- |             --- |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
-| Signals                  |     0.003 |      695 |       --- |             --- |
-| I/O                      |    <0.001 |       37 |       106 |           34.91 |
+| Signals                  |     0.003 |      766 |       --- |             --- |
+| I/O                      |    <0.001 |       39 |       106 |           36.79 |
 | Static Power             |     0.072 |          |           |                 |
 | Total                    |     0.079 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -142,7 +142,7 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| Top_Student                    |     0.008 |
+| Top_Student                    |     0.007 |
 |   Oled_Display                 |    <0.001 |
 |   clk1k_mod                    |    <0.001 |
 |   clk1m_mod                    |    <0.001 |
@@ -162,7 +162,11 @@ Table of Contents
 |   draw_pile_reg_r2_64_127_3_5  |    <0.001 |
 |   draw_pile_reg_r3_0_63_0_2    |    <0.001 |
 |   draw_pile_reg_r3_0_63_3_5    |    <0.001 |
-|   lfsr_mod                     |     0.003 |
+|   draw_pile_reg_r3_128_191_0_2 |    <0.001 |
+|   draw_pile_reg_r3_128_191_3_5 |    <0.001 |
+|   draw_pile_reg_r3_64_127_0_2  |    <0.001 |
+|   draw_pile_reg_r3_64_127_3_5  |    <0.001 |
+|   lfsr_mod                     |    <0.001 |
 +--------------------------------+-----------+
 
 
