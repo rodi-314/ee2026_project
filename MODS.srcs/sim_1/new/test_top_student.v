@@ -29,6 +29,7 @@ module test_top_student(
     wire [7:0] JX;
     wire [15:0] led;
     wire [6:0] seg;
+    wire [3:0] an;
     wire ps2_clk, ps2_data;
     
     Top_Student dut(
@@ -38,12 +39,14 @@ module test_top_student(
         JX,  
         led,
         seg,
+        an,
         ps2_clk, ps2_data
     );
     
     initial begin
         clk = 0;
-        btnC = 0; #100;
+        sw = 16'b0000_0000_0000_0001;
+        btnC = 0; #1000000;
         btnC = 1; #1000000;
         btnC = 0; #5000000;
         btnC = 1; #1000000;
