@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8384 
+INFO: Helper process launched with PID 18520 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 356.445 ; gain = 99.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 356.027 ; gain = 98.848
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
@@ -83,13 +83,17 @@ INFO: [Synth 8-6157] synthesizing module 'lfsr' [C:/Users/rodi3/Documents/EE2026
 INFO: [Synth 8-6155] done synthesizing module 'lfsr' (4#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/lfsr.v:23]
 INFO: [Synth 8-6157] synthesizing module 'one_hot_to_integer' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/one_hot_to_integer.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'one_hot_to_integer' (5#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/one_hot_to_integer.v:23]
-INFO: [Synth 8-3876] $readmem data file 'C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/tiles.txt' is read successfully [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:67]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:219]
-WARNING: [Synth 8-6014] Unused sequential element initialised_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:66]
-WARNING: [Synth 8-6014] Unused sequential element random_index_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:84]
-WARNING: [Synth 8-6014] Unused sequential element tile_value_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:85]
-WARNING: [Synth 8-6014] Unused sequential element discard_tile_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:127]
-WARNING: [Synth 8-6014] Unused sequential element digit_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:203]
+INFO: [Synth 8-6157] synthesizing module 'counter_200ms' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_200ms.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter_200ms' (6#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_200ms.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter_5s' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_5s.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter_5s' (7#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_5s.v:23]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/tiles.txt' is read successfully [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:79]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:312]
+WARNING: [Synth 8-6014] Unused sequential element initialised_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:78]
+WARNING: [Synth 8-6014] Unused sequential element random_index_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:96]
+WARNING: [Synth 8-6014] Unused sequential element tile_value_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:97]
+WARNING: [Synth 8-6014] Unused sequential element start_game_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:119]
+WARNING: [Synth 8-6014] Unused sequential element digit_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:296]
 WARNING: [Synth 8-4767] Trying to implement RAM 'draw_pile_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: Invalid write data for RAM. 
@@ -97,8 +101,8 @@ Reason is one or more of the following :
 	3: Unable to determine number of words or word size in RAM. 
 	4: No valid read/write found for RAM. 
 RAM "draw_pile_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'master' (6#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (7#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'master' (8#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (9#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3331] design master has unconnected port x[6]
 WARNING: [Synth 8-3331] design master has unconnected port x[5]
 WARNING: [Synth 8-3331] design master has unconnected port x[4]
@@ -115,10 +119,8 @@ WARNING: [Synth 8-3331] design master has unconnected port y[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JX[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_clk
 WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_data
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnL
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnR
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 511.172 ; gain = 254.234
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 512.336 ; gain = 255.156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -131,10 +133,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 511.172 ; gain = 254.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 512.336 ; gain = 255.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 511.172 ; gain = 254.234
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 512.336 ; gain = 255.156
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -150,22 +152,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 829.918 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 830.496 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 829.918 ; gain = 572.980
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 830.496 ; gain = 573.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 829.918 ; gain = 572.980
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 830.496 ; gain = 573.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 829.918 ; gain = 572.980
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 830.496 ; gain = 573.316
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -173,32 +175,18 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "int" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-802] inferred FSM for state register 'player_reg' in module 'master'
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_1_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_1_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_3_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_3_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "shuffling" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "player" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "player" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "player" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "oled_data" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -236,19 +224,13 @@ INFO: [Synth 8-5544] ROM "player" won't be mapped to Block RAM because address s
                SendPixel | 00000000000000000010000000000000 |                            10000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 iSTATE2 |                               00 |                               00
-                  iSTATE |                               01 |                               01
-                 iSTATE0 |                               10 |                               10
-                 iSTATE1 |                               11 |                               11
-*
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'player_reg' using encoding 'sequential' in module 'master'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 829.918 ; gain = 572.980
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 830.496 ; gain = 573.316
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnU_counter_mod'
+INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnD_counter_mod'
+INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnL_counter_mod'
+INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnR_counter_mod'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -260,49 +242,45 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 3     
 	                8 Bit    Registers := 4     
 	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 209   
+	                6 Bit    Registers := 210   
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 14    
+	                1 Bit    Registers := 18    
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
 	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 6     
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 619   
-	   3 Input      6 Bit        Muxes := 14    
-	   4 Input      6 Bit        Muxes := 14    
-	   5 Input      6 Bit        Muxes := 14    
+	   2 Input      6 Bit        Muxes := 895   
+	   4 Input      6 Bit        Muxes := 15    
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	  15 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 3     
-	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 325   
-	   3 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 302   
+	   5 Input      1 Bit        Muxes := 2     
 	  11 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -349,37 +327,48 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 +---Muxes : 
 	  15 Input      4 Bit        Muxes := 1     
+Module counter_200ms 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_5s 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
 Module master 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 3     
 	                8 Bit    Registers := 3     
 	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 208   
+	                6 Bit    Registers := 209   
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 8     
+	                1 Bit    Registers := 12    
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 618   
-	   3 Input      6 Bit        Muxes := 14    
-	   4 Input      6 Bit        Muxes := 14    
-	   5 Input      6 Bit        Muxes := 14    
+	   2 Input      6 Bit        Muxes := 894   
+	   4 Input      6 Bit        Muxes := 15    
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 3     
-	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 317   
-	   3 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 294   
+	   5 Input      1 Bit        Muxes := 2     
 	  11 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -397,13 +386,14 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "one_hot_to_integer_mod/int" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "shuffling" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "hand_0_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "oled_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "hand_3_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
@@ -497,26 +487,13 @@ INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5545] ROM "hand_1_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_3_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_1_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_1_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element clk1k_mod/flex_clk_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 WARNING: [Synth 8-6014] Unused sequential element clk1p0_mod/flex_clk_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 INFO: [Synth 8-5545] ROM "clk6p25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -538,125 +515,26 @@ WARNING: [Synth 8-3331] design master has unconnected port y[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JX[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_clk
 WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_data
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnL
-WARNING: [Synth 8-3331] design Top_Student has unconnected port btnR
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[0]' (FDSE) to 'master_mod/oled_data_reg[1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[1]' (FDSE) to 'master_mod/oled_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[2]' (FDSE) to 'master_mod/oled_data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[3]' (FDSE) to 'master_mod/oled_data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[4]' (FDSE) to 'master_mod/oled_data_reg[5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[5]' (FDSE) to 'master_mod/oled_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[6]' (FDSE) to 'master_mod/oled_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[7]' (FDSE) to 'master_mod/oled_data_reg[8]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[8]' (FDSE) to 'master_mod/oled_data_reg[9]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[9]' (FDSE) to 'master_mod/oled_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[10]' (FDSE) to 'master_mod/oled_data_reg[11]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[11]' (FDSE) to 'master_mod/oled_data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[12]' (FDSE) to 'master_mod/oled_data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[13]' (FDSE) to 'master_mod/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[0]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[1]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[2]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[3]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[4]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[5]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[6]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[7]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[8]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[9]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[10]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[11]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[12]' (FDSE) to 'master_mod/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[13]' (FDSE) to 'master_mod/oled_data_reg[15]'
 INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[14]' (FDSE) to 'master_mod/oled_data_reg[15]'
 INFO: [Synth 8-3886] merging instance 'master_mod/an_reg[2]' (FDS) to 'master_mod/an_reg[3]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (master_mod/\an_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (an_reg[3]) is unused and will be removed from module master.
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[15][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[14][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[17][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[16][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[15][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[14][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[17][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[16][0]' (FDE) to 'master_mod/hand_0_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[15][0]' (FDE) to 'master_mod/hand_0_reg[17][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[14][0]' (FDE) to 'master_mod/hand_0_reg[17][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[17][0]' (FDE) to 'master_mod/hand_1_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[16][0]' (FDE) to 'master_mod/hand_1_reg[15][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[15][0]' (FDE) to 'master_mod/hand_1_reg[17][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[14][0]' (FDE) to 'master_mod/hand_1_reg[17][0]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[17][0]' (FDE) to 'master_mod/hand_1_reg[16][0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (master_mod/\hand_1_reg[16][0] )
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[15][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[14][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[17][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[16][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[15][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[14][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[17][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[16][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[15][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[14][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[17][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[16][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[15][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[14][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[17][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[16][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[15][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[14][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[17][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_2_reg[16][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[15][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[14][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[17][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[16][4]' (FDE) to 'master_mod/hand_0_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[15][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[14][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[17][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[16][3]' (FDE) to 'master_mod/hand_0_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[15][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[14][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[17][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[16][5]' (FDE) to 'master_mod/hand_0_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[15][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[14][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[17][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[16][1]' (FDE) to 'master_mod/hand_0_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[15][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[14][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[17][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_3_reg[16][2]' (FDE) to 'master_mod/hand_0_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[15][1]' (FDE) to 'master_mod/hand_0_reg[17][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[14][1]' (FDE) to 'master_mod/hand_0_reg[17][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[17][1]' (FDE) to 'master_mod/hand_1_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[16][1]' (FDE) to 'master_mod/hand_1_reg[15][1]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[15][4]' (FDE) to 'master_mod/hand_0_reg[17][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[14][4]' (FDE) to 'master_mod/hand_0_reg[17][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[17][4]' (FDE) to 'master_mod/hand_1_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[16][4]' (FDE) to 'master_mod/hand_1_reg[15][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[15][5]' (FDE) to 'master_mod/hand_0_reg[17][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[14][5]' (FDE) to 'master_mod/hand_0_reg[17][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[17][5]' (FDE) to 'master_mod/hand_1_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[16][5]' (FDE) to 'master_mod/hand_1_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[15][3]' (FDE) to 'master_mod/hand_0_reg[17][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[14][3]' (FDE) to 'master_mod/hand_0_reg[17][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[17][3]' (FDE) to 'master_mod/hand_1_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[16][3]' (FDE) to 'master_mod/hand_1_reg[15][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[15][2]' (FDE) to 'master_mod/hand_0_reg[17][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[14][2]' (FDE) to 'master_mod/hand_0_reg[17][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[17][2]' (FDE) to 'master_mod/hand_1_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_0_reg[16][2]' (FDE) to 'master_mod/hand_1_reg[15][2]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[15][4]' (FDE) to 'master_mod/hand_1_reg[17][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[14][4]' (FDE) to 'master_mod/hand_1_reg[17][4]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[17][4]' (FDE) to 'master_mod/hand_1_reg[16][4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (master_mod/\hand_1_reg[16][4] )
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[15][3]' (FDE) to 'master_mod/hand_1_reg[17][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[14][3]' (FDE) to 'master_mod/hand_1_reg[17][3]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[17][3]' (FDE) to 'master_mod/hand_1_reg[16][3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (master_mod/\hand_1_reg[16][3] )
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[15][5]' (FDE) to 'master_mod/hand_1_reg[17][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[14][5]' (FDE) to 'master_mod/hand_1_reg[17][5]'
-INFO: [Synth 8-3886] merging instance 'master_mod/hand_1_reg[17][5]' (FDE) to 'master_mod/hand_1_reg[16][5]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (master_mod/\hand_1_reg[16][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (master_mod/\hand_1_reg[16][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (master_mod/\hand_1_reg[16][1] )
-WARNING: [Synth 8-3332] Sequential element (hand_1_reg[16][0]) is unused and will be removed from module master.
-WARNING: [Synth 8-3332] Sequential element (hand_1_reg[16][4]) is unused and will be removed from module master.
-WARNING: [Synth 8-3332] Sequential element (hand_1_reg[16][3]) is unused and will be removed from module master.
-WARNING: [Synth 8-3332] Sequential element (hand_1_reg[16][5]) is unused and will be removed from module master.
-WARNING: [Synth 8-3332] Sequential element (hand_1_reg[16][2]) is unused and will be removed from module master.
-WARNING: [Synth 8-3332] Sequential element (hand_1_reg[16][1]) is unused and will be removed from module master.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:34 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 961.820 ; gain = 704.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -668,13 +546,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:41 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:50 . Memory (MB): peak = 961.820 ; gain = 704.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:42 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:53 . Memory (MB): peak = 961.820 ; gain = 704.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -685,8 +563,12 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (master_mod/btnU_pressed_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (master_mod/btnR_pressed_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (master_mod/btnD_pressed_reg) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (master_mod/btnL_pressed_reg) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:44 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:01:00 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -710,7 +592,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:45 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -723,7 +605,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:45 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -735,25 +617,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:45 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:45 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:45 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:01:02 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:45 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:01:02 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -770,46 +652,45 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     3|
-|2     |CARRY4 |    78|
-|3     |LUT1   |    28|
-|4     |LUT2   |   119|
-|5     |LUT3   |   281|
-|6     |LUT4   |   150|
-|7     |LUT5   |   771|
-|8     |LUT6   |  1860|
-|9     |MUXF7  |   236|
-|10    |MUXF8  |    74|
-|11    |FDE_1  |    32|
-|12    |FDRE   |  1461|
-|13    |IBUF   |    20|
-|14    |OBUF   |    34|
-|15    |OBUFT  |     1|
+|2     |CARRY4 |    94|
+|3     |LUT1   |    12|
+|4     |LUT2   |   214|
+|5     |LUT3   |   385|
+|6     |LUT4   |   418|
+|7     |LUT5   |   986|
+|8     |LUT6   |  2459|
+|9     |FDE_1  |    32|
+|10    |FDRE   |  1627|
+|11    |IBUF   |    22|
+|12    |OBUF   |    34|
+|13    |OBUFT  |     1|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------------------------+------------------------+------+
-|      |Instance                   |Module                  |Cells |
-+------+---------------------------+------------------------+------+
-|1     |top                        |                        |  5148|
-|2     |  Oled_Display             |Oled_Display            |   279|
-|3     |  clk1m_mod                |flexible_clock_module   |    51|
-|4     |  clk6p25m_mod             |flexible_clock_module_0 |    52|
-|5     |  master_mod               |master                  |  4707|
-|6     |    clk1k_mod              |flexible_clock_module_1 |    63|
-|7     |    clk1p0_mod             |flexible_clock_module_2 |    63|
-|8     |    lfsr_mod               |lfsr                    |     9|
-|9     |    one_hot_to_integer_mod |one_hot_to_integer      |   408|
-+------+---------------------------+------------------------+------+
++------+-------------------------------+------------------------+------+
+|      |Instance                       |Module                  |Cells |
++------+-------------------------------+------------------------+------+
+|1     |top                            |                        |  6287|
+|2     |  Oled_Display                 |Oled_Display            |   279|
+|3     |  clk1m_mod                    |flexible_clock_module   |    51|
+|4     |  clk6p25m_mod                 |flexible_clock_module_0 |    52|
+|5     |  master_mod                   |master                  |  5844|
+|6     |    btnC_counter_mod           |counter_200ms           |   262|
+|7     |    clk1k_mod                  |flexible_clock_module_1 |    63|
+|8     |    clk1p0_mod                 |flexible_clock_module_2 |    63|
+|9     |    lfsr_mod                   |lfsr                    |     9|
+|10    |    one_hot_to_integer_mod     |one_hot_to_integer      |   684|
+|11    |    tile_discarded_counter_mod |counter_5s              |   106|
++------+-------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:45 . Memory (MB): peak = 949.785 ; gain = 692.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:01:02 . Memory (MB): peak = 1247.352 ; gain = 990.172
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 949.785 ; gain = 374.102
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:46 . Memory (MB): peak = 949.785 ; gain = 692.848
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:55 . Memory (MB): peak = 1247.352 ; gain = 672.012
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:01:02 . Memory (MB): peak = 1247.352 ; gain = 990.172
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 440 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 148 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'Top_Student' is not ideal for floorplanning, since the cellview 'master' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -817,11 +698,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE_1 => FDRE (inverted pins: C): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-294 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
+184 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:48 . Memory (MB): peak = 949.785 ; gain = 705.688
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:01:05 . Memory (MB): peak = 1247.352 ; gain = 1003.062
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 949.785 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 00:42:50 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1247.352 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 03:11:28 2024...

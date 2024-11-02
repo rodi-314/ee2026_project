@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module master(input clk, clk1m, btnU, btnC, btnD, input [15:0] sw, input [6:0] x, input [5:0] y, output reg [15:0] oled_data = 16'h0, 
+module master(input clk, clk1m, btnU, btnC, btnD, btnL, btnR, input [15:0] sw, input [6:0] x, input [5:0] y, output reg [15:0] oled_data = 16'h0, 
     output reg [15:0] led = 0,
     output reg [6:0] seg,
     output reg [3:0] an
@@ -33,7 +33,7 @@ module master(input clk, clk1m, btnU, btnC, btnD, input [15:0] sw, input [6:0] x
     // Hands
     reg [5:0] draw_pile[135:0], hand_0[17:0], hand_1[17:0], hand_2[17:0], hand_3[17:0];
     
-    // Shuffling variables
+    // Setup variables
     reg shuffle = 0;
     reg [7:0] shuffle_index = 0;
     reg [7:0] random_number, random_index;
@@ -44,24 +44,36 @@ module master(input clk, clk1m, btnU, btnC, btnD, input [15:0] sw, input [6:0] x
     reg start_game = 0;
     reg started_shuffling = 0;
     
-    reg button_pressed = 0;
-    
-    // Round variables
+    // Game variables
     reg [1:0] player = 0;
     reg [7:0] draw_pile_index = 52;
     wire [3:0] discard_index;
     reg [3:0] shift_index = 0;
     reg [5:0] discard_tile;
+    reg tile_discarded = 0;
+    reg pong_chi_kan = 0;
+    reg btnC_pressed = 0;
     reg btnU_pressed = 0;
+    reg btnD_pressed = 0;
+    reg btnL_pressed = 0;
+    reg btnR_pressed = 0;
+    wire [31:0] btnC_counter;
+    wire [31:0] btnU_counter;
+    wire [31:0] btnD_counter;
+    wire [31:0] btnL_counter;
+    wire [31:0] btnR_counter;
+    wire [31:0] tile_discarded_counter;
     // One-hot to integer converter
     one_hot_to_integer one_hot_to_integer_mod(.clk(clk), .array(sw[13:0]), .int(discard_index));
+    counter_200ms btnC_counter_mod(.clk1m(clk1m), .btn_pressed(btnC_pressed), .counter(btnC_counter));
+    counter_200ms btnU_counter_mod(.clk1m(clk1m), .btn_pressed(btnC_pressed), .counter(btnU_counter));
+    counter_200ms btnD_counter_mod(.clk1m(clk1m), .btn_pressed(btnC_pressed), .counter(btnD_counter));
+    counter_200ms btnL_counter_mod(.clk1m(clk1m), .btn_pressed(btnC_pressed), .counter(btnL_counter));
+    counter_200ms btnR_counter_mod(.clk1m(clk1m), .btn_pressed(btnC_pressed), .counter(btnR_counter));
+    counter_5s tile_discarded_counter_mod(.clk1m(clk1m), .tile_discarded(tile_discarded), .counter(tile_discarded_counter));
 
     // Shuffle all tiles in draw pile
     always @ (posedge clk1m) begin
-        if (btnC && !button_pressed) begin
-            start_game = 1;
-            button_pressed = 1;
-        end
         // Initialise tiles
         if (!initialised) begin
             $readmemb("C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/tiles.txt", draw_pile);
@@ -104,80 +116,161 @@ module master(input clk, clk1m, btnU, btnC, btnD, input [15:0] sw, input [6:0] x
         end
 
         // Game setup
+        start_game = btnC;
         if (start_game) begin
             if (!started_shuffling) begin
                 shuffle = 1;
                 started_shuffling = 1;
+                btnC_pressed = 1;
             end
         end
         
         // Game in progress
         if (shuffled) begin
-            if (!btnU && btnU_pressed) begin
+            // Reset buttons
+            if (!btnC && btnC_pressed && btnC_counter == 200000) begin
+                btnC_pressed = 0;
+            end
+            if (!btnU && btnU_pressed && btnU_counter == 200000) begin
                 btnU_pressed = 0;
             end
-            if (draw_pile_index == 121) begin
-                // Game draw
+            if (!btnD && btnD_pressed && btnD_counter == 200000) begin
+                btnD_pressed = 0;
             end
-            oled_data = 16'hFFFF;
+            if (!btnL && btnL_pressed && btnL_counter == 200000) begin
+                btnL_pressed = 0;
+            end
+            if (!btnR && btnR_pressed && btnR_counter == 200000) begin
+                btnR_pressed = 0;
+            end
+            
+            // Draw game
+            if (draw_pile_index == 121) begin
+                oled_data = 16'hFFFF;
+            end
+            
+            // Draw and discard tile during turn
             if (player == 0) begin
-                hand_0[13] = draw_pile[draw_pile_index];
-                if (btnU && !btnU_pressed) begin
-                    btnU_pressed = 1;
+                if (!tile_discarded) begin
+                    if (!pong_chi_kan) begin
+                        hand_0[13] = draw_pile[draw_pile_index];
+                    end
+                    else begin
+                        hand_0[13] = discard_tile;
+                    end
+                end
+                if (btnC && !btnC_pressed) begin
+                    btnC_pressed = 1;
                     discard_tile = hand_0[discard_index];
                     for (shift_index = 0; shift_index < 13; shift_index = shift_index + 1) begin
                         if (shift_index >= discard_index) begin
                             hand_0[shift_index] = hand_0[shift_index + 1];
                         end
                     end
-                    player = player + 1;
-                    draw_pile_index = draw_pile_index + 1;
                     hand_0[13] = 0;
+                    draw_pile_index = draw_pile_index + 1;
+                    tile_discarded = 1;
+                    pong_chi_kan = 0;
                 end
             end
             else if (player == 1) begin
-                hand_1[13] = draw_pile[draw_pile_index];
-                if (btnU && !btnU_pressed) begin
-                    btnU_pressed = 1;
+                if (!tile_discarded) begin
+                    if (!pong_chi_kan) begin
+                        hand_1[13] = draw_pile[draw_pile_index];
+                    end
+                    else begin
+                        hand_1[13] = discard_tile;
+                    end
+                end
+                if (btnC && !btnC_pressed) begin
+                    btnC_pressed = 1;
                     discard_tile = hand_1[discard_index];
                     for (shift_index = 0; shift_index < 13; shift_index = shift_index + 1) begin
                         if (shift_index >= discard_index) begin
                             hand_1[shift_index] = hand_1[shift_index + 1];
                         end
                     end
-                    player = player + 1;
                     draw_pile_index = draw_pile_index + 1;
                     hand_1[13] = 0;
+                    tile_discarded = 1;
+                    pong_chi_kan = 0;
                 end
             end
             else if (player == 2) begin
-                hand_2[13] = draw_pile[draw_pile_index];
-                if (btnU && !btnU_pressed) begin
-                    btnU_pressed = 1;
+                if (!tile_discarded) begin
+                    if (!pong_chi_kan) begin
+                        hand_2[13] = draw_pile[draw_pile_index];
+                    end
+                    else begin
+                        hand_2[13] = discard_tile;
+                    end
+                end
+                if (btnC && !btnC_pressed) begin
+                    btnC_pressed = 1;
                     discard_tile = hand_2[discard_index];
                     for (shift_index = 0; shift_index < 13; shift_index = shift_index + 1) begin
                         if (shift_index >= discard_index) begin
                             hand_2[shift_index] = hand_2[shift_index + 1];
                         end
                     end
-                    player = player + 1;
                     draw_pile_index = draw_pile_index + 1;
                     hand_2[13] = 0;
+                    tile_discarded = 1;
+                    pong_chi_kan = 0;
                 end
             end
             else if (player == 3) begin
-                hand_3[13] = draw_pile[draw_pile_index];
-                if (btnU && !btnU_pressed) begin
-                    btnU_pressed = 1;
+                if (!tile_discarded) begin
+                    if (!pong_chi_kan) begin
+                        hand_3[13] = draw_pile[draw_pile_index];
+                    end
+                    else begin
+                        hand_3[13] = discard_tile;
+                    end
+                end
+                if (btnC && !btnC_pressed) begin
+                    btnC_pressed = 1;
                     discard_tile = hand_3[discard_index];
                     for (shift_index = 0; shift_index < 13; shift_index = shift_index + 1) begin
                         if (shift_index >= discard_index) begin
                             hand_3[shift_index] = hand_3[shift_index + 1];
                         end
                     end
-                    player = player + 1;
                     draw_pile_index = draw_pile_index + 1;
                     hand_3[13] = 0;
+                    tile_discarded = 1;
+                    pong_chi_kan = 0;
+                end
+            end
+            
+            // Wait 5s after tile is discarded
+            if (tile_discarded && tile_discarded_counter == 5000000) begin
+                tile_discarded = 0;
+                player = player + 1;
+            end
+            
+            // Pong, chi, or kan
+            if (tile_discarded) begin
+                // Player 0 pong/chi/kan
+                if (player != 0 && btnU && !btnU_pressed) begin
+                    pong_chi_kan = 1;
+                    tile_discarded = 0;
+                    player = 0;
+                end
+                if (player != 1 && btnR && !btnR_pressed) begin
+                    pong_chi_kan = 1;
+                    tile_discarded = 0;
+                    player = 1;
+                end
+                if (player != 2 && btnD && !btnD_pressed) begin
+                    pong_chi_kan = 1;
+                    tile_discarded = 0;
+                    player = 2;
+                end
+                if (player != 3 && btnL && !btnL_pressed) begin
+                    pong_chi_kan = 1;
+                    tile_discarded = 0;
+                    player = 3;
                 end
             end
         end
@@ -189,10 +282,10 @@ module master(input clk, clk1m, btnU, btnC, btnD, input [15:0] sw, input [6:0] x
     // Incrementing counter to show 13 drawn tiles
     reg [15:0] display_hand_index = 0;
     always @ (posedge clk1p0) begin
-        display_hand_index = (display_hand_index == 13) ? 0: (btnD ? 0 : display_hand_index + 1);
+        display_hand_index = (display_hand_index == 13) ? 0: display_hand_index + 1;
     end
     
-    // Show shuffled drawn tiles in hand on 7-segment display and LEDs
+    // Show hands on 7-segment display and LEDs
     reg counter = 0;
     reg [3:0] digit;
     always @ (posedge clk1k) begin

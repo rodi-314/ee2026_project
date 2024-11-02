@@ -88,7 +88,7 @@ module Top_Student (
     wire [5:0] y;
     pixel_index_to_xy pixel_index_to_xy_mod(.pixel_index(pixel_index), .x(x), .y(y));
     
-    master master_mod(.clk(clk), .clk1m(clk1m), .btnU(btnU), .btnC(btnC), .btnD(btnD), .sw(sw), .x(x), .y(y), .oled_data(oled_data), 
+    master master_mod(.clk(clk), .clk1m(clk1m), .btnU(btnU), .btnC(btnC), .btnD(btnD), .btnL(btnL), .btnR(btnR), .sw(sw), .x(x), .y(y), .oled_data(oled_data), 
         .led(led),
         .seg(seg),
         .an(an));

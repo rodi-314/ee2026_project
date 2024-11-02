@@ -34,6 +34,8 @@ add_files {{C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sou
 add_files {{C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/res/00.coe}}
 read_verilog -library xil_defaultlib {
   {C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
+  {C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_200ms.v}
+  {C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_5s.v}
   {C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v}
   {C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/lfsr.v}
   {C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v}
