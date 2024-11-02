@@ -1,1 +1,0 @@
--wto "63befdab578c422a95f612615b25a4cc" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "test_top_student_behav" "xil_defaultlib.test_top_student" "xil_defaultlib.glbl" -log "elaborate.log" 
