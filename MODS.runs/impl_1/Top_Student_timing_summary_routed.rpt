@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Nov  3 03:12:41 2024
+| Date         : Sun Nov  3 08:28:28 2024
 | Host         : Roderick running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Top_Student_timing_summary_routed.rpt -pb Top_Student_timing_summary_routed.pb -rpx Top_Student_timing_summary_routed.rpx -warn_on_violation
 | Design       : Top_Student
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 1358 register/latch pins with no clock driven by root clock pin: clk1m_mod/flex_clk_reg/Q (HIGH)
+ There are 1370 register/latch pins with no clock driven by root clock pin: clk1m_mod/flex_clk_reg/Q (HIGH)
 
  There are 115 register/latch pins with no clock driven by root clock pin: clk6p25m_mod/flex_clk_reg/Q (HIGH)
 
@@ -73,14 +73,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 2612 pins that are not constrained for maximum delay. (HIGH)
+ There are 2679 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 21 input ports with no input delay specified. (HIGH)
+ There are 14 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
@@ -132,7 +132,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.257        0.000                      0                  268        0.098        0.000                      0                  268        4.500        0.000                       0                   145  
+      5.572        0.000                      0                  268        0.116        0.000                      0                  268        4.500        0.000                       0                   141  
 
 
 All user specified timing constraints are met.
@@ -155,7 +155,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         5.257        0.000                      0                  268        0.098        0.000                      0                  268        4.500        0.000                       0                   145  
+sys_clk_pin         5.572        0.000                      0                  268        0.116        0.000                      0                  268        4.500        0.000                       0                   141  
 
 
 ------------------------------------------------------------------------------------------------
@@ -186,536 +186,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        5.257ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.098ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        5.572ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.116ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             5.257ns  (required time - arrival time)
-  Source:                 clk6p25m_mod/COUNT_reg[23]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[24]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        4.053ns  (logic 0.890ns (21.957%)  route 3.163ns (78.043%))
-  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.086ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.565     5.086    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[23]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.518     5.604 f  clk6p25m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           1.109     6.713    clk6p25m_mod/COUNT_reg[23]
-    SLICE_X35Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.837 r  clk6p25m_mod/COUNT[0]_i_9__1/O
-                         net (fo=1, routed)           0.796     7.633    clk6p25m_mod/COUNT[0]_i_9__1_n_0
-    SLICE_X35Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.757 r  clk6p25m_mod/COUNT[0]_i_4/O
-                         net (fo=2, routed)           0.307     8.065    clk6p25m_mod/COUNT[0]_i_4_n_0
-    SLICE_X35Y46         LUT5 (Prop_lut5_I3_O)        0.124     8.189 r  clk6p25m_mod/COUNT[0]_i_1/O
-                         net (fo=32, routed)          0.951     9.140    clk6p25m_mod/clear
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[24]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.435    14.776    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[24]/C
-                         clock pessimism              0.180    14.956    
-                         clock uncertainty           -0.035    14.920    
-    SLICE_X34Y50         FDRE (Setup_fdre_C_R)       -0.524    14.396    clk6p25m_mod/COUNT_reg[24]
-  -------------------------------------------------------------------
-                         required time                         14.396    
-                         arrival time                          -9.140    
-  -------------------------------------------------------------------
-                         slack                                  5.257    
-
-Slack (MET) :             5.257ns  (required time - arrival time)
-  Source:                 clk6p25m_mod/COUNT_reg[23]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[25]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        4.053ns  (logic 0.890ns (21.957%)  route 3.163ns (78.043%))
-  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.086ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.565     5.086    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[23]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.518     5.604 f  clk6p25m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           1.109     6.713    clk6p25m_mod/COUNT_reg[23]
-    SLICE_X35Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.837 r  clk6p25m_mod/COUNT[0]_i_9__1/O
-                         net (fo=1, routed)           0.796     7.633    clk6p25m_mod/COUNT[0]_i_9__1_n_0
-    SLICE_X35Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.757 r  clk6p25m_mod/COUNT[0]_i_4/O
-                         net (fo=2, routed)           0.307     8.065    clk6p25m_mod/COUNT[0]_i_4_n_0
-    SLICE_X35Y46         LUT5 (Prop_lut5_I3_O)        0.124     8.189 r  clk6p25m_mod/COUNT[0]_i_1/O
-                         net (fo=32, routed)          0.951     9.140    clk6p25m_mod/clear
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[25]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.435    14.776    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[25]/C
-                         clock pessimism              0.180    14.956    
-                         clock uncertainty           -0.035    14.920    
-    SLICE_X34Y50         FDRE (Setup_fdre_C_R)       -0.524    14.396    clk6p25m_mod/COUNT_reg[25]
-  -------------------------------------------------------------------
-                         required time                         14.396    
-                         arrival time                          -9.140    
-  -------------------------------------------------------------------
-                         slack                                  5.257    
-
-Slack (MET) :             5.257ns  (required time - arrival time)
-  Source:                 clk6p25m_mod/COUNT_reg[23]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[26]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        4.053ns  (logic 0.890ns (21.957%)  route 3.163ns (78.043%))
-  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.086ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.565     5.086    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[23]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.518     5.604 f  clk6p25m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           1.109     6.713    clk6p25m_mod/COUNT_reg[23]
-    SLICE_X35Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.837 r  clk6p25m_mod/COUNT[0]_i_9__1/O
-                         net (fo=1, routed)           0.796     7.633    clk6p25m_mod/COUNT[0]_i_9__1_n_0
-    SLICE_X35Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.757 r  clk6p25m_mod/COUNT[0]_i_4/O
-                         net (fo=2, routed)           0.307     8.065    clk6p25m_mod/COUNT[0]_i_4_n_0
-    SLICE_X35Y46         LUT5 (Prop_lut5_I3_O)        0.124     8.189 r  clk6p25m_mod/COUNT[0]_i_1/O
-                         net (fo=32, routed)          0.951     9.140    clk6p25m_mod/clear
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[26]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.435    14.776    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[26]/C
-                         clock pessimism              0.180    14.956    
-                         clock uncertainty           -0.035    14.920    
-    SLICE_X34Y50         FDRE (Setup_fdre_C_R)       -0.524    14.396    clk6p25m_mod/COUNT_reg[26]
-  -------------------------------------------------------------------
-                         required time                         14.396    
-                         arrival time                          -9.140    
-  -------------------------------------------------------------------
-                         slack                                  5.257    
-
-Slack (MET) :             5.257ns  (required time - arrival time)
-  Source:                 clk6p25m_mod/COUNT_reg[23]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[27]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        4.053ns  (logic 0.890ns (21.957%)  route 3.163ns (78.043%))
-  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.086ns
-    Clock Pessimism Removal (CPR):    0.180ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.565     5.086    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[23]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.518     5.604 f  clk6p25m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           1.109     6.713    clk6p25m_mod/COUNT_reg[23]
-    SLICE_X35Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.837 r  clk6p25m_mod/COUNT[0]_i_9__1/O
-                         net (fo=1, routed)           0.796     7.633    clk6p25m_mod/COUNT[0]_i_9__1_n_0
-    SLICE_X35Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.757 r  clk6p25m_mod/COUNT[0]_i_4/O
-                         net (fo=2, routed)           0.307     8.065    clk6p25m_mod/COUNT[0]_i_4_n_0
-    SLICE_X35Y46         LUT5 (Prop_lut5_I3_O)        0.124     8.189 r  clk6p25m_mod/COUNT[0]_i_1/O
-                         net (fo=32, routed)          0.951     9.140    clk6p25m_mod/clear
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[27]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.435    14.776    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[27]/C
-                         clock pessimism              0.180    14.956    
-                         clock uncertainty           -0.035    14.920    
-    SLICE_X34Y50         FDRE (Setup_fdre_C_R)       -0.524    14.396    clk6p25m_mod/COUNT_reg[27]
-  -------------------------------------------------------------------
-                         required time                         14.396    
-                         arrival time                          -9.140    
-  -------------------------------------------------------------------
-                         slack                                  5.257    
-
-Slack (MET) :             5.294ns  (required time - arrival time)
-  Source:                 master_mod/clk1k_mod/COUNT_reg[3]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            master_mod/clk1k_mod/COUNT_reg[28]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.944ns  (logic 1.534ns (38.899%)  route 2.410ns (61.101%))
-  Logic Levels:           4  (CARRY4=3 LUT3=1)
-  Clock Path Skew:        -0.014ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.853ns = ( 14.853 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.141ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.620     5.141    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y26         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X64Y26         FDRE (Prop_fdre_C_Q)         0.518     5.659 r  master_mod/clk1k_mod/COUNT_reg[3]/Q
-                         net (fo=3, routed)           0.831     6.490    master_mod/clk1k_mod/COUNT_reg[3]
-    SLICE_X65Y28         LUT3 (Prop_lut3_I2_O)        0.124     6.614 r  master_mod/clk1k_mod/COUNT[0]_i_15__0/O
-                         net (fo=1, routed)           0.000     6.614    master_mod/clk1k_mod/COUNT[0]_i_15__0_n_0
-    SLICE_X65Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.164 r  master_mod/clk1k_mod/COUNT_reg[0]_i_8__0/CO[3]
-                         net (fo=1, routed)           0.000     7.164    master_mod/clk1k_mod/COUNT_reg[0]_i_8__0_n_0
-    SLICE_X65Y29         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.278 r  master_mod/clk1k_mod/COUNT_reg[0]_i_3__0/CO[3]
-                         net (fo=1, routed)           0.000     7.278    master_mod/clk1k_mod/COUNT_reg[0]_i_3__0_n_0
-    SLICE_X65Y30         CARRY4 (Prop_carry4_CI_CO[2])
-                                                      0.228     7.506 r  master_mod/clk1k_mod/COUNT_reg[0]_i_1__0/CO[2]
-                         net (fo=32, routed)          1.579     9.085    master_mod/clk1k_mod/clear
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[28]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.512    14.853    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[28]/C
-                         clock pessimism              0.274    15.127    
-                         clock uncertainty           -0.035    15.092    
-    SLICE_X64Y33         FDRE (Setup_fdre_C_R)       -0.713    14.379    master_mod/clk1k_mod/COUNT_reg[28]
-  -------------------------------------------------------------------
-                         required time                         14.379    
-                         arrival time                          -9.085    
-  -------------------------------------------------------------------
-                         slack                                  5.294    
-
-Slack (MET) :             5.294ns  (required time - arrival time)
-  Source:                 master_mod/clk1k_mod/COUNT_reg[3]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            master_mod/clk1k_mod/COUNT_reg[29]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.944ns  (logic 1.534ns (38.899%)  route 2.410ns (61.101%))
-  Logic Levels:           4  (CARRY4=3 LUT3=1)
-  Clock Path Skew:        -0.014ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.853ns = ( 14.853 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.141ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.620     5.141    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y26         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X64Y26         FDRE (Prop_fdre_C_Q)         0.518     5.659 r  master_mod/clk1k_mod/COUNT_reg[3]/Q
-                         net (fo=3, routed)           0.831     6.490    master_mod/clk1k_mod/COUNT_reg[3]
-    SLICE_X65Y28         LUT3 (Prop_lut3_I2_O)        0.124     6.614 r  master_mod/clk1k_mod/COUNT[0]_i_15__0/O
-                         net (fo=1, routed)           0.000     6.614    master_mod/clk1k_mod/COUNT[0]_i_15__0_n_0
-    SLICE_X65Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.164 r  master_mod/clk1k_mod/COUNT_reg[0]_i_8__0/CO[3]
-                         net (fo=1, routed)           0.000     7.164    master_mod/clk1k_mod/COUNT_reg[0]_i_8__0_n_0
-    SLICE_X65Y29         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.278 r  master_mod/clk1k_mod/COUNT_reg[0]_i_3__0/CO[3]
-                         net (fo=1, routed)           0.000     7.278    master_mod/clk1k_mod/COUNT_reg[0]_i_3__0_n_0
-    SLICE_X65Y30         CARRY4 (Prop_carry4_CI_CO[2])
-                                                      0.228     7.506 r  master_mod/clk1k_mod/COUNT_reg[0]_i_1__0/CO[2]
-                         net (fo=32, routed)          1.579     9.085    master_mod/clk1k_mod/clear
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[29]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.512    14.853    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[29]/C
-                         clock pessimism              0.274    15.127    
-                         clock uncertainty           -0.035    15.092    
-    SLICE_X64Y33         FDRE (Setup_fdre_C_R)       -0.713    14.379    master_mod/clk1k_mod/COUNT_reg[29]
-  -------------------------------------------------------------------
-                         required time                         14.379    
-                         arrival time                          -9.085    
-  -------------------------------------------------------------------
-                         slack                                  5.294    
-
-Slack (MET) :             5.294ns  (required time - arrival time)
-  Source:                 master_mod/clk1k_mod/COUNT_reg[3]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            master_mod/clk1k_mod/COUNT_reg[30]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.944ns  (logic 1.534ns (38.899%)  route 2.410ns (61.101%))
-  Logic Levels:           4  (CARRY4=3 LUT3=1)
-  Clock Path Skew:        -0.014ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.853ns = ( 14.853 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.141ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.620     5.141    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y26         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X64Y26         FDRE (Prop_fdre_C_Q)         0.518     5.659 r  master_mod/clk1k_mod/COUNT_reg[3]/Q
-                         net (fo=3, routed)           0.831     6.490    master_mod/clk1k_mod/COUNT_reg[3]
-    SLICE_X65Y28         LUT3 (Prop_lut3_I2_O)        0.124     6.614 r  master_mod/clk1k_mod/COUNT[0]_i_15__0/O
-                         net (fo=1, routed)           0.000     6.614    master_mod/clk1k_mod/COUNT[0]_i_15__0_n_0
-    SLICE_X65Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.164 r  master_mod/clk1k_mod/COUNT_reg[0]_i_8__0/CO[3]
-                         net (fo=1, routed)           0.000     7.164    master_mod/clk1k_mod/COUNT_reg[0]_i_8__0_n_0
-    SLICE_X65Y29         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.278 r  master_mod/clk1k_mod/COUNT_reg[0]_i_3__0/CO[3]
-                         net (fo=1, routed)           0.000     7.278    master_mod/clk1k_mod/COUNT_reg[0]_i_3__0_n_0
-    SLICE_X65Y30         CARRY4 (Prop_carry4_CI_CO[2])
-                                                      0.228     7.506 r  master_mod/clk1k_mod/COUNT_reg[0]_i_1__0/CO[2]
-                         net (fo=32, routed)          1.579     9.085    master_mod/clk1k_mod/clear
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[30]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.512    14.853    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[30]/C
-                         clock pessimism              0.274    15.127    
-                         clock uncertainty           -0.035    15.092    
-    SLICE_X64Y33         FDRE (Setup_fdre_C_R)       -0.713    14.379    master_mod/clk1k_mod/COUNT_reg[30]
-  -------------------------------------------------------------------
-                         required time                         14.379    
-                         arrival time                          -9.085    
-  -------------------------------------------------------------------
-                         slack                                  5.294    
-
-Slack (MET) :             5.294ns  (required time - arrival time)
-  Source:                 master_mod/clk1k_mod/COUNT_reg[3]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            master_mod/clk1k_mod/COUNT_reg[31]/R
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.944ns  (logic 1.534ns (38.899%)  route 2.410ns (61.101%))
-  Logic Levels:           4  (CARRY4=3 LUT3=1)
-  Clock Path Skew:        -0.014ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.853ns = ( 14.853 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.141ns
-    Clock Pessimism Removal (CPR):    0.274ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.620     5.141    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y26         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X64Y26         FDRE (Prop_fdre_C_Q)         0.518     5.659 r  master_mod/clk1k_mod/COUNT_reg[3]/Q
-                         net (fo=3, routed)           0.831     6.490    master_mod/clk1k_mod/COUNT_reg[3]
-    SLICE_X65Y28         LUT3 (Prop_lut3_I2_O)        0.124     6.614 r  master_mod/clk1k_mod/COUNT[0]_i_15__0/O
-                         net (fo=1, routed)           0.000     6.614    master_mod/clk1k_mod/COUNT[0]_i_15__0_n_0
-    SLICE_X65Y28         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.164 r  master_mod/clk1k_mod/COUNT_reg[0]_i_8__0/CO[3]
-                         net (fo=1, routed)           0.000     7.164    master_mod/clk1k_mod/COUNT_reg[0]_i_8__0_n_0
-    SLICE_X65Y29         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.278 r  master_mod/clk1k_mod/COUNT_reg[0]_i_3__0/CO[3]
-                         net (fo=1, routed)           0.000     7.278    master_mod/clk1k_mod/COUNT_reg[0]_i_3__0_n_0
-    SLICE_X65Y30         CARRY4 (Prop_carry4_CI_CO[2])
-                                                      0.228     7.506 r  master_mod/clk1k_mod/COUNT_reg[0]_i_1__0/CO[2]
-                         net (fo=32, routed)          1.579     9.085    master_mod/clk1k_mod/clear
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[31]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk (IN)
-                         net (fo=0)                   0.000    10.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.512    14.853    master_mod/clk1k_mod/clk_IBUF_BUFG
-    SLICE_X64Y33         FDRE                                         r  master_mod/clk1k_mod/COUNT_reg[31]/C
-                         clock pessimism              0.274    15.127    
-                         clock uncertainty           -0.035    15.092    
-    SLICE_X64Y33         FDRE (Setup_fdre_C_R)       -0.713    14.379    master_mod/clk1k_mod/COUNT_reg[31]
-  -------------------------------------------------------------------
-                         required time                         14.379    
-                         arrival time                          -9.085    
-  -------------------------------------------------------------------
-                         slack                                  5.294    
-
-Slack (MET) :             5.414ns  (required time - arrival time)
-  Source:                 clk6p25m_mod/COUNT_reg[23]/C
+Slack (MET) :             5.572ns  (required time - arrival time)
+  Source:                 clk6p25m_mod/COUNT_reg[11]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk6p25m_mod/COUNT_reg[28]/R
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.896ns  (logic 0.890ns (22.844%)  route 3.006ns (77.156%))
+  Data Path Delay:        3.935ns  (logic 0.828ns (21.044%)  route 3.107ns (78.956%))
   Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.086ns
-    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.763ns = ( 14.763 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.064ns
+    Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -731,18 +223,18 @@ Slack (MET) :             5.414ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.565     5.086    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[23]/C
+                         net (fo=140, routed)         1.543     5.064    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y68         FDRE                                         r  clk6p25m_mod/COUNT_reg[11]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.518     5.604 f  clk6p25m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           1.109     6.713    clk6p25m_mod/COUNT_reg[23]
-    SLICE_X35Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.837 r  clk6p25m_mod/COUNT[0]_i_9__1/O
-                         net (fo=1, routed)           0.796     7.633    clk6p25m_mod/COUNT[0]_i_9__1_n_0
-    SLICE_X35Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.757 r  clk6p25m_mod/COUNT[0]_i_4/O
-                         net (fo=2, routed)           0.307     8.065    clk6p25m_mod/COUNT[0]_i_4_n_0
-    SLICE_X35Y46         LUT5 (Prop_lut5_I3_O)        0.124     8.189 r  clk6p25m_mod/COUNT[0]_i_1/O
-                         net (fo=32, routed)          0.794     8.982    clk6p25m_mod/clear
-    SLICE_X34Y51         FDRE                                         r  clk6p25m_mod/COUNT_reg[28]/R
+    SLICE_X28Y68         FDRE (Prop_fdre_C_Q)         0.456     5.520 f  clk6p25m_mod/COUNT_reg[11]/Q
+                         net (fo=2, routed)           1.220     6.740    clk6p25m_mod/COUNT_reg[11]
+    SLICE_X29Y69         LUT6 (Prop_lut6_I1_O)        0.124     6.864 r  clk6p25m_mod/COUNT[0]_i_7__1/O
+                         net (fo=1, routed)           0.639     7.503    clk6p25m_mod/COUNT[0]_i_7__1_n_0
+    SLICE_X29Y70         LUT3 (Prop_lut3_I0_O)        0.124     7.627 r  clk6p25m_mod/COUNT[0]_i_4/O
+                         net (fo=2, routed)           0.307     7.934    clk6p25m_mod/COUNT[0]_i_4_n_0
+    SLICE_X29Y68         LUT5 (Prop_lut5_I3_O)        0.124     8.058 r  clk6p25m_mod/COUNT[0]_i_1/O
+                         net (fo=32, routed)          0.940     8.998    clk6p25m_mod/clear
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[28]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -752,30 +244,213 @@ Slack (MET) :             5.414ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.435    14.776    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y51         FDRE                                         r  clk6p25m_mod/COUNT_reg[28]/C
-                         clock pessimism              0.180    14.956    
-                         clock uncertainty           -0.035    14.920    
-    SLICE_X34Y51         FDRE (Setup_fdre_C_R)       -0.524    14.396    clk6p25m_mod/COUNT_reg[28]
+                         net (fo=140, routed)         1.422    14.763    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[28]/C
+                         clock pessimism              0.272    15.035    
+                         clock uncertainty           -0.035    15.000    
+    SLICE_X28Y73         FDRE (Setup_fdre_C_R)       -0.429    14.571    clk6p25m_mod/COUNT_reg[28]
   -------------------------------------------------------------------
-                         required time                         14.396    
-                         arrival time                          -8.982    
+                         required time                         14.571    
+                         arrival time                          -8.998    
   -------------------------------------------------------------------
-                         slack                                  5.414    
+                         slack                                  5.572    
 
-Slack (MET) :             5.414ns  (required time - arrival time)
-  Source:                 clk6p25m_mod/COUNT_reg[23]/C
+Slack (MET) :             5.572ns  (required time - arrival time)
+  Source:                 clk6p25m_mod/COUNT_reg[11]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk6p25m_mod/COUNT_reg[29]/R
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.896ns  (logic 0.890ns (22.844%)  route 3.006ns (77.156%))
+  Data Path Delay:        3.935ns  (logic 0.828ns (21.044%)  route 3.107ns (78.956%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.763ns = ( 14.763 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.064ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.543     5.064    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y68         FDRE                                         r  clk6p25m_mod/COUNT_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y68         FDRE (Prop_fdre_C_Q)         0.456     5.520 f  clk6p25m_mod/COUNT_reg[11]/Q
+                         net (fo=2, routed)           1.220     6.740    clk6p25m_mod/COUNT_reg[11]
+    SLICE_X29Y69         LUT6 (Prop_lut6_I1_O)        0.124     6.864 r  clk6p25m_mod/COUNT[0]_i_7__1/O
+                         net (fo=1, routed)           0.639     7.503    clk6p25m_mod/COUNT[0]_i_7__1_n_0
+    SLICE_X29Y70         LUT3 (Prop_lut3_I0_O)        0.124     7.627 r  clk6p25m_mod/COUNT[0]_i_4/O
+                         net (fo=2, routed)           0.307     7.934    clk6p25m_mod/COUNT[0]_i_4_n_0
+    SLICE_X29Y68         LUT5 (Prop_lut5_I3_O)        0.124     8.058 r  clk6p25m_mod/COUNT[0]_i_1/O
+                         net (fo=32, routed)          0.940     8.998    clk6p25m_mod/clear
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[29]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.422    14.763    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[29]/C
+                         clock pessimism              0.272    15.035    
+                         clock uncertainty           -0.035    15.000    
+    SLICE_X28Y73         FDRE (Setup_fdre_C_R)       -0.429    14.571    clk6p25m_mod/COUNT_reg[29]
+  -------------------------------------------------------------------
+                         required time                         14.571    
+                         arrival time                          -8.998    
+  -------------------------------------------------------------------
+                         slack                                  5.572    
+
+Slack (MET) :             5.572ns  (required time - arrival time)
+  Source:                 clk6p25m_mod/COUNT_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk6p25m_mod/COUNT_reg[30]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.935ns  (logic 0.828ns (21.044%)  route 3.107ns (78.956%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.763ns = ( 14.763 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.064ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.543     5.064    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y68         FDRE                                         r  clk6p25m_mod/COUNT_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y68         FDRE (Prop_fdre_C_Q)         0.456     5.520 f  clk6p25m_mod/COUNT_reg[11]/Q
+                         net (fo=2, routed)           1.220     6.740    clk6p25m_mod/COUNT_reg[11]
+    SLICE_X29Y69         LUT6 (Prop_lut6_I1_O)        0.124     6.864 r  clk6p25m_mod/COUNT[0]_i_7__1/O
+                         net (fo=1, routed)           0.639     7.503    clk6p25m_mod/COUNT[0]_i_7__1_n_0
+    SLICE_X29Y70         LUT3 (Prop_lut3_I0_O)        0.124     7.627 r  clk6p25m_mod/COUNT[0]_i_4/O
+                         net (fo=2, routed)           0.307     7.934    clk6p25m_mod/COUNT[0]_i_4_n_0
+    SLICE_X29Y68         LUT5 (Prop_lut5_I3_O)        0.124     8.058 r  clk6p25m_mod/COUNT[0]_i_1/O
+                         net (fo=32, routed)          0.940     8.998    clk6p25m_mod/clear
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[30]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.422    14.763    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[30]/C
+                         clock pessimism              0.272    15.035    
+                         clock uncertainty           -0.035    15.000    
+    SLICE_X28Y73         FDRE (Setup_fdre_C_R)       -0.429    14.571    clk6p25m_mod/COUNT_reg[30]
+  -------------------------------------------------------------------
+                         required time                         14.571    
+                         arrival time                          -8.998    
+  -------------------------------------------------------------------
+                         slack                                  5.572    
+
+Slack (MET) :             5.572ns  (required time - arrival time)
+  Source:                 clk6p25m_mod/COUNT_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk6p25m_mod/COUNT_reg[31]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.935ns  (logic 0.828ns (21.044%)  route 3.107ns (78.956%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.763ns = ( 14.763 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.064ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.543     5.064    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y68         FDRE                                         r  clk6p25m_mod/COUNT_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y68         FDRE (Prop_fdre_C_Q)         0.456     5.520 f  clk6p25m_mod/COUNT_reg[11]/Q
+                         net (fo=2, routed)           1.220     6.740    clk6p25m_mod/COUNT_reg[11]
+    SLICE_X29Y69         LUT6 (Prop_lut6_I1_O)        0.124     6.864 r  clk6p25m_mod/COUNT[0]_i_7__1/O
+                         net (fo=1, routed)           0.639     7.503    clk6p25m_mod/COUNT[0]_i_7__1_n_0
+    SLICE_X29Y70         LUT3 (Prop_lut3_I0_O)        0.124     7.627 r  clk6p25m_mod/COUNT[0]_i_4/O
+                         net (fo=2, routed)           0.307     7.934    clk6p25m_mod/COUNT[0]_i_4_n_0
+    SLICE_X29Y68         LUT5 (Prop_lut5_I3_O)        0.124     8.058 r  clk6p25m_mod/COUNT[0]_i_1/O
+                         net (fo=32, routed)          0.940     8.998    clk6p25m_mod/clear
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[31]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.422    14.763    clk6p25m_mod/clk_IBUF_BUFG
+    SLICE_X28Y73         FDRE                                         r  clk6p25m_mod/COUNT_reg[31]/C
+                         clock pessimism              0.272    15.035    
+                         clock uncertainty           -0.035    15.000    
+    SLICE_X28Y73         FDRE (Setup_fdre_C_R)       -0.429    14.571    clk6p25m_mod/COUNT_reg[31]
+  -------------------------------------------------------------------
+                         required time                         14.571    
+                         arrival time                          -8.998    
+  -------------------------------------------------------------------
+                         slack                                  5.572    
+
+Slack (MET) :             5.596ns  (required time - arrival time)
+  Source:                 clk1m_mod/COUNT_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/COUNT_reg[24]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.809ns  (logic 0.828ns (21.737%)  route 2.981ns (78.263%))
   Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
   Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.086ns
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
     Clock Pessimism Removal (CPR):    0.180ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -792,18 +467,18 @@ Slack (MET) :             5.414ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.565     5.086    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[23]/C
+                         net (fo=140, routed)         1.566     5.087    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.518     5.604 f  clk6p25m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           1.109     6.713    clk6p25m_mod/COUNT_reg[23]
-    SLICE_X35Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.837 r  clk6p25m_mod/COUNT[0]_i_9__1/O
-                         net (fo=1, routed)           0.796     7.633    clk6p25m_mod/COUNT[0]_i_9__1_n_0
-    SLICE_X35Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.757 r  clk6p25m_mod/COUNT[0]_i_4/O
-                         net (fo=2, routed)           0.307     8.065    clk6p25m_mod/COUNT[0]_i_4_n_0
-    SLICE_X35Y46         LUT5 (Prop_lut5_I3_O)        0.124     8.189 r  clk6p25m_mod/COUNT[0]_i_1/O
-                         net (fo=32, routed)          0.794     8.982    clk6p25m_mod/clear
-    SLICE_X34Y51         FDRE                                         r  clk6p25m_mod/COUNT_reg[29]/R
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.456     5.543 f  clk1m_mod/COUNT_reg[23]/Q
+                         net (fo=2, routed)           1.080     6.623    clk1m_mod/COUNT_reg[23]
+    SLICE_X33Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.747 r  clk1m_mod/COUNT[0]_i_9__2/O
+                         net (fo=1, routed)           0.638     7.386    clk1m_mod/COUNT[0]_i_9__2_n_0
+    SLICE_X33Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.510 r  clk1m_mod/COUNT[0]_i_4__0/O
+                         net (fo=2, routed)           0.307     7.817    clk1m_mod/COUNT[0]_i_4__0_n_0
+    SLICE_X33Y46         LUT5 (Prop_lut5_I3_O)        0.124     7.941 r  clk1m_mod/COUNT[0]_i_1__0/O
+                         net (fo=32, routed)          0.955     8.896    clk1m_mod/COUNT[0]_i_1__0_n_0
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[24]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -813,16 +488,331 @@ Slack (MET) :             5.414ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         1.435    14.776    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y51         FDRE                                         r  clk6p25m_mod/COUNT_reg[29]/C
-                         clock pessimism              0.180    14.956    
-                         clock uncertainty           -0.035    14.920    
-    SLICE_X34Y51         FDRE (Setup_fdre_C_R)       -0.524    14.396    clk6p25m_mod/COUNT_reg[29]
+                         net (fo=140, routed)         1.436    14.777    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[24]/C
+                         clock pessimism              0.180    14.957    
+                         clock uncertainty           -0.035    14.921    
+    SLICE_X32Y50         FDRE (Setup_fdre_C_R)       -0.429    14.492    clk1m_mod/COUNT_reg[24]
   -------------------------------------------------------------------
-                         required time                         14.396    
-                         arrival time                          -8.982    
+                         required time                         14.492    
+                         arrival time                          -8.896    
   -------------------------------------------------------------------
-                         slack                                  5.414    
+                         slack                                  5.596    
+
+Slack (MET) :             5.596ns  (required time - arrival time)
+  Source:                 clk1m_mod/COUNT_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/COUNT_reg[25]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.809ns  (logic 0.828ns (21.737%)  route 2.981ns (78.263%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.566     5.087    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.456     5.543 f  clk1m_mod/COUNT_reg[23]/Q
+                         net (fo=2, routed)           1.080     6.623    clk1m_mod/COUNT_reg[23]
+    SLICE_X33Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.747 r  clk1m_mod/COUNT[0]_i_9__2/O
+                         net (fo=1, routed)           0.638     7.386    clk1m_mod/COUNT[0]_i_9__2_n_0
+    SLICE_X33Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.510 r  clk1m_mod/COUNT[0]_i_4__0/O
+                         net (fo=2, routed)           0.307     7.817    clk1m_mod/COUNT[0]_i_4__0_n_0
+    SLICE_X33Y46         LUT5 (Prop_lut5_I3_O)        0.124     7.941 r  clk1m_mod/COUNT[0]_i_1__0/O
+                         net (fo=32, routed)          0.955     8.896    clk1m_mod/COUNT[0]_i_1__0_n_0
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[25]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.436    14.777    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[25]/C
+                         clock pessimism              0.180    14.957    
+                         clock uncertainty           -0.035    14.921    
+    SLICE_X32Y50         FDRE (Setup_fdre_C_R)       -0.429    14.492    clk1m_mod/COUNT_reg[25]
+  -------------------------------------------------------------------
+                         required time                         14.492    
+                         arrival time                          -8.896    
+  -------------------------------------------------------------------
+                         slack                                  5.596    
+
+Slack (MET) :             5.596ns  (required time - arrival time)
+  Source:                 clk1m_mod/COUNT_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/COUNT_reg[26]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.809ns  (logic 0.828ns (21.737%)  route 2.981ns (78.263%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.566     5.087    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.456     5.543 f  clk1m_mod/COUNT_reg[23]/Q
+                         net (fo=2, routed)           1.080     6.623    clk1m_mod/COUNT_reg[23]
+    SLICE_X33Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.747 r  clk1m_mod/COUNT[0]_i_9__2/O
+                         net (fo=1, routed)           0.638     7.386    clk1m_mod/COUNT[0]_i_9__2_n_0
+    SLICE_X33Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.510 r  clk1m_mod/COUNT[0]_i_4__0/O
+                         net (fo=2, routed)           0.307     7.817    clk1m_mod/COUNT[0]_i_4__0_n_0
+    SLICE_X33Y46         LUT5 (Prop_lut5_I3_O)        0.124     7.941 r  clk1m_mod/COUNT[0]_i_1__0/O
+                         net (fo=32, routed)          0.955     8.896    clk1m_mod/COUNT[0]_i_1__0_n_0
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[26]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.436    14.777    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[26]/C
+                         clock pessimism              0.180    14.957    
+                         clock uncertainty           -0.035    14.921    
+    SLICE_X32Y50         FDRE (Setup_fdre_C_R)       -0.429    14.492    clk1m_mod/COUNT_reg[26]
+  -------------------------------------------------------------------
+                         required time                         14.492    
+                         arrival time                          -8.896    
+  -------------------------------------------------------------------
+                         slack                                  5.596    
+
+Slack (MET) :             5.596ns  (required time - arrival time)
+  Source:                 clk1m_mod/COUNT_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/COUNT_reg[27]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.809ns  (logic 0.828ns (21.737%)  route 2.981ns (78.263%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.131ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.777ns = ( 14.777 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.566     5.087    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.456     5.543 f  clk1m_mod/COUNT_reg[23]/Q
+                         net (fo=2, routed)           1.080     6.623    clk1m_mod/COUNT_reg[23]
+    SLICE_X33Y49         LUT6 (Prop_lut6_I1_O)        0.124     6.747 r  clk1m_mod/COUNT[0]_i_9__2/O
+                         net (fo=1, routed)           0.638     7.386    clk1m_mod/COUNT[0]_i_9__2_n_0
+    SLICE_X33Y48         LUT3 (Prop_lut3_I2_O)        0.124     7.510 r  clk1m_mod/COUNT[0]_i_4__0/O
+                         net (fo=2, routed)           0.307     7.817    clk1m_mod/COUNT[0]_i_4__0_n_0
+    SLICE_X33Y46         LUT5 (Prop_lut5_I3_O)        0.124     7.941 r  clk1m_mod/COUNT[0]_i_1__0/O
+                         net (fo=32, routed)          0.955     8.896    clk1m_mod/COUNT[0]_i_1__0_n_0
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[27]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.436    14.777    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[27]/C
+                         clock pessimism              0.180    14.957    
+                         clock uncertainty           -0.035    14.921    
+    SLICE_X32Y50         FDRE (Setup_fdre_C_R)       -0.429    14.492    clk1m_mod/COUNT_reg[27]
+  -------------------------------------------------------------------
+                         required time                         14.492    
+                         arrival time                          -8.896    
+  -------------------------------------------------------------------
+                         slack                                  5.596    
+
+Slack (MET) :             5.606ns  (required time - arrival time)
+  Source:                 master_mod/clk1p0_mod/COUNT_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            master_mod/clk1p0_mod/COUNT_reg[28]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.717ns  (logic 1.472ns (39.599%)  route 2.245ns (60.401%))
+  Logic Levels:           4  (CARRY4=3 LUT3=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.790ns = ( 14.790 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.566     5.087    master_mod/clk1p0_mod/clk_IBUF_BUFG
+    SLICE_X45Y42         FDRE                                         r  master_mod/clk1p0_mod/COUNT_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y42         FDRE (Prop_fdre_C_Q)         0.456     5.543 r  master_mod/clk1p0_mod/COUNT_reg[3]/Q
+                         net (fo=3, routed)           0.835     6.378    master_mod/clk1p0_mod/COUNT_reg[3]
+    SLICE_X44Y44         LUT3 (Prop_lut3_I2_O)        0.124     6.502 r  master_mod/clk1p0_mod/COUNT[0]_i_15/O
+                         net (fo=1, routed)           0.000     6.502    master_mod/clk1p0_mod/COUNT[0]_i_15_n_0
+    SLICE_X44Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.052 r  master_mod/clk1p0_mod/COUNT_reg[0]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     7.052    master_mod/clk1p0_mod/COUNT_reg[0]_i_8_n_0
+    SLICE_X44Y45         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.166 r  master_mod/clk1p0_mod/COUNT_reg[0]_i_3/CO[3]
+                         net (fo=1, routed)           0.000     7.166    master_mod/clk1p0_mod/COUNT_reg[0]_i_3_n_0
+    SLICE_X44Y46         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     7.394 r  master_mod/clk1p0_mod/COUNT_reg[0]_i_1/CO[2]
+                         net (fo=32, routed)          1.411     8.805    master_mod/clk1p0_mod/clear
+    SLICE_X45Y49         FDRE                                         r  master_mod/clk1p0_mod/COUNT_reg[28]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.449    14.790    master_mod/clk1p0_mod/clk_IBUF_BUFG
+    SLICE_X45Y49         FDRE                                         r  master_mod/clk1p0_mod/COUNT_reg[28]/C
+                         clock pessimism              0.274    15.064    
+                         clock uncertainty           -0.035    15.029    
+    SLICE_X45Y49         FDRE (Setup_fdre_C_R)       -0.618    14.411    master_mod/clk1p0_mod/COUNT_reg[28]
+  -------------------------------------------------------------------
+                         required time                         14.411    
+                         arrival time                          -8.805    
+  -------------------------------------------------------------------
+                         slack                                  5.606    
+
+Slack (MET) :             5.606ns  (required time - arrival time)
+  Source:                 master_mod/clk1p0_mod/COUNT_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            master_mod/clk1p0_mod/COUNT_reg[29]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.717ns  (logic 1.472ns (39.599%)  route 2.245ns (60.401%))
+  Logic Levels:           4  (CARRY4=3 LUT3=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.790ns = ( 14.790 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.087ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.566     5.087    master_mod/clk1p0_mod/clk_IBUF_BUFG
+    SLICE_X45Y42         FDRE                                         r  master_mod/clk1p0_mod/COUNT_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y42         FDRE (Prop_fdre_C_Q)         0.456     5.543 r  master_mod/clk1p0_mod/COUNT_reg[3]/Q
+                         net (fo=3, routed)           0.835     6.378    master_mod/clk1p0_mod/COUNT_reg[3]
+    SLICE_X44Y44         LUT3 (Prop_lut3_I2_O)        0.124     6.502 r  master_mod/clk1p0_mod/COUNT[0]_i_15/O
+                         net (fo=1, routed)           0.000     6.502    master_mod/clk1p0_mod/COUNT[0]_i_15_n_0
+    SLICE_X44Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.052 r  master_mod/clk1p0_mod/COUNT_reg[0]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     7.052    master_mod/clk1p0_mod/COUNT_reg[0]_i_8_n_0
+    SLICE_X44Y45         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.166 r  master_mod/clk1p0_mod/COUNT_reg[0]_i_3/CO[3]
+                         net (fo=1, routed)           0.000     7.166    master_mod/clk1p0_mod/COUNT_reg[0]_i_3_n_0
+    SLICE_X44Y46         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     7.394 r  master_mod/clk1p0_mod/COUNT_reg[0]_i_1/CO[2]
+                         net (fo=32, routed)          1.411     8.805    master_mod/clk1p0_mod/clear
+    SLICE_X45Y49         FDRE                                         r  master_mod/clk1p0_mod/COUNT_reg[29]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.449    14.790    master_mod/clk1p0_mod/clk_IBUF_BUFG
+    SLICE_X45Y49         FDRE                                         r  master_mod/clk1p0_mod/COUNT_reg[29]/C
+                         clock pessimism              0.274    15.064    
+                         clock uncertainty           -0.035    15.029    
+    SLICE_X45Y49         FDRE (Setup_fdre_C_R)       -0.618    14.411    master_mod/clk1p0_mod/COUNT_reg[29]
+  -------------------------------------------------------------------
+                         required time                         14.411    
+                         arrival time                          -8.805    
+  -------------------------------------------------------------------
+                         slack                                  5.606    
 
 
 
@@ -830,73 +820,18 @@ Slack (MET) :             5.414ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.098ns  (arrival time - required time)
-  Source:                 clk6p25m_mod/COUNT_reg[22]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[24]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.499ns  (logic 0.373ns (74.723%)  route 0.126ns (25.277%))
-  Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.446ns
-    Clock Pessimism Removal (CPR):    0.244ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.563     1.446    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[22]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.164     1.610 r  clk6p25m_mod/COUNT_reg[22]/Q
-                         net (fo=2, routed)           0.125     1.736    clk6p25m_mod/COUNT_reg[22]
-    SLICE_X34Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.156     1.892 r  clk6p25m_mod/COUNT_reg[20]_i_1__1/CO[3]
-                         net (fo=1, routed)           0.001     1.892    clk6p25m_mod/COUNT_reg[20]_i_1__1_n_0
-    SLICE_X34Y50         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.053     1.945 r  clk6p25m_mod/COUNT_reg[24]_i_1__1/O[0]
-                         net (fo=1, routed)           0.000     1.945    clk6p25m_mod/COUNT_reg[24]_i_1__1_n_7
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[24]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.829     1.957    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[24]/C
-                         clock pessimism             -0.244     1.713    
-    SLICE_X34Y50         FDRE (Hold_fdre_C_D)         0.134     1.847    clk6p25m_mod/COUNT_reg[24]
-  -------------------------------------------------------------------
-                         required time                         -1.847    
-                         arrival time                           1.945    
-  -------------------------------------------------------------------
-                         slack                                  0.098    
-
-Slack (MET) :             0.100ns  (arrival time - required time)
-  Source:                 clk1m_mod/COUNT_reg[23]/C
+Slack (MET) :             0.116ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk1m_mod/COUNT_reg[24]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.473ns  (logic 0.355ns (75.068%)  route 0.118ns (24.932%))
+  Data Path Delay:        0.488ns  (logic 0.355ns (72.708%)  route 0.133ns (27.292%))
   Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.959ns
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
     Source Clock Delay      (SCD):    1.447ns
     Clock Pessimism Removal (CPR):    0.244ns
 
@@ -909,18 +844,18 @@ Slack (MET) :             0.100ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X41Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           0.117     1.705    clk1m_mod/COUNT_reg[23]
-    SLICE_X41Y49         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.160     1.865 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
-                         net (fo=1, routed)           0.001     1.866    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
-    SLICE_X41Y50         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.054     1.920 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[0]
-                         net (fo=1, routed)           0.000     1.920    clk1m_mod/COUNT_reg[24]_i_1__2_n_7
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[24]/D
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     1.935 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[0]
+                         net (fo=1, routed)           0.000     1.935    clk1m_mod/COUNT_reg[24]_i_1__2_n_7
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[24]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -930,28 +865,28 @@ Slack (MET) :             0.100ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.832     1.959    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[24]/C
-                         clock pessimism             -0.244     1.715    
-    SLICE_X41Y50         FDRE (Hold_fdre_C_D)         0.105     1.820    clk1m_mod/COUNT_reg[24]
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[24]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[24]
   -------------------------------------------------------------------
-                         required time                         -1.820    
-                         arrival time                           1.920    
+                         required time                         -1.819    
+                         arrival time                           1.935    
   -------------------------------------------------------------------
-                         slack                                  0.100    
+                         slack                                  0.116    
 
-Slack (MET) :             0.111ns  (arrival time - required time)
-  Source:                 clk1m_mod/COUNT_reg[23]/C
+Slack (MET) :             0.127ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk1m_mod/COUNT_reg[26]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.484ns  (logic 0.366ns (75.635%)  route 0.118ns (24.365%))
+  Data Path Delay:        0.499ns  (logic 0.366ns (73.309%)  route 0.133ns (26.691%))
   Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.959ns
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
     Source Clock Delay      (SCD):    1.447ns
     Clock Pessimism Removal (CPR):    0.244ns
 
@@ -964,73 +899,18 @@ Slack (MET) :             0.111ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X41Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           0.117     1.705    clk1m_mod/COUNT_reg[23]
-    SLICE_X41Y49         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.160     1.865 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
-                         net (fo=1, routed)           0.001     1.866    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
-    SLICE_X41Y50         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.065     1.931 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[2]
-                         net (fo=1, routed)           0.000     1.931    clk1m_mod/COUNT_reg[24]_i_1__2_n_5
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[26]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.832     1.959    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[26]/C
-                         clock pessimism             -0.244     1.715    
-    SLICE_X41Y50         FDRE (Hold_fdre_C_D)         0.105     1.820    clk1m_mod/COUNT_reg[26]
-  -------------------------------------------------------------------
-                         required time                         -1.820    
-                         arrival time                           1.931    
-  -------------------------------------------------------------------
-                         slack                                  0.111    
-
-Slack (MET) :             0.111ns  (arrival time - required time)
-  Source:                 clk6p25m_mod/COUNT_reg[22]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[26]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.512ns  (logic 0.386ns (75.365%)  route 0.126ns (24.635%))
-  Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.446ns
-    Clock Pessimism Removal (CPR):    0.244ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.563     1.446    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[22]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.164     1.610 r  clk6p25m_mod/COUNT_reg[22]/Q
-                         net (fo=2, routed)           0.125     1.736    clk6p25m_mod/COUNT_reg[22]
-    SLICE_X34Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.156     1.892 r  clk6p25m_mod/COUNT_reg[20]_i_1__1/CO[3]
-                         net (fo=1, routed)           0.001     1.892    clk6p25m_mod/COUNT_reg[20]_i_1__1_n_0
-    SLICE_X34Y50         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.066     1.958 r  clk6p25m_mod/COUNT_reg[24]_i_1__1/O[2]
-                         net (fo=1, routed)           0.000     1.958    clk6p25m_mod/COUNT_reg[24]_i_1__1_n_5
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[26]/D
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     1.946 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[2]
+                         net (fo=1, routed)           0.000     1.946    clk1m_mod/COUNT_reg[24]_i_1__2_n_5
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[26]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1040,83 +920,28 @@ Slack (MET) :             0.111ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.829     1.957    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[26]/C
-                         clock pessimism             -0.244     1.713    
-    SLICE_X34Y50         FDRE (Hold_fdre_C_D)         0.134     1.847    clk6p25m_mod/COUNT_reg[26]
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[26]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[26]
   -------------------------------------------------------------------
-                         required time                         -1.847    
-                         arrival time                           1.958    
+                         required time                         -1.819    
+                         arrival time                           1.946    
   -------------------------------------------------------------------
-                         slack                                  0.111    
+                         slack                                  0.127    
 
-Slack (MET) :             0.134ns  (arrival time - required time)
-  Source:                 clk6p25m_mod/COUNT_reg[22]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[25]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.535ns  (logic 0.409ns (76.423%)  route 0.126ns (23.577%))
-  Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.446ns
-    Clock Pessimism Removal (CPR):    0.244ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.563     1.446    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[22]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.164     1.610 r  clk6p25m_mod/COUNT_reg[22]/Q
-                         net (fo=2, routed)           0.125     1.736    clk6p25m_mod/COUNT_reg[22]
-    SLICE_X34Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.156     1.892 r  clk6p25m_mod/COUNT_reg[20]_i_1__1/CO[3]
-                         net (fo=1, routed)           0.001     1.892    clk6p25m_mod/COUNT_reg[20]_i_1__1_n_0
-    SLICE_X34Y50         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.089     1.981 r  clk6p25m_mod/COUNT_reg[24]_i_1__1/O[1]
-                         net (fo=1, routed)           0.000     1.981    clk6p25m_mod/COUNT_reg[24]_i_1__1_n_6
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[25]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.829     1.957    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[25]/C
-                         clock pessimism             -0.244     1.713    
-    SLICE_X34Y50         FDRE (Hold_fdre_C_D)         0.134     1.847    clk6p25m_mod/COUNT_reg[25]
-  -------------------------------------------------------------------
-                         required time                         -1.847    
-                         arrival time                           1.981    
-  -------------------------------------------------------------------
-                         slack                                  0.134    
-
-Slack (MET) :             0.136ns  (arrival time - required time)
-  Source:                 clk1m_mod/COUNT_reg[23]/C
+Slack (MET) :             0.152ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk1m_mod/COUNT_reg[25]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.509ns  (logic 0.391ns (76.832%)  route 0.118ns (23.168%))
+  Data Path Delay:        0.524ns  (logic 0.391ns (74.582%)  route 0.133ns (25.418%))
   Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.959ns
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
     Source Clock Delay      (SCD):    1.447ns
     Clock Pessimism Removal (CPR):    0.244ns
 
@@ -1129,18 +954,18 @@ Slack (MET) :             0.136ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X41Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           0.117     1.705    clk1m_mod/COUNT_reg[23]
-    SLICE_X41Y49         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.160     1.865 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
-                         net (fo=1, routed)           0.001     1.866    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
-    SLICE_X41Y50         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.090     1.956 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[1]
-                         net (fo=1, routed)           0.000     1.956    clk1m_mod/COUNT_reg[24]_i_1__2_n_6
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[25]/D
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.090     1.971 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[1]
+                         net (fo=1, routed)           0.000     1.971    clk1m_mod/COUNT_reg[24]_i_1__2_n_6
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1150,28 +975,28 @@ Slack (MET) :             0.136ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.832     1.959    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[25]/C
-                         clock pessimism             -0.244     1.715    
-    SLICE_X41Y50         FDRE (Hold_fdre_C_D)         0.105     1.820    clk1m_mod/COUNT_reg[25]
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[25]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[25]
   -------------------------------------------------------------------
-                         required time                         -1.820    
-                         arrival time                           1.956    
+                         required time                         -1.819    
+                         arrival time                           1.971    
   -------------------------------------------------------------------
-                         slack                                  0.136    
+                         slack                                  0.152    
 
-Slack (MET) :             0.136ns  (arrival time - required time)
-  Source:                 clk1m_mod/COUNT_reg[23]/C
+Slack (MET) :             0.152ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk1m_mod/COUNT_reg[27]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.509ns  (logic 0.391ns (76.832%)  route 0.118ns (23.168%))
+  Data Path Delay:        0.524ns  (logic 0.391ns (74.582%)  route 0.133ns (25.418%))
   Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.959ns
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
     Source Clock Delay      (SCD):    1.447ns
     Clock Pessimism Removal (CPR):    0.244ns
 
@@ -1184,73 +1009,18 @@ Slack (MET) :             0.136ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X41Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           0.117     1.705    clk1m_mod/COUNT_reg[23]
-    SLICE_X41Y49         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.160     1.865 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
-                         net (fo=1, routed)           0.001     1.866    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
-    SLICE_X41Y50         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.090     1.956 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[3]
-                         net (fo=1, routed)           0.000     1.956    clk1m_mod/COUNT_reg[24]_i_1__2_n_4
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[27]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.832     1.959    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y50         FDRE                                         r  clk1m_mod/COUNT_reg[27]/C
-                         clock pessimism             -0.244     1.715    
-    SLICE_X41Y50         FDRE (Hold_fdre_C_D)         0.105     1.820    clk1m_mod/COUNT_reg[27]
-  -------------------------------------------------------------------
-                         required time                         -1.820    
-                         arrival time                           1.956    
-  -------------------------------------------------------------------
-                         slack                                  0.136    
-
-Slack (MET) :             0.136ns  (arrival time - required time)
-  Source:                 clk6p25m_mod/COUNT_reg[22]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[27]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.537ns  (logic 0.411ns (76.511%)  route 0.126ns (23.489%))
-  Logic Levels:           2  (CARRY4=2)
-  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.446ns
-    Clock Pessimism Removal (CPR):    0.244ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.563     1.446    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[22]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.164     1.610 r  clk6p25m_mod/COUNT_reg[22]/Q
-                         net (fo=2, routed)           0.125     1.736    clk6p25m_mod/COUNT_reg[22]
-    SLICE_X34Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.156     1.892 r  clk6p25m_mod/COUNT_reg[20]_i_1__1/CO[3]
-                         net (fo=1, routed)           0.001     1.892    clk6p25m_mod/COUNT_reg[20]_i_1__1_n_0
-    SLICE_X34Y50         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.091     1.983 r  clk6p25m_mod/COUNT_reg[24]_i_1__1/O[3]
-                         net (fo=1, routed)           0.000     1.983    clk6p25m_mod/COUNT_reg[24]_i_1__1_n_4
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[27]/D
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.090     1.971 r  clk1m_mod/COUNT_reg[24]_i_1__2/O[3]
+                         net (fo=1, routed)           0.000     1.971    clk1m_mod/COUNT_reg[24]_i_1__2_n_4
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[27]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1260,86 +1030,28 @@ Slack (MET) :             0.136ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.829     1.957    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y50         FDRE                                         r  clk6p25m_mod/COUNT_reg[27]/C
-                         clock pessimism             -0.244     1.713    
-    SLICE_X34Y50         FDRE (Hold_fdre_C_D)         0.134     1.847    clk6p25m_mod/COUNT_reg[27]
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y50         FDRE                                         r  clk1m_mod/COUNT_reg[27]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[27]
   -------------------------------------------------------------------
-                         required time                         -1.847    
-                         arrival time                           1.983    
+                         required time                         -1.819    
+                         arrival time                           1.971    
   -------------------------------------------------------------------
-                         slack                                  0.136    
+                         slack                                  0.152    
 
-Slack (MET) :             0.138ns  (arrival time - required time)
-  Source:                 clk6p25m_mod/COUNT_reg[22]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            clk6p25m_mod/COUNT_reg[28]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.539ns  (logic 0.413ns (76.598%)  route 0.126ns (23.402%))
-  Logic Levels:           3  (CARRY4=3)
-  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.446ns
-    Clock Pessimism Removal (CPR):    0.244ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.563     1.446    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y49         FDRE                                         r  clk6p25m_mod/COUNT_reg[22]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y49         FDRE (Prop_fdre_C_Q)         0.164     1.610 r  clk6p25m_mod/COUNT_reg[22]/Q
-                         net (fo=2, routed)           0.125     1.736    clk6p25m_mod/COUNT_reg[22]
-    SLICE_X34Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.156     1.892 r  clk6p25m_mod/COUNT_reg[20]_i_1__1/CO[3]
-                         net (fo=1, routed)           0.001     1.892    clk6p25m_mod/COUNT_reg[20]_i_1__1_n_0
-    SLICE_X34Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.040     1.932 r  clk6p25m_mod/COUNT_reg[24]_i_1__1/CO[3]
-                         net (fo=1, routed)           0.000     1.932    clk6p25m_mod/COUNT_reg[24]_i_1__1_n_0
-    SLICE_X34Y51         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.053     1.985 r  clk6p25m_mod/COUNT_reg[28]_i_1__1/O[0]
-                         net (fo=1, routed)           0.000     1.985    clk6p25m_mod/COUNT_reg[28]_i_1__1_n_7
-    SLICE_X34Y51         FDRE                                         r  clk6p25m_mod/COUNT_reg[28]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.829     1.957    clk6p25m_mod/clk_IBUF_BUFG
-    SLICE_X34Y51         FDRE                                         r  clk6p25m_mod/COUNT_reg[28]/C
-                         clock pessimism             -0.244     1.713    
-    SLICE_X34Y51         FDRE (Hold_fdre_C_D)         0.134     1.847    clk6p25m_mod/COUNT_reg[28]
-  -------------------------------------------------------------------
-                         required time                         -1.847    
-                         arrival time                           1.985    
-  -------------------------------------------------------------------
-                         slack                                  0.138    
-
-Slack (MET) :             0.139ns  (arrival time - required time)
-  Source:                 clk1m_mod/COUNT_reg[23]/C
+Slack (MET) :             0.155ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk1m_mod/COUNT_reg[28]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.512ns  (logic 0.394ns (76.968%)  route 0.118ns (23.032%))
+  Data Path Delay:        0.527ns  (logic 0.394ns (74.727%)  route 0.133ns (25.273%))
   Logic Levels:           3  (CARRY4=3)
-  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.959ns
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
     Source Clock Delay      (SCD):    1.447ns
     Clock Pessimism Removal (CPR):    0.244ns
 
@@ -1352,21 +1064,21 @@ Slack (MET) :             0.139ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y49         FDRE                                         r  clk1m_mod/COUNT_reg[23]/C
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X41Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[23]/Q
-                         net (fo=2, routed)           0.117     1.705    clk1m_mod/COUNT_reg[23]
-    SLICE_X41Y49         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.160     1.865 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
-                         net (fo=1, routed)           0.001     1.866    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
-    SLICE_X41Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.039     1.905 r  clk1m_mod/COUNT_reg[24]_i_1__2/CO[3]
-                         net (fo=1, routed)           0.000     1.905    clk1m_mod/COUNT_reg[24]_i_1__2_n_0
-    SLICE_X41Y51         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.054     1.959 r  clk1m_mod/COUNT_reg[28]_i_1__2/O[0]
-                         net (fo=1, routed)           0.000     1.959    clk1m_mod/COUNT_reg[28]_i_1__2_n_7
-    SLICE_X41Y51         FDRE                                         r  clk1m_mod/COUNT_reg[28]/D
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.920 r  clk1m_mod/COUNT_reg[24]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.000     1.920    clk1m_mod/COUNT_reg[24]_i_1__2_n_0
+    SLICE_X32Y51         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     1.974 r  clk1m_mod/COUNT_reg[28]_i_1__2/O[0]
+                         net (fo=1, routed)           0.000     1.974    clk1m_mod/COUNT_reg[28]_i_1__2_n_7
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[28]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1376,15 +1088,293 @@ Slack (MET) :             0.139ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=144, routed)         0.832     1.959    clk1m_mod/clk_IBUF_BUFG
-    SLICE_X41Y51         FDRE                                         r  clk1m_mod/COUNT_reg[28]/C
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[28]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y51         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[28]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.974    
+  -------------------------------------------------------------------
+                         slack                                  0.155    
+
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/COUNT_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.538ns  (logic 0.405ns (75.243%)  route 0.133ns (24.757%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.920 r  clk1m_mod/COUNT_reg[24]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.000     1.920    clk1m_mod/COUNT_reg[24]_i_1__2_n_0
+    SLICE_X32Y51         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     1.985 r  clk1m_mod/COUNT_reg[28]_i_1__2/O[2]
+                         net (fo=1, routed)           0.000     1.985    clk1m_mod/COUNT_reg[28]_i_1__2_n_5
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[30]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y51         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[30]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.985    
+  -------------------------------------------------------------------
+                         slack                                  0.166    
+
+Slack (MET) :             0.168ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/flex_clk_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.529ns  (logic 0.231ns (43.651%)  route 0.298ns (56.349%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.270ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.959ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.562     1.445    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y51         FDRE (Prop_fdre_C_Q)         0.141     1.586 f  clk1m_mod/COUNT_reg[30]/Q
+                         net (fo=2, routed)           0.065     1.651    clk1m_mod/COUNT_reg[30]
+    SLICE_X33Y51         LUT6 (Prop_lut6_I5_O)        0.045     1.696 r  clk1m_mod/COUNT[0]_i_5__2/O
+                         net (fo=2, routed)           0.233     1.929    clk1m_mod/COUNT[0]_i_5__2_n_0
+    SLICE_X33Y46         LUT6 (Prop_lut6_I0_O)        0.045     1.974 r  clk1m_mod/flex_clk_i_1__2/O
+                         net (fo=1, routed)           0.000     1.974    clk1m_mod/flex_clk_i_1__2_n_0
+    SLICE_X33Y46         FDRE                                         r  clk1m_mod/flex_clk_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.832     1.959    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X33Y46         FDRE                                         r  clk1m_mod/flex_clk_reg/C
                          clock pessimism             -0.244     1.715    
-    SLICE_X41Y51         FDRE (Hold_fdre_C_D)         0.105     1.820    clk1m_mod/COUNT_reg[28]
+    SLICE_X33Y46         FDRE (Hold_fdre_C_D)         0.091     1.806    clk1m_mod/flex_clk_reg
   -------------------------------------------------------------------
-                         required time                         -1.820    
-                         arrival time                           1.959    
+                         required time                         -1.806    
+                         arrival time                           1.974    
   -------------------------------------------------------------------
-                         slack                                  0.139    
+                         slack                                  0.168    
+
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/COUNT_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.563ns  (logic 0.430ns (76.342%)  route 0.133ns (23.658%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.920 r  clk1m_mod/COUNT_reg[24]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.000     1.920    clk1m_mod/COUNT_reg[24]_i_1__2_n_0
+    SLICE_X32Y51         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.090     2.010 r  clk1m_mod/COUNT_reg[28]_i_1__2/O[1]
+                         net (fo=1, routed)           0.000     2.010    clk1m_mod/COUNT_reg[28]_i_1__2_n_6
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[29]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y51         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[29]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           2.010    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 clk1m_mod/COUNT_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            clk1m_mod/COUNT_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.563ns  (logic 0.430ns (76.342%)  route 0.133ns (23.658%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.564     1.447    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y49         FDRE                                         r  clk1m_mod/COUNT_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  clk1m_mod/COUNT_reg[22]/Q
+                         net (fo=2, routed)           0.133     1.721    clk1m_mod/COUNT_reg[22]
+    SLICE_X32Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.881 r  clk1m_mod/COUNT_reg[20]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.001     1.881    clk1m_mod/COUNT_reg[20]_i_1__2_n_0
+    SLICE_X32Y50         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.920 r  clk1m_mod/COUNT_reg[24]_i_1__2/CO[3]
+                         net (fo=1, routed)           0.000     1.920    clk1m_mod/COUNT_reg[24]_i_1__2_n_0
+    SLICE_X32Y51         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.090     2.010 r  clk1m_mod/COUNT_reg[28]_i_1__2/O[3]
+                         net (fo=1, routed)           0.000     2.010    clk1m_mod/COUNT_reg[28]_i_1__2_n_4
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.830     1.958    clk1m_mod/clk_IBUF_BUFG
+    SLICE_X32Y51         FDRE                                         r  clk1m_mod/COUNT_reg[31]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X32Y51         FDRE (Hold_fdre_C_D)         0.105     1.819    clk1m_mod/COUNT_reg[31]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           2.010    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+Slack (MET) :             0.195ns  (arrival time - required time)
+  Source:                 master_mod/lfsr_mod/Q_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            master_mod/lfsr_mod/Q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.303ns  (logic 0.186ns (61.311%)  route 0.117ns (38.689%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.448ns
+    Clock Pessimism Removal (CPR):    0.497ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.565     1.448    master_mod/lfsr_mod/clk_IBUF_BUFG
+    SLICE_X57Y57         FDRE                                         r  master_mod/lfsr_mod/Q_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y57         FDRE (Prop_fdre_C_Q)         0.141     1.589 r  master_mod/lfsr_mod/Q_reg[7]/Q
+                         net (fo=2, routed)           0.117     1.707    master_mod/lfsr_mod/D[7]
+    SLICE_X57Y56         LUT2 (Prop_lut2_I1_O)        0.045     1.752 r  master_mod/lfsr_mod/Q[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.752    master_mod/lfsr_mod/Q[0]_i_1_n_0
+    SLICE_X57Y56         FDRE                                         r  master_mod/lfsr_mod/Q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.834     1.962    master_mod/lfsr_mod/clk_IBUF_BUFG
+    SLICE_X57Y56         FDRE                                         r  master_mod/lfsr_mod/Q_reg[0]/C
+                         clock pessimism             -0.497     1.465    
+    SLICE_X57Y56         FDRE (Hold_fdre_C_D)         0.091     1.556    master_mod/lfsr_mod/Q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.556    
+                         arrival time                           1.752    
+  -------------------------------------------------------------------
+                         slack                                  0.195    
 
 
 
@@ -1399,35 +1389,35 @@ Sources:            { clk }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
 Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1  clk_IBUF_BUFG_inst/I
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y51   clk1m_mod/COUNT_reg[29]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y44   clk1m_mod/COUNT_reg[2]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y51   clk1m_mod/COUNT_reg[30]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y51   clk1m_mod/COUNT_reg[31]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y44   clk1m_mod/COUNT_reg[3]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y45   clk1m_mod/COUNT_reg[4]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y45   clk1m_mod/COUNT_reg[5]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y45   clk1m_mod/COUNT_reg[6]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X41Y45   clk1m_mod/COUNT_reg[7]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y44   clk1m_mod/COUNT_reg[2]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y44   clk1m_mod/COUNT_reg[3]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y45   clk1m_mod/COUNT_reg[4]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y45   clk1m_mod/COUNT_reg[5]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y45   clk1m_mod/COUNT_reg[6]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y45   clk1m_mod/COUNT_reg[7]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y46   clk1m_mod/COUNT_reg[8]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y46   clk1m_mod/COUNT_reg[9]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X40Y46   clk1m_mod/flex_clk_reg/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y44   clk1m_mod/COUNT_reg[0]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y51   clk1m_mod/COUNT_reg[29]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y51   clk1m_mod/COUNT_reg[30]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y51   clk1m_mod/COUNT_reg[31]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X64Y26   master_mod/clk1k_mod/COUNT_reg[0]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X64Y26   master_mod/clk1k_mod/COUNT_reg[1]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X64Y32   master_mod/clk1k_mod/COUNT_reg[24]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X64Y32   master_mod/clk1k_mod/COUNT_reg[25]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X64Y32   master_mod/clk1k_mod/COUNT_reg[26]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X64Y32   master_mod/clk1k_mod/COUNT_reg[27]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X64Y33   master_mod/clk1k_mod/COUNT_reg[28]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y49   clk1m_mod/COUNT_reg[23]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y50   clk1m_mod/COUNT_reg[24]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y50   clk1m_mod/COUNT_reg[25]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y50   clk1m_mod/COUNT_reg[26]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y50   clk1m_mod/COUNT_reg[27]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y51   clk1m_mod/COUNT_reg[28]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y51   clk1m_mod/COUNT_reg[29]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y44   clk1m_mod/COUNT_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X32Y51   clk1m_mod/COUNT_reg[30]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y49   clk1m_mod/COUNT_reg[23]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y44   clk1m_mod/COUNT_reg[2]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y44   clk1m_mod/COUNT_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y45   clk1m_mod/COUNT_reg[4]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y45   clk1m_mod/COUNT_reg[5]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y45   clk1m_mod/COUNT_reg[6]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y45   clk1m_mod/COUNT_reg[7]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y46   clk1m_mod/COUNT_reg[8]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y46   clk1m_mod/COUNT_reg[9]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X33Y46   clk1m_mod/flex_clk_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y50   clk1m_mod/COUNT_reg[24]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y50   clk1m_mod/COUNT_reg[25]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y50   clk1m_mod/COUNT_reg[26]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y50   clk1m_mod/COUNT_reg[27]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y51   clk1m_mod/COUNT_reg[28]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y51   clk1m_mod/COUNT_reg[29]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y51   clk1m_mod/COUNT_reg[30]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X32Y51   clk1m_mod/COUNT_reg[31]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X49Y33   master_mod/clk1k_mod/COUNT_reg[24]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X49Y33   master_mod/clk1k_mod/COUNT_reg[25]/C
 
 
 
