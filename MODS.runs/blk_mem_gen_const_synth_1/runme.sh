@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/rodi3/OneDrive/Documents/MODS/MODS.runs/blk_mem_gen_const_synth_1'
+HD_PWD='C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.runs/blk_mem_gen_const_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

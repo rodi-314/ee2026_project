@@ -22,6 +22,6 @@
 
 module counter_5s(input clk1m, tile_discarded, output reg [31:0] counter);
     always @ (posedge clk1m) begin
-        counter = (counter == 5000000) ? 0 : (tile_discarded ? counter + 1 : 0);
+        counter = (tile_discarded ? (counter == 5000000 ? 5000000 : counter + 1) : 0);
     end
 endmodule

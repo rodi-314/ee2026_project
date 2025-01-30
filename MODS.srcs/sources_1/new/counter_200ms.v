@@ -22,6 +22,6 @@
 
 module counter_200ms(input clk1m, btn_pressed, output reg [31:0] counter);
     always @ (posedge clk1m) begin
-        counter = (counter == 200000) ? 0 : (btn_pressed ? counter + 1 : 0);
+        counter = (counter == 200000) ? 200000 : (btn_pressed ? counter + 1 : 0);
     end
 endmodule

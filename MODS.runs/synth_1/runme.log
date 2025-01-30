@@ -14,14 +14,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 54328 
+INFO: Helper process launched with PID 20228 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 356.551 ; gain = 99.965
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 387.609 ; gain = 100.730
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/Top_Student.v:14]
-INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'flexible_clock_module' (1#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'flexible_clock_module' (1#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
 	Parameter PixelCount bound to: 6144 - type: integer 
@@ -72,34 +72,73 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/rodi3/Document
 	Parameter SendPixel bound to: 5'b10000 
 	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
 	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
-INFO: [Synth 8-226] default block is never used [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
-WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
-INFO: [Synth 8-6157] synthesizing module 'pixel_index_to_xy' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/pixel_index_to_xy.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'pixel_index_to_xy' (3#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/pixel_index_to_xy.v:23]
-INFO: [Synth 8-6157] synthesizing module 'master' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:23]
-INFO: [Synth 8-6157] synthesizing module 'lfsr' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/lfsr.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'lfsr' (4#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/lfsr.v:23]
-INFO: [Synth 8-6157] synthesizing module 'counter_200ms' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_200ms.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'counter_200ms' (5#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_200ms.v:23]
-INFO: [Synth 8-6157] synthesizing module 'counter_5s' [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_5s.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'counter_5s' (6#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/counter_5s.v:23]
-INFO: [Synth 8-3876] $readmem data file 'C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/tiles.txt' is read successfully [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:74]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:331]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:440]
-WARNING: [Synth 8-6014] Unused sequential element initialised_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:73]
-WARNING: [Synth 8-6014] Unused sequential element random_index_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:91]
-WARNING: [Synth 8-6014] Unused sequential element tile_value_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:92]
-WARNING: [Synth 8-6014] Unused sequential element start_game_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:114]
-WARNING: [Synth 8-6014] Unused sequential element btnD_pressed_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:133]
-WARNING: [Synth 8-6014] Unused sequential element checked_pon_chi_kan_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:277]
-WARNING: [Synth 8-6014] Unused sequential element same_tile_counter_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:279]
-WARNING: [Synth 8-6014] Unused sequential element chi_checker_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:280]
-WARNING: [Synth 8-6014] Unused sequential element pon_possible_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:281]
-WARNING: [Synth 8-6014] Unused sequential element kan_possible_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:282]
-WARNING: [Synth 8-6014] Unused sequential element chi_possible_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:283]
-WARNING: [Synth 8-6014] Unused sequential element digit_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:425]
+INFO: [Synth 8-226] default block is never used [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'pixel_index_to_xy' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/pixel_index_to_xy.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_index_to_xy' (3#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/pixel_index_to_xy.v:23]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (4#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (5#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+INFO: [Synth 8-6157] synthesizing module 'master' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:23]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/lfsr.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (6#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/lfsr.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/debounce.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (7#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/debounce.v:25]
+INFO: [Synth 8-6157] synthesizing module 'UART_TX' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_TX.v:23]
+	Parameter PACKET_TYPE_TILE bound to: 2'b00 
+	Parameter PACKET_TYPE_MOVE bound to: 2'b01 
+	Parameter PACKET_TYPE_TURN bound to: 2'b10 
+	Parameter CLK_FREQ bound to: 100000 - type: integer 
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+	Parameter BAUD_CNT bound to: 10 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter SEND bound to: 2'b01 
+WARNING: [Synth 8-6014] Unused sequential element data_byte_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_TX.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'UART_TX' (8#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_TX.v:23]
+INFO: [Synth 8-6157] synthesizing module 'UART_RX' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_RX.v:23]
+	Parameter PACKET_TYPE_TILE bound to: 2'b00 
+	Parameter PACKET_TYPE_MOVE bound to: 2'b01 
+	Parameter PACKET_TYPE_TURN bound to: 2'b10 
+	Parameter CLK_FREQ bound to: 100000 - type: integer 
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+	Parameter BAUD_CNT bound to: 10 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter RECEIVE bound to: 2'b01 
+	Parameter HOLD bound to: 2'b10 
+WARNING: [Synth 8-6014] Unused sequential element received_byte_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_RX.v:63]
+WARNING: [Synth 8-5788] Register tile_reg in module UART_RX is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_RX.v:92]
+WARNING: [Synth 8-5788] Register move_reg in module UART_RX is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_RX.v:93]
+WARNING: [Synth 8-5788] Register turn_reg in module UART_RX is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_RX.v:94]
+WARNING: [Synth 8-5788] Register chi_reg in module UART_RX is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_RX.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'UART_RX' (9#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/UART_RX.v:23]
+INFO: [Synth 8-6157] synthesizing module 'one_hot_to_integer' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/one_hot_to_integer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_to_integer' (10#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/one_hot_to_integer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter_200ms' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/counter_200ms.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter_200ms' (11#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/counter_200ms.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter_5s' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/counter_5s.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter_5s' (12#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/counter_5s.v:23]
+INFO: [Synth 8-3876] $readmem data file 'tiles.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:278]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:256]
+WARNING: [Synth 8-6014] Unused sequential element hand_1_reg[17] was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:282]
+WARNING: [Synth 8-6014] Unused sequential element hand_1_reg[16] was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:282]
+WARNING: [Synth 8-6014] Unused sequential element hand_2_reg[17] was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:283]
+WARNING: [Synth 8-6014] Unused sequential element hand_2_reg[16] was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:283]
+WARNING: [Synth 8-6014] Unused sequential element hand_3_reg[17] was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:284]
+WARNING: [Synth 8-6014] Unused sequential element hand_3_reg[16] was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:284]
+WARNING: [Synth 8-6014] Unused sequential element random_index_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:301]
+WARNING: [Synth 8-6014] Unused sequential element tile_value_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:302]
+WARNING: [Synth 8-6014] Unused sequential element kan_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:396]
 WARNING: [Synth 8-4767] Trying to implement RAM 'draw_pile_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: Invalid write data for RAM. 
@@ -107,33 +146,212 @@ Reason is one or more of the following :
 	3: Unable to determine number of words or word size in RAM. 
 	4: No valid read/write found for RAM. 
 RAM "draw_pile_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'master' (7#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/master.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (8#1) [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/Top_Student.v:14]
-WARNING: [Synth 8-3331] design master has unconnected port btnD
-WARNING: [Synth 8-3331] design master has unconnected port sw[13]
-WARNING: [Synth 8-3331] design master has unconnected port sw[12]
-WARNING: [Synth 8-3331] design master has unconnected port sw[11]
-WARNING: [Synth 8-3331] design master has unconnected port sw[10]
-WARNING: [Synth 8-3331] design master has unconnected port sw[9]
-WARNING: [Synth 8-3331] design master has unconnected port sw[8]
-WARNING: [Synth 8-3331] design master has unconnected port x[6]
-WARNING: [Synth 8-3331] design master has unconnected port x[5]
-WARNING: [Synth 8-3331] design master has unconnected port x[4]
-WARNING: [Synth 8-3331] design master has unconnected port x[3]
-WARNING: [Synth 8-3331] design master has unconnected port x[2]
-WARNING: [Synth 8-3331] design master has unconnected port x[1]
-WARNING: [Synth 8-3331] design master has unconnected port x[0]
-WARNING: [Synth 8-3331] design master has unconnected port y[5]
-WARNING: [Synth 8-3331] design master has unconnected port y[4]
-WARNING: [Synth 8-3331] design master has unconnected port y[3]
-WARNING: [Synth 8-3331] design master has unconnected port y[2]
-WARNING: [Synth 8-3331] design master has unconnected port y[1]
-WARNING: [Synth 8-3331] design master has unconnected port y[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port JX[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_clk
-WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_data
+WARNING: [Synth 8-3848] Net oled_data in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:23]
+WARNING: [Synth 8-3848] Net seg in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:37]
+WARNING: [Synth 8-3848] Net an in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:38]
+WARNING: [Synth 8-3848] Net tx_move1 in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:106]
+WARNING: [Synth 8-3848] Net tx_chi1 in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:107]
+WARNING: [Synth 8-3848] Net tx_move2 in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:106]
+WARNING: [Synth 8-3848] Net tx_chi2 in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:107]
+WARNING: [Synth 8-3848] Net tx_move3 in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:106]
+WARNING: [Synth 8-3848] Net tx_chi3 in module/entity master does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'master' (13#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:23]
+INFO: [Synth 8-6157] synthesizing module 'slave' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'move' does not match port width (2) of module 'UART_RX' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:94]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:160]
+WARNING: [Synth 8-3848] Net oled_data in module/entity slave does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:31]
+WARNING: [Synth 8-3848] Net hand[17] in module/entity slave does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:81]
+WARNING: [Synth 8-3848] Net hand[16] in module/entity slave does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:81]
+WARNING: [Synth 8-3848] Net seg in module/entity slave does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:45]
+WARNING: [Synth 8-3848] Net an in module/entity slave does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:46]
+WARNING: [Synth 8-3848] Net tx_move in module/entity slave does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:102]
+WARNING: [Synth 8-3848] Net tx_chi in module/entity slave does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'slave' (14#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uiux' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:28]
+	Parameter SQUARE_WIDTH bound to: 10 - type: integer 
+	Parameter SQUARE_HEIGHT bound to: 10 - type: integer 
+	Parameter X_SPACING bound to: 5 - type: integer 
+	Parameter Y1_BASE bound to: 10 - type: integer 
+	Parameter Y2_BASE bound to: 30 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'layout_00.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:79]
+INFO: [Synth 8-3876] $readmem data file 'layout_01.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:80]
+INFO: [Synth 8-3876] $readmem data file 'layout_02.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:81]
+INFO: [Synth 8-3876] $readmem data file 'layout_03.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:82]
+INFO: [Synth 8-3876] $readmem data file 'layout_04.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:83]
+INFO: [Synth 8-3876] $readmem data file 'layout_10.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:84]
+INFO: [Synth 8-3876] $readmem data file 'layout_20.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:85]
+INFO: [Synth 8-3876] $readmem data file 'layout_30.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:86]
+INFO: [Synth 8-3876] $readmem data file 'layout_40.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:87]
+INFO: [Synth 8-3876] $readmem data file 'layout_11.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:88]
+INFO: [Synth 8-3876] $readmem data file 'layout_12.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:89]
+INFO: [Synth 8-3876] $readmem data file 'layout_21.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:90]
+INFO: [Synth 8-3876] $readmem data file 'layout_13.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:91]
+INFO: [Synth 8-3876] $readmem data file 'layout_31.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:92]
+INFO: [Synth 8-3876] $readmem data file 'layout_22.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:93]
+INFO: [Synth 8-3876] $readmem data file 'discard.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:94]
+INFO: [Synth 8-3876] $readmem data file 'cursor1.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:172]
+INFO: [Synth 8-3876] $readmem data file 'cursor2.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:173]
+INFO: [Synth 8-3876] $readmem data file 'cursor3.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:174]
+INFO: [Synth 8-3876] $readmem data file 'cursorright.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:175]
+INFO: [Synth 8-3876] $readmem data file 'cursorleft.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:176]
+INFO: [Synth 8-3876] $readmem data file 'emote.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:177]
+INFO: [Synth 8-3876] $readmem data file 'emote2.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:178]
+INFO: [Synth 8-3876] $readmem data file 'eye.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:179]
+INFO: [Synth 8-3876] $readmem data file 'eye2.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:180]
+INFO: [Synth 8-3876] $readmem data file 'eye3.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:181]
+INFO: [Synth 8-3876] $readmem data file 'eye4.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:182]
+INFO: [Synth 8-6157] synthesizing module 'tile_designs' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:23]
+INFO: [Synth 8-3876] $readmem data file '1tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:61]
+INFO: [Synth 8-3876] $readmem data file '2tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:62]
+INFO: [Synth 8-3876] $readmem data file '3tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:63]
+INFO: [Synth 8-3876] $readmem data file '4tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:64]
+INFO: [Synth 8-3876] $readmem data file '5tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:65]
+INFO: [Synth 8-3876] $readmem data file '6tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:66]
+INFO: [Synth 8-3876] $readmem data file '7tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:67]
+INFO: [Synth 8-3876] $readmem data file '8tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:68]
+INFO: [Synth 8-3876] $readmem data file '9tong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:69]
+INFO: [Synth 8-3876] $readmem data file '1wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:70]
+INFO: [Synth 8-3876] $readmem data file '2wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:71]
+INFO: [Synth 8-3876] $readmem data file '3wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:72]
+INFO: [Synth 8-3876] $readmem data file '4wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:73]
+INFO: [Synth 8-3876] $readmem data file '5wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:74]
+INFO: [Synth 8-3876] $readmem data file '6wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:75]
+INFO: [Synth 8-3876] $readmem data file '7wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:76]
+INFO: [Synth 8-3876] $readmem data file '8wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:77]
+INFO: [Synth 8-3876] $readmem data file '9wan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:78]
+INFO: [Synth 8-3876] $readmem data file '1suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:79]
+INFO: [Synth 8-3876] $readmem data file '2suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:80]
+INFO: [Synth 8-3876] $readmem data file '3suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:81]
+INFO: [Synth 8-3876] $readmem data file '4suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:82]
+INFO: [Synth 8-3876] $readmem data file '5suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:83]
+INFO: [Synth 8-3876] $readmem data file '6suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:84]
+INFO: [Synth 8-3876] $readmem data file '7suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:85]
+INFO: [Synth 8-3876] $readmem data file '8suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:86]
+INFO: [Synth 8-3876] $readmem data file '9suo.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:87]
+INFO: [Synth 8-3876] $readmem data file 'dong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:88]
+INFO: [Synth 8-3876] $readmem data file 'nan.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:89]
+INFO: [Synth 8-3876] $readmem data file 'xi.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:90]
+INFO: [Synth 8-3876] $readmem data file 'bei.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:91]
+INFO: [Synth 8-3876] $readmem data file 'hongzhong.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:92]
+INFO: [Synth 8-3876] $readmem data file 'baiban.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:93]
+INFO: [Synth 8-3876] $readmem data file 'facai.txt' is read successfully [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'tile_designs' (15#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/tile_designs.v:23]
+WARNING: [Synth 8-6090] variable 'gesture_left' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:900]
+WARNING: [Synth 8-6090] variable 'gesture_right' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:901]
+WARNING: [Synth 8-6090] variable 'gesture_tick_se' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:902]
+WARNING: [Synth 8-6090] variable 'gesture_tick_ne' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:903]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:918]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:953]
+WARNING: [Synth 8-6014] Unused sequential element player_turn_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:342]
+WARNING: [Synth 8-6014] Unused sequential element dx_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:871]
+WARNING: [Synth 8-6014] Unused sequential element dy_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:872]
+INFO: [Synth 8-6155] done synthesizing module 'uiux' (16#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:28]
+WARNING: [Synth 8-3848] Net btnL_pulse in module/entity Top_Student does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/Top_Student.v:72]
+WARNING: [Synth 8-3848] Net btnR_pulse in module/entity Top_Student does not have driver. [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/Top_Student.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (17#1) [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[7]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[6]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[5]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[4]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[3]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[2]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[1]
+WARNING: [Synth 8-3331] design uiux has unconnected port led[0]
+WARNING: [Synth 8-3331] design uiux has unconnected port clk2k
+WARNING: [Synth 8-3331] design uiux has unconnected port btnU
+WARNING: [Synth 8-3331] design uiux has unconnected port btnC
+WARNING: [Synth 8-3331] design uiux has unconnected port btnD
+WARNING: [Synth 8-3331] design uiux has unconnected port btnR
+WARNING: [Synth 8-3331] design uiux has unconnected port btnL
+WARNING: [Synth 8-3331] design uiux has unconnected port restart
+WARNING: [Synth 8-3331] design uiux has unconnected port sw[15]
+WARNING: [Synth 8-3331] design uiux has unconnected port mz[3]
+WARNING: [Synth 8-3331] design uiux has unconnected port mz[2]
+WARNING: [Synth 8-3331] design uiux has unconnected port mz[1]
+WARNING: [Synth 8-3331] design uiux has unconnected port mz[0]
+WARNING: [Synth 8-3331] design uiux has unconnected port btnL_pulse
+WARNING: [Synth 8-3331] design uiux has unconnected port btnR_pulse
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[15]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[14]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[13]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[12]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[11]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[10]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[9]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[8]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[7]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[6]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[5]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[4]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[3]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[2]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[1]
+WARNING: [Synth 8-3331] design slave has unconnected port oled_data[0]
+WARNING: [Synth 8-3331] design slave has unconnected port seg[6]
+WARNING: [Synth 8-3331] design slave has unconnected port seg[5]
+WARNING: [Synth 8-3331] design slave has unconnected port seg[4]
+WARNING: [Synth 8-3331] design slave has unconnected port seg[3]
+WARNING: [Synth 8-3331] design slave has unconnected port seg[2]
+WARNING: [Synth 8-3331] design slave has unconnected port seg[1]
+WARNING: [Synth 8-3331] design slave has unconnected port seg[0]
+WARNING: [Synth 8-3331] design slave has unconnected port an[3]
+WARNING: [Synth 8-3331] design slave has unconnected port an[2]
+WARNING: [Synth 8-3331] design slave has unconnected port an[1]
+WARNING: [Synth 8-3331] design slave has unconnected port an[0]
+WARNING: [Synth 8-3331] design slave has unconnected port sw[15]
+WARNING: [Synth 8-3331] design slave has unconnected port sw[14]
+WARNING: [Synth 8-3331] design slave has unconnected port x[6]
+WARNING: [Synth 8-3331] design slave has unconnected port x[5]
+WARNING: [Synth 8-3331] design slave has unconnected port x[4]
+WARNING: [Synth 8-3331] design slave has unconnected port x[3]
+WARNING: [Synth 8-3331] design slave has unconnected port x[2]
+WARNING: [Synth 8-3331] design slave has unconnected port x[1]
+WARNING: [Synth 8-3331] design slave has unconnected port x[0]
+WARNING: [Synth 8-3331] design slave has unconnected port y[5]
+WARNING: [Synth 8-3331] design slave has unconnected port y[4]
+WARNING: [Synth 8-3331] design slave has unconnected port y[3]
+WARNING: [Synth 8-3331] design slave has unconnected port y[2]
+WARNING: [Synth 8-3331] design slave has unconnected port y[1]
+WARNING: [Synth 8-3331] design slave has unconnected port y[0]
+WARNING: [Synth 8-3331] design slave has unconnected port clk25m
+WARNING: [Synth 8-3331] design slave has unconnected port clk2k
+WARNING: [Synth 8-3331] design slave has unconnected port clk50
+WARNING: [Synth 8-3331] design slave has unconnected port clk1
+WARNING: [Synth 8-3331] design slave has unconnected port restart
+WARNING: [Synth 8-3331] design slave has unconnected port mx[6]
+WARNING: [Synth 8-3331] design slave has unconnected port mx[5]
+WARNING: [Synth 8-3331] design slave has unconnected port mx[4]
+WARNING: [Synth 8-3331] design slave has unconnected port mx[3]
+WARNING: [Synth 8-3331] design slave has unconnected port mx[2]
+WARNING: [Synth 8-3331] design slave has unconnected port mx[1]
+WARNING: [Synth 8-3331] design slave has unconnected port mx[0]
+WARNING: [Synth 8-3331] design slave has unconnected port my[5]
+WARNING: [Synth 8-3331] design slave has unconnected port my[4]
+WARNING: [Synth 8-3331] design slave has unconnected port my[3]
+WARNING: [Synth 8-3331] design slave has unconnected port my[2]
+WARNING: [Synth 8-3331] design slave has unconnected port my[1]
+WARNING: [Synth 8-3331] design slave has unconnected port my[0]
+WARNING: [Synth 8-3331] design slave has unconnected port mz[3]
+WARNING: [Synth 8-3331] design slave has unconnected port mz[2]
+WARNING: [Synth 8-3331] design slave has unconnected port mz[1]
+WARNING: [Synth 8-3331] design slave has unconnected port mz[0]
+WARNING: [Synth 8-3331] design slave has unconnected port left
+WARNING: [Synth 8-3331] design slave has unconnected port middle
+WARNING: [Synth 8-3331] design slave has unconnected port right
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[12]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[11]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[10]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[9]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[8]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[7]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[6]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[5]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[4]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[3]
+WARNING: [Synth 8-3331] design slave has unconnected port pixel_index[2]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 518.809 ; gain = 262.223
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 667.457 ; gain = 380.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -142,70 +360,229 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin uarttx1:move[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:110]
+WARNING: [Synth 8-3295] tying undriven pin uarttx1:move[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:110]
+WARNING: [Synth 8-3295] tying undriven pin uarttx1:chi[2] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:110]
+WARNING: [Synth 8-3295] tying undriven pin uarttx1:chi[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:110]
+WARNING: [Synth 8-3295] tying undriven pin uarttx1:chi[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:110]
+WARNING: [Synth 8-3295] tying undriven pin uarttx2:move[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:122]
+WARNING: [Synth 8-3295] tying undriven pin uarttx2:move[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:122]
+WARNING: [Synth 8-3295] tying undriven pin uarttx2:chi[2] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:122]
+WARNING: [Synth 8-3295] tying undriven pin uarttx2:chi[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:122]
+WARNING: [Synth 8-3295] tying undriven pin uarttx2:chi[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:122]
+WARNING: [Synth 8-3295] tying undriven pin uarttx3:move[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:134]
+WARNING: [Synth 8-3295] tying undriven pin uarttx3:move[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:134]
+WARNING: [Synth 8-3295] tying undriven pin uarttx3:chi[2] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:134]
+WARNING: [Synth 8-3295] tying undriven pin uarttx3:chi[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:134]
+WARNING: [Synth 8-3295] tying undriven pin uarttx3:chi[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:134]
+WARNING: [Synth 8-3295] tying undriven pin uart_slave:move[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:109]
+WARNING: [Synth 8-3295] tying undriven pin uart_slave:move[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:109]
+WARNING: [Synth 8-3295] tying undriven pin uart_slave:chi[2] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:109]
+WARNING: [Synth 8-3295] tying undriven pin uart_slave:chi[1] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:109]
+WARNING: [Synth 8-3295] tying undriven pin uart_slave:chi[0] to constant 0 [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/slave.v:109]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 518.809 ; gain = 262.223
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 667.457 ; gain = 380.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 518.809 ; gain = 262.223
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 667.457 ; gain = 380.578
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/constrs_1/new/basys3_constraints.xdc]
-Finished Parsing XDC File [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/constrs_1/new/basys3_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/constrs_1/new/basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Parsing XDC File [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc]
+Finished Parsing XDC File [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/constrs_1/new/basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 836.074 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 974.945 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 836.074 ; gain = 579.488
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 975.062 ; gain = 688.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 836.074 ; gain = 579.488
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 975.062 ; gain = 688.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 836.074 ; gain = 579.488
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 975.062 ; gain = 688.184
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
+INFO: [Synth 8-5546] ROM "reset_bit_count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "busy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "read_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "load_tx_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2_clk_h" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_100us_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_20us_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_63clk_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'MouseCtl'
+INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reset_periodic_check_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "new_event" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_TX'
+INFO: [Synth 8-5544] ROM "tx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_RX'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "int" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'chi_reg' into 'pon_reg' [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:393]
+WARNING: [Synth 8-6014] Unused sequential element chi_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/master.v:393]
 INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "shuffling" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "hand_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hand_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tong_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_5" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_7" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_8" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tong_9" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_5" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_7" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_8" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wan_9" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_5" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_7" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_8" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "suo_9" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dong" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nan" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "xi" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bei" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hongzhong" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "baiban" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "facai" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/task_4b.v:941]
+INFO: [Synth 8-5546] ROM "kan_tile_3_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kan_tile_2_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kan_tile_1_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kan_tile_4_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "blinkUp0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "layout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cycle_kan" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor4_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor4_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "eye2_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "eye3_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "eye_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor5_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor5_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor2_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor2_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kan_tile_3_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kan_tile_2_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kan_tile_1_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kan_tile_4_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "blinkUp0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "layout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cycle_kan" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor4_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor4_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "eye2_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "eye3_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "eye_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor5_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor5_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor2_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cursor2_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "gesture_left2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "gesture_right2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "gesture_tick_se2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "gesture_tick_ne2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "emote" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "emote" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "emote" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "emote_wait" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "layout0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -243,66 +620,211 @@ INFO: [Synth 8-5546] ROM "shuffling" won't be mapped to RAM because it is too sp
                SendPixel | 00000000000000000010000000000000 |                            10000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                00000000000000001 |                            00000
+            rx_down_edge |                00000000000000010 |                            00011
+                rx_clk_l |                00000000000000100 |                            00010
+                rx_clk_h |                00000000000001000 |                            00001
+         rx_error_parity |                00000000000010000 |                            00100
+           rx_data_ready |                00000000000100000 |                            00101
+          tx_force_clk_l |                00000000001000000 |                            00110
+      tx_bring_data_down |                00000000010000000 |                            00111
+          tx_release_clk |                00000000100000000 |                            01000
+ tx_first_wait_down_edge |                00000001000000000 |                            01001
+                tx_clk_l |                00000010000000000 |                            01010
+         tx_wait_up_edge |                00000100000000000 |                            01011
+tx_wait_up_edge_before_ack |                00001000000000000 |                            01101
+             tx_wait_ack |                00010000000000000 |                            01110
+         tx_received_ack |                00100000000000000 |                            01111
+         tx_error_no_ack |                01000000000000000 |                            10000
+                tx_clk_h |                10000000000000000 |                            01100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Ps2Interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset | 0000000000000000000000000000000000001 |                           000000
+          reset_wait_ack | 0000000000000000000000000000000000010 |                           000001
+reset_wait_bat_completion | 0000000000000000000000000000000000100 |                           000010
+           reset_wait_id | 0000000000000000000000000000000001000 |                           000011
+reset_set_sample_rate_200 | 0000000000000000000000000000000010000 |                           000100
+reset_set_sample_rate_200_wait_ack | 0000000000000000000000000000000100000 |                           000101
+reset_send_sample_rate_200 | 0000000000000000000000000000001000000 |                           000110
+reset_send_sample_rate_200_wait_ack | 0000000000000000000000000000010000000 |                           000111
+reset_set_sample_rate_100 | 0000000000000000000000000000100000000 |                           001000
+reset_set_sample_rate_100_wait_ack | 0000000000000000000000000001000000000 |                           001001
+reset_send_sample_rate_100 | 0000000000000000000000000010000000000 |                           001010
+reset_send_sample_rate_100_wait_ack | 0000000000000000000000000100000000000 |                           001011
+reset_set_sample_rate_80 | 0000000000000000000000001000000000000 |                           001100
+reset_set_sample_rate_80_wait_ack | 0000000000000000000000010000000000000 |                           001101
+reset_send_sample_rate_80 | 0000000000000000000000100000000000000 |                           001110
+reset_send_sample_rate_80_wait_ack | 0000000000000000000001000000000000000 |                           001111
+           reset_read_id | 0000000000000000000010000000000000000 |                           010000
+  reset_read_id_wait_ack | 0000000000000000000100000000000000000 |                           010001
+   reset_read_id_wait_id | 0000000000000000001000000000000000000 |                           010010
+    reset_set_resolution | 0000000000000000010000000000000000000 |                           010011
+reset_set_resolution_wait_ack | 0000000000000000100000000000000000000 |                           010100
+   reset_send_resolution | 0000000000000001000000000000000000000 |                           010101
+reset_send_resolution_wait_ack | 0000000000000010000000000000000000000 |                           010110
+reset_set_sample_rate_40 | 0000000000000100000000000000000000000 |                           010111
+reset_set_sample_rate_40_wait_ack | 0000000000001000000000000000000000000 |                           011000
+reset_send_sample_rate_40 | 0000000000010000000000000000000000000 |                           011001
+reset_send_sample_rate_40_wait_ack | 0000000000100000000000000000000000000 |                           011010
+  reset_enable_reporting | 0000000001000000000000000000000000000 |                           011011
+reset_enable_reporting_wait_ack | 0000000010000000000000000000000000000 |                           011100
+             read_byte_1 | 0000000100000000000000000000000000000 |                           011101
+             read_byte_2 | 0000001000000000000000000000000000000 |                           011110
+             read_byte_3 | 0000010000000000000000000000000000000 |                           011111
+             read_byte_4 | 0000100000000000000000000000000000000 |                           100000
+          mark_new_event | 0001000000000000000000000000000000000 |                           100100
+           check_read_id | 0010000000000000000000000000000000000 |                           100001
+  check_read_id_wait_ack | 0100000000000000000000000000000000000 |                           100010
+   check_read_id_wait_id | 1000000000000000000000000000000000000 |                           100011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'MouseCtl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                               00
+                    SEND |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'UART_TX'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                               00
+                 RECEIVE |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'UART_RX'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 836.074 ; gain = 579.488
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 975.062 ; gain = 688.184
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnU_counter_mod'
-INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnD_counter_mod'
-INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnL_counter_mod'
-INFO: [Synth 8-223] decloning instance 'master_mod/btnC_counter_mod' (counter_200ms) to 'master_mod/btnR_counter_mod'
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |tile_designs      |          19|      7181|
+|2     |uiux__GCB0        |           1|     29411|
+|3     |uiux__GCB1        |           1|      8160|
+|4     |uiux__GCB2        |           1|     24480|
+|5     |uiux__GCB3        |           1|     34533|
+|6     |uiux__GCB4        |           1|      3755|
+|7     |Top_Student__GCB0 |           1|     43623|
+|8     |Top_Student__GCB1 |           1|      8756|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 19    
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 4     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
+	   3 Input     14 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 7     
+	   2 Input     12 Bit       Adders := 5     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 23    
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 8     
+	   3 Input      7 Bit       Adders := 18    
+	   2 Input      7 Bit       Adders := 29    
+	   2 Input      6 Bit       Adders := 6     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 21    
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 23    
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 3     
-	                8 Bit    Registers := 4     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 210   
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 4     
-	                1 Bit    Registers := 19    
+	               16 Bit    Registers := 21    
+	               14 Bit    Registers := 6     
+	               12 Bit    Registers := 6     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 8     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 21    
+	                6 Bit    Registers := 250   
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 16    
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 14    
+	                1 Bit    Registers := 115   
++---Multipliers : 
+	                 6x32  Multipliers := 2     
 +---Muxes : 
+	   2 Input    108 Bit        Muxes := 1     
 	   2 Input     40 Bit        Muxes := 3     
+	  37 Input     37 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 69    
+	   2 Input     32 Bit        Muxes := 53    
+	   3 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
 	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 6     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
 	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 19    
+	  17 Input     17 Bit        Muxes := 1     
+	 105 Input     16 Bit        Muxes := 627   
+	  35 Input     16 Bit        Muxes := 19    
+	  15 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 77    
+	 257 Input     16 Bit        Muxes := 6     
+	 197 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 12    
+	   2 Input     12 Bit        Muxes := 10    
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 12    
+	   4 Input     10 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 2     
+	  37 Input      8 Bit        Muxes := 3     
+	   4 Input      7 Bit        Muxes := 3     
+	   5 Input      7 Bit        Muxes := 4     
+	   3 Input      7 Bit        Muxes := 4     
+	   6 Input      7 Bit        Muxes := 1     
+	  15 Input      7 Bit        Muxes := 5     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 974   
+	  16 Input      6 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 5     
+	   5 Input      6 Bit        Muxes := 1     
 	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1034  
-	   4 Input      6 Bit        Muxes := 19    
-	   5 Input      6 Bit        Muxes := 2     
-	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
 	  32 Input      5 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 23    
-	   2 Input      1 Bit        Muxes := 371   
-	   5 Input      1 Bit        Muxes := 8     
-	   4 Input      1 Bit        Muxes := 2     
-	  11 Input      1 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 34    
+	  15 Input      4 Bit        Muxes := 2     
+	  37 Input      4 Bit        Muxes := 1     
+	  15 Input      3 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	  15 Input      2 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 454   
+	   4 Input      1 Bit        Muxes := 17    
+	  16 Input      1 Bit        Muxes := 3     
+	  15 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 3     
+	  17 Input      1 Bit        Muxes := 4     
+	  37 Input      1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -310,7 +832,471 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module flexible_clock_module 
+Module Top_Student 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    108 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module tile_designs 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	 105 Input     16 Bit        Muxes := 33    
+	  35 Input     16 Bit        Muxes := 1     
+Module uiux 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 7     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
+	   3 Input     14 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 23    
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 5     
+	   3 Input      7 Bit       Adders := 18    
+	   2 Input      7 Bit       Adders := 28    
+	   2 Input      6 Bit       Adders := 5     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 20    
+	                6 Bit    Registers := 22    
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Multipliers : 
+	                 6x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 22    
+	   3 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
+	  15 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 73    
+	 257 Input     16 Bit        Muxes := 6     
+	 197 Input     16 Bit        Muxes := 3     
+	   4 Input      7 Bit        Muxes := 3     
+	   5 Input      7 Bit        Muxes := 4     
+	   3 Input      7 Bit        Muxes := 4     
+	   6 Input      7 Bit        Muxes := 1     
+	  15 Input      7 Bit        Muxes := 5     
+	   2 Input      6 Bit        Muxes := 3     
+	  16 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  15 Input      3 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	  15 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 3     
+	  16 Input      1 Bit        Muxes := 3     
+	  15 Input      1 Bit        Muxes := 4     
+Module flexible_clock_module__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module UART_RX 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   4 Input      1 Bit        Muxes := 2     
+Module UART_TX 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module one_hot_to_integer 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	  15 Input      4 Bit        Muxes := 1     
+Module counter_200ms__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module flexible_clock_module__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module slave 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                6 Bit    Registers := 17    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 466   
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module lfsr 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module flexible_clock_module__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module UART_TX__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module UART_TX__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module UART_TX__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module UART_RX__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   4 Input      1 Bit        Muxes := 2     
+Module UART_RX__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   4 Input      1 Bit        Muxes := 2     
+Module UART_RX__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   4 Input      1 Bit        Muxes := 2     
+Module one_hot_to_integer__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	  15 Input      4 Bit        Muxes := 1     
+Module counter_200ms__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_200ms__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module counter_5s 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module master 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 206   
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 503   
+	   4 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 307   
+	   5 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 2     
+Module flexible_clock_module__7 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
@@ -336,58 +1322,91 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
-Module lfsr 
+Module Ps2Interface 
 Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
 +---Registers : 
+	               11 Bit    Registers := 2     
 	                8 Bit    Registers := 1     
-Module counter_200ms 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
-Module counter_5s 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
-Module master 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 4     
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	               16 Bit    Registers := 3     
-	                8 Bit    Registers := 3     
 	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 209   
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 4     
-	                1 Bit    Registers := 13    
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 1033  
-	   4 Input      6 Bit        Muxes := 19    
-	   5 Input      6 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 23    
-	   2 Input      1 Bit        Muxes := 363   
-	   5 Input      1 Bit        Muxes := 8     
-	   4 Input      1 Bit        Muxes := 2     
-	  11 Input      1 Bit        Muxes := 1     
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 18    
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  17 Input      1 Bit        Muxes := 4     
+Module MouseCtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  37 Input     37 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 69    
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 2     
+	  37 Input      8 Bit        Muxes := 3     
+	  37 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  37 Input      1 Bit        Muxes := 20    
+Module flexible_clock_module__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -404,90 +1423,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "hand_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hand_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "nolabel_line51/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line53/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line282/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line67/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line69/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line71/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "shuffling" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "hand_3_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
@@ -508,101 +1452,399 @@ INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5545] ROM "hand_3_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_3_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_1_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "hand_0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hand_0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element clk1k_mod/flex_clk_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
-WARNING: [Synth 8-6014] Unused sequential element clk1p0_mod/flex_clk_reg was removed.  [C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
-INFO: [Synth 8-5545] ROM "clk6p25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element clk1k_mod/flex_clk_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+WARNING: [Synth 8-6014] Unused sequential element clk100k_mod/flex_clk_reg was removed.  [C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+INFO: [Synth 8-5545] ROM "clk1p0_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk50_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk2k_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk1m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3917] design Top_Student has port JX[7] driven by constant 1
-WARNING: [Synth 8-3331] design master has unconnected port btnD
-WARNING: [Synth 8-3331] design master has unconnected port sw[13]
-WARNING: [Synth 8-3331] design master has unconnected port sw[12]
-WARNING: [Synth 8-3331] design master has unconnected port sw[11]
-WARNING: [Synth 8-3331] design master has unconnected port sw[10]
-WARNING: [Synth 8-3331] design master has unconnected port sw[9]
-WARNING: [Synth 8-3331] design master has unconnected port sw[8]
-WARNING: [Synth 8-3331] design master has unconnected port x[6]
-WARNING: [Synth 8-3331] design master has unconnected port x[5]
-WARNING: [Synth 8-3331] design master has unconnected port x[4]
-WARNING: [Synth 8-3331] design master has unconnected port x[3]
-WARNING: [Synth 8-3331] design master has unconnected port x[2]
-WARNING: [Synth 8-3331] design master has unconnected port x[1]
-WARNING: [Synth 8-3331] design master has unconnected port x[0]
-WARNING: [Synth 8-3331] design master has unconnected port y[5]
-WARNING: [Synth 8-3331] design master has unconnected port y[4]
-WARNING: [Synth 8-3331] design master has unconnected port y[3]
-WARNING: [Synth 8-3331] design master has unconnected port y[2]
-WARNING: [Synth 8-3331] design master has unconnected port y[1]
-WARNING: [Synth 8-3331] design master has unconnected port y[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port JX[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_clk
-WARNING: [Synth 8-3331] design Top_Student has unconnected port ps2_data
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[0]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[1]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[2]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[3]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[4]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[5]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[6]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[7]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[8]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[9]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[10]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[11]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[12]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[13]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/oled_data_reg[14]' (FDSE) to 'master_mod/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'master_mod/an_reg[2]' (FDS) to 'master_mod/an_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (master_mod/\an_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (an_reg[3]) is unused and will be removed from module master.
+INFO: [Synth 8-5545] ROM "clk6p25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP oled_data3, operation Mode is: C+A*(B:0x32).
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+DSP Report: operator oled_data4 is absorbed into DSP oled_data3.
+DSP Report: Generating DSP oled_data1, operation Mode is: C+A*(B:0x32).
+DSP Report: operator oled_data1 is absorbed into DSP oled_data1.
+DSP Report: operator oled_data2 is absorbed into DSP oled_data1.
+DSP Report: Generating DSP oled_data4, operation Mode is: A*(B:0x32).
+DSP Report: operator oled_data4 is absorbed into DSP oled_data4.
+DSP Report: Generating DSP oled_data3, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffffd1).
+DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line51/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line53/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line282/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tile_discarded_counter_mod/counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line67/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "hand_0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "hand_0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line71/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line69/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk1p0_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk50_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk2k_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk1m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk6p25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk25m_mod/flex_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'tile_designs:/oled_data_reg[0]' (FD) to 'tile_designs:/oled_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tile_designs:/oled_data_reg[3]' (FD) to 'tile_designs:/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'tile_designs:/oled_data_reg[11]' (FD) to 'tile_designs:/oled_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'tile_designs:/oled_data_reg[12]' (FD) to 'tile_designs:/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'tile_designs:/oled_data_reg[14]' (FD) to 'tile_designs:/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'tile_designs:/oled_data_reg[6]' (FD) to 'tile_designs:/oled_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'tile_designs:/oled_data_reg[7]' (FD) to 'tile_designs:/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/packet_type1_reg[0]' (FDE) to 'i_0/master_mod/packet_type1_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/\packet_type1_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[26]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[27]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[28]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[29]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[31]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[30]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[21]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[22]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[19]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[20]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[23]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[24]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[25]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[10]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[11]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[8]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[9]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[4]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[5]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[6]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[7]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[16]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[17]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[18]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[12]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[13]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx1/baud_counter_reg[14]' (FDCE) to 'i_0/master_mod/uarttx1/baud_counter_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uarttx1/\baud_counter_reg[15] )
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/packet_type2_reg[0]' (FDE) to 'i_0/master_mod/packet_type2_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/\packet_type2_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[26]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[27]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[28]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[29]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[31]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[30]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[21]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[22]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[19]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[20]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[23]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[24]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[25]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[10]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[11]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[8]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[9]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[4]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[5]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[6]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[7]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[16]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[17]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[18]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[12]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[13]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx2/baud_counter_reg[14]' (FDCE) to 'i_0/master_mod/uarttx2/baud_counter_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uarttx2/\baud_counter_reg[15] )
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/packet_type3_reg[0]' (FDE) to 'i_0/master_mod/packet_type3_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/\packet_type3_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[26]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[27]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[28]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[29]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[31]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[30]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[21]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[22]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[19]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[20]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[23]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[24]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[25]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[10]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[11]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[8]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[9]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[4]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[5]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[6]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[7]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[16]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[17]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[18]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[12]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[13]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/master_mod/uarttx3/baud_counter_reg[14]' (FDCE) to 'i_0/master_mod/uarttx3/baud_counter_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uarttx3/\baud_counter_reg[15] )
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/tx_packet_type_reg[0]' (FDRE) to 'i_0/slave_mod/tx_packet_type_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\slave_mod/tx_packet_type_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[26]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[27]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[28]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[29]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[31]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[30]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[21]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/slave_mod/uart_slave/baud_counter_reg[22]' (FDCE) to 'i_0/slave_mod/uart_slave/baud_counter_reg[4]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\slave_mod/uart_slave/baud_counter_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uartrx3/\baud_counter_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uartrx2/\baud_counter_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uartrx1/\baud_counter_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\slave_mod/uartrx/baud_counter_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uarttx1/\tx_shift_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uarttx2/\tx_shift_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/uarttx3/\tx_shift_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\slave_mod/uart_slave/tx_shift_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/master_mod/pon_reg)
+WARNING: [Synth 8-3332] Sequential element (pbC_prev_reg) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[13]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[12]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[11]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[10]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[9]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[8]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[7]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[6]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[5]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[4]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[3]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[2]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[1]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (COUNT_reg[0]) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (debounced_pulse_reg) is unused and will be removed from module debounce__3.
+WARNING: [Synth 8-3332] Sequential element (baud_counter_reg[15]) is unused and will be removed from module UART_TX__1.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[8]) is unused and will be removed from module UART_TX__1.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[7]) is unused and will be removed from module UART_TX__1.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[0]) is unused and will be removed from module UART_TX__1.
+WARNING: [Synth 8-3332] Sequential element (baud_counter_reg[15]) is unused and will be removed from module UART_TX__2.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[8]) is unused and will be removed from module UART_TX__2.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[7]) is unused and will be removed from module UART_TX__2.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[0]) is unused and will be removed from module UART_TX__2.
+WARNING: [Synth 8-3332] Sequential element (baud_counter_reg[15]) is unused and will be removed from module UART_TX__3.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[8]) is unused and will be removed from module UART_TX__3.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[7]) is unused and will be removed from module UART_TX__3.
+WARNING: [Synth 8-3332] Sequential element (tx_shift_reg_reg[0]) is unused and will be removed from module UART_TX__3.
+WARNING: [Synth 8-3332] Sequential element (baud_counter_reg[15]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[9]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[6]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[5]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[4]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[3]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[2]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[1]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[0]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[5]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[4]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[3]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[2]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[1]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[0]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (move_reg[1]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (move_reg[0]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[2]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[1]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[0]) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (turn_reg) is unused and will be removed from module UART_RX__1.
+WARNING: [Synth 8-3332] Sequential element (baud_counter_reg[15]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[9]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[6]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[5]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[4]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[3]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[2]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[1]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[0]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[5]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[4]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[3]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[2]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[1]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[0]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (move_reg[1]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (move_reg[0]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[2]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[1]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[0]) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (turn_reg) is unused and will be removed from module UART_RX__2.
+WARNING: [Synth 8-3332] Sequential element (baud_counter_reg[15]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[9]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[6]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[5]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[4]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[3]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[2]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[1]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (rx_shift_reg_reg[0]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[5]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[4]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[3]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[2]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[1]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (tile_reg[0]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (move_reg[1]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (move_reg[0]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[2]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[1]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (chi_reg[0]) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (turn_reg) is unused and will be removed from module UART_RX__3.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[31]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[30]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[29]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[28]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[27]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[26]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[25]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[24]) is unused and will be removed from module counter_200ms__2.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[23]) is unused and will be removed from module counter_200ms__2.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\mousectl/x_max_reg[11] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:37 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:28 ; elapsed = 00:06:14 . Memory (MB): peak = 1419.145 ; gain = 1132.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------+------------+---------------+----------------+
+|Module Name  | RTL Object | Depth x Width | Implemented As | 
++-------------+------------+---------------+----------------+
+|tile_designs | p_0_out    | 128x16        | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 8192x16       | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|uiux         | p_0_out    | 256x16        | LUT            | 
+|uiux         | p_0_out    | 256x16        | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|uiux         | p_0_out    | 4096x16       | LUT            | 
+|tile_designs | p_0_out    | 128x16        | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
+|Top_Student  | p_0_out    | 256x16        | LUT            | 
+|Top_Student  | p_0_out    | 256x16        | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
+|Top_Student  | p_0_out    | 8192x16       | LUT            | 
+|Top_Student  | p_0_out    | 4096x16       | LUT            | 
++-------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Top_Student | C+A*(B:0x32)                      | 12     | 6      | 7      | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Top_Student | C+A*(B:0x32)                      | 12     | 6      | 7      | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Top_Student | A*(B:0x32)                        | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student | PCIN+(A:0x0):B+(C:0xffffffffffd1) | 30     | 7      | 7      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |tile_designs      |          18|      1177|
+|2     |uiux__GCB0        |           1|      2094|
+|3     |uiux__GCB1        |           1|       588|
+|4     |uiux__GCB2        |           1|      1223|
+|5     |uiux__GCB3        |           1|     14604|
+|6     |uiux__GCB4        |           1|      2260|
+|7     |Top_Student__GCB0 |           1|     16690|
+|8     |Top_Student__GCB1 |           1|      2859|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:45 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:36 ; elapsed = 00:06:36 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:45 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Timing Optimization : Time (s): cpu = 00:02:37 ; elapsed = 00:06:39 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |tile_designs      |          18|      1177|
+|2     |uiux__GCB0        |           1|      2083|
+|3     |uiux__GCB1        |           1|       588|
+|4     |uiux__GCB2        |           1|      1223|
+|5     |uiux__GCB3        |           1|     14604|
+|6     |uiux__GCB4        |           1|      2260|
+|7     |Top_Student__GCB0 |           1|     16690|
+|8     |Top_Student__GCB1 |           1|      2859|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (master_mod/btnR_pressed_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (master_mod/btnU_pressed_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (master_mod/btnL_pressed_reg) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:48 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Technology Mapping : Time (s): cpu = 00:02:42 ; elapsed = 00:06:59 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -622,11 +1864,13 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop mousectl/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to mousectl/Inst_Ps2Interface/ps2_clk_h_reg_inv.
+INFO: [Synth 8-5365] Flop mousectl/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to mousectl/Inst_Ps2Interface/ps2_data_h_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:49 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished IO Insertion : Time (s): cpu = 00:02:43 ; elapsed = 00:07:03 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -639,7 +1883,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:49 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:43 ; elapsed = 00:07:03 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -651,25 +1895,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:49 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:44 ; elapsed = 00:07:06 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:49 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:45 ; elapsed = 00:07:07 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:50 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:46 ; elapsed = 00:07:11 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:50 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:46 ; elapsed = 00:07:11 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -682,63 +1926,116 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     3|
-|2     |CARRY4 |    94|
-|3     |LUT1   |    31|
-|4     |LUT2   |   210|
-|5     |LUT3   |   448|
-|6     |LUT4   |   167|
-|7     |LUT5   |  1097|
-|8     |LUT6   |  1969|
-|9     |MUXF7  |   190|
-|10    |MUXF8  |    60|
-|11    |FDE_1  |    32|
-|12    |FDRE   |  1635|
-|13    |IBUF   |    15|
-|14    |OBUF   |    34|
-|15    |OBUFT  |     1|
-+------+-------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     8|
+|2     |CARRY4    |   379|
+|3     |DSP48E1   |     2|
+|4     |DSP48E1_1 |     1|
+|5     |DSP48E1_2 |     1|
+|6     |LUT1      |   227|
+|7     |LUT2      |  1287|
+|8     |LUT3      |   862|
+|9     |LUT4      |  1155|
+|10    |LUT5      |  1963|
+|11    |LUT6      | 13412|
+|12    |MUXF7     |  2277|
+|13    |MUXF8     |   691|
+|14    |FDCE      |   130|
+|15    |FDE_1     |    32|
+|16    |FDPE      |     4|
+|17    |FDRE      |  2749|
+|18    |FDSE      |    44|
+|19    |IBUF      |    24|
+|20    |IOBUF     |     2|
+|21    |OBUF      |    38|
+|22    |OBUFT     |     1|
++------+----------+------+
 
 Report Instance Areas: 
-+------+-------------------------------+------------------------+------+
-|      |Instance                       |Module                  |Cells |
-+------+-------------------------------+------------------------+------+
-|1     |top                            |                        |  5986|
-|2     |  Oled_Display                 |Oled_Display            |   279|
-|3     |  clk1m_mod                    |flexible_clock_module   |    51|
-|4     |  clk6p25m_mod                 |flexible_clock_module_0 |    52|
-|5     |  master_mod                   |master                  |  5545|
-|6     |    btnC_counter_mod           |counter_200ms           |    90|
-|7     |    clk1k_mod                  |flexible_clock_module_1 |    63|
-|8     |    clk1p0_mod                 |flexible_clock_module_2 |    63|
-|9     |    lfsr_mod                   |lfsr                    |     9|
-|10    |    tile_discarded_counter_mod |counter_5s              |   144|
-+------+-------------------------------+------------------------+------+
++------+-------------------------------+-------------------------+------+
+|      |Instance                       |Module                   |Cells |
++------+-------------------------------+-------------------------+------+
+|1     |top                            |                         | 25289|
+|2     |  Oled_Display                 |Oled_Display             |  4927|
+|3     |  clk1m_mod                    |flexible_clock_module    |    51|
+|4     |  clk1p0_mod                   |flexible_clock_module_0  |    56|
+|5     |  clk25m_mod                   |flexible_clock_module_1  |    50|
+|6     |  clk50_mod                    |flexible_clock_module_2  |    54|
+|7     |  clk6p25m_mod                 |flexible_clock_module_3  |    52|
+|8     |  master_mod                   |master                   |  6422|
+|9     |    btnC_counter_mod           |counter_200ms_25         |    70|
+|10    |    debounce_btnL              |debounce_26              |   367|
+|11    |    debounce_btnR              |debounce_27              |    25|
+|12    |    lfsr_mod                   |lfsr                     |     9|
+|13    |    nolabel_line67             |flexible_clock_module_28 |    53|
+|14    |    nolabel_line69             |flexible_clock_module_29 |    53|
+|15    |    nolabel_line71             |flexible_clock_module_30 |    54|
+|16    |    one_hot_to_integer_mod     |one_hot_to_integer_31    |    45|
+|17    |    tile_discarded_counter_mod |counter_5s               |   102|
+|18    |    uartrx1                    |UART_RX_32               |    36|
+|19    |    uartrx2                    |UART_RX_33               |    38|
+|20    |    uartrx3                    |UART_RX_34               |    35|
+|21    |    uarttx1                    |UART_TX_35               |    41|
+|22    |    uarttx2                    |UART_TX_36               |    45|
+|23    |    uarttx3                    |UART_TX_37               |    41|
+|24    |  mousectl                     |MouseCtl                 |  1403|
+|25    |    Inst_Ps2Interface          |Ps2Interface             |   287|
+|26    |  pixel_index_to_xy_mod        |pixel_index_to_xy        |   127|
+|27    |  slave_mod                    |slave                    |  1052|
+|28    |    btnC_counter_mod           |counter_200ms            |    63|
+|29    |    debounce_btnL              |debounce                 |    26|
+|30    |    debounce_btnR              |debounce_21              |    27|
+|31    |    nolabel_line282            |flexible_clock_module_22 |    54|
+|32    |    nolabel_line51             |flexible_clock_module_23 |    53|
+|33    |    nolabel_line53             |flexible_clock_module_24 |    53|
+|34    |    one_hot_to_integer_mod     |one_hot_to_integer       |    84|
+|35    |    uart_slave                 |UART_TX                  |    38|
+|36    |    uartrx                     |UART_RX                  |   471|
+|37    |  uiux_mod                     |uiux                     | 11019|
+|38    |    incoming_tile              |tile_designs             |    88|
+|39    |    kan_1                      |tile_designs_4           |   175|
+|40    |    kan_2                      |tile_designs_5           |   161|
+|41    |    kan_3                      |tile_designs_6           |   162|
+|42    |    kan_4                      |tile_designs_7           |   169|
+|43    |    tile_1                     |tile_designs_8           |   161|
+|44    |    tile_10                    |tile_designs_9           |   164|
+|45    |    tile_11                    |tile_designs_10          |   165|
+|46    |    tile_12                    |tile_designs_11          |   181|
+|47    |    tile_13                    |tile_designs_12          |   157|
+|48    |    tile_2                     |tile_designs_13          |   163|
+|49    |    tile_3                     |tile_designs_14          |   162|
+|50    |    tile_4                     |tile_designs_15          |   164|
+|51    |    tile_5                     |tile_designs_16          |   175|
+|52    |    tile_6                     |tile_designs_17          |   160|
+|53    |    tile_7                     |tile_designs_18          |   162|
+|54    |    tile_8                     |tile_designs_19          |   163|
+|55    |    tile_9                     |tile_designs_20          |   174|
++------+-------------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:50 . Memory (MB): peak = 982.184 ; gain = 725.598
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:46 ; elapsed = 00:07:11 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:43 . Memory (MB): peak = 982.184 ; gain = 408.332
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:50 . Memory (MB): peak = 982.184 ; gain = 725.598
+Synthesis finished with 0 errors, 0 critical warnings and 237 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:41 ; elapsed = 00:07:03 . Memory (MB): peak = 1419.145 ; gain = 824.660
+Synthesis Optimization Complete : Time (s): cpu = 00:02:46 ; elapsed = 00:07:11 . Memory (MB): peak = 1419.145 ; gain = 1132.266
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 391 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'Top_Student' is not ideal for floorplanning, since the cellview 'master' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Netlist 29-17] Analyzing 3409 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
+  A total of 34 instances were transformed.
   FDE_1 => FDRE (inverted pins: C): 32 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-199 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+464 Infos, 272 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:52 . Memory (MB): peak = 982.184 ; gain = 738.266
+synth_design: Time (s): cpu = 00:02:51 ; elapsed = 00:07:22 . Memory (MB): peak = 1419.145 ; gain = 1143.781
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1419.145 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 982.184 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 08:27:20 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.236 . Memory (MB): peak = 1419.145 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  6 17:44:06 2024...

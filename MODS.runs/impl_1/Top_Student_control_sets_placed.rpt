@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Nov  3 08:28:02 2024
-| Host         : Roderick running 64-bit major release  (build 9200)
+| Date         : Wed Nov  6 17:46:36 2024
+| Host         : DESKTOP-J1LPDNN running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
 | Device       : xc7a35t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |   172 |
-| Unused register locations in slices containing registers |   634 |
+| Number of unique control sets                            |   235 |
+| Unused register locations in slices containing registers |   776 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,11 +34,14 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            4 |
-|      8 |            3 |
-|     10 |            1 |
-|     12 |          145 |
-|    16+ |           19 |
+|      2 |            3 |
+|      4 |            1 |
+|      6 |            1 |
+|      8 |           19 |
+|     10 |            3 |
+|     12 |          152 |
+|     14 |            9 |
+|    16+ |           47 |
 +--------+--------------+
 
 
@@ -48,193 +51,256 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             782 |          209 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             574 |           82 |
-| Yes          | No                    | No                     |            1966 |          543 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              12 |            4 |
+| No           | No                    | No                     |            1118 |          309 |
+| No           | No                    | Yes                    |              86 |           17 |
+| No           | Yes                   | No                     |            1284 |          178 |
+| Yes          | No                    | No                     |            3122 |          764 |
+| Yes          | No                    | Yes                    |             184 |           38 |
+| Yes          | Yes                   | No                     |             126 |           20 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------+--------------------------------------+--------------------------------------------------------------+------------------+----------------+
-|          Clock Signal         |             Enable Signal            |                       Set/Reset Signal                       | Slice Load Count | Bel Load Count |
-+-------------------------------+--------------------------------------+--------------------------------------------------------------+------------------+----------------+
-|  clk1m_BUFG                   | master_mod/shuffle54_out             |                                                              |                1 |              2 |
-|  master_mod/clk1k_mod/clk1k   |                                      | master_mod/counter_i_1_n_0                                   |                1 |              2 |
-|  master_mod/clk1p0_mod/clk1p0 |                                      |                                                              |                1 |              2 |
-| ~clk6p25m_BUFG                |                                      |                                                              |                1 |              2 |
-|  master_mod/clk1k_mod/clk1k   |                                      | master_mod/led[7]_i_1_n_0                                    |                1 |              8 |
-|  master_mod/clk1k_mod/clk1k   |                                      | master_mod/led[11]_i_1_n_0                                   |                2 |              8 |
-|  master_mod/clk1k_mod/clk1k   |                                      | master_mod/led[3]_i_1_n_0                                    |                1 |              8 |
-|  clk1m_BUFG                   |                                      | master_mod/shuffle_index[4]_i_1_n_0                          |                4 |             10 |
-|  clk1m_BUFG                   | master_mod/draw_pile[106][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_0[16][5]_i_1_n_0     |                                                              |                1 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_0[17][5]_i_1_n_0     |                                                              |                1 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_0[15][5]_i_1_n_0     | master_mod/hand_0[13][5]_i_1_n_0                             |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_1[16][5]_i_1_n_0     |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_1[17][5]_i_1_n_0     |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_2[17][5]_i_1_n_0     |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_2[16][5]_i_1_n_0     |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_3[16][5]_i_1_n_0     |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/hand_3[17][5]_i_1_n_0     |                                                              |                1 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[101][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[0][5]_i_1_n_0   |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[100][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[105][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[103][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[11][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[104][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[102][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[107][5]_i_1_n_0 |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[108][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[111][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[109][5]_i_1_n_0 |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[110][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[10][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[112][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[116][5]_i_1_n_0 |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[118][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[117][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[119][5]_i_1_n_0 |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[115][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[113][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[114][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[122][5]_i_1_n_0 |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[123][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[124][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[125][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[120][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[121][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[129][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[128][5]_i_1_n_0 |                                                              |                1 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[126][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[127][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[133][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[132][5]_i_1_n_0 |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[134][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[135][5]_i_1_n_0 |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[131][5]_i_1_n_0 |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[130][5]_i_1_n_0 |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[12][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[17][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[14][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[15][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[13][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[16][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[18][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[19][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[1][5]_i_1_n_0   |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[20][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[21][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[24][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[22][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[23][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[26][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[25][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[28][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[29][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[27][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[31][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[33][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[30][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[32][5]_i_1_n_0  |                                                              |                1 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[2][5]_i_1_n_0   |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[34][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[36][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[35][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[37][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[38][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[39][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[3][5]_i_1_n_0   |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[42][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[43][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[40][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[41][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[48][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[49][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[47][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[44][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[46][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[45][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[4][5]_i_1_n_0   |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[54][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[50][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[53][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[51][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[52][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[55][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[59][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[58][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[56][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[5][5]_i_1_n_0   |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[57][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[61][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[62][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[64][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[63][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[60][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[67][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[65][5]_i_1_n_0  |                                                              |                6 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[69][5]_i_1_n_0  |                                                              |                6 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[66][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[68][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[6][5]_i_1_n_0   |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[73][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[74][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[75][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[71][5]_i_1_n_0  |                                                              |                2 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[72][5]_i_1_n_0  |                                                              |                6 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[70][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[79][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[7][5]_i_1_n_0   |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[80][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[77][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[76][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[78][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[83][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[82][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[85][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[86][5]_i_1_n_0  |                                                              |                6 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[81][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[84][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[91][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[8][5]_i_1_n_0   |                                                              |                1 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[89][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[88][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[90][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[87][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[95][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[94][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[96][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[97][5]_i_1_n_0  |                                                              |                5 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[92][5]_i_1_n_0  |                                                              |                3 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[93][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[98][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[9][5]_i_1_n_0   |                                                              |                4 |             12 |
-|  clk1m_BUFG                   | master_mod/draw_pile[99][5]_i_1_n_0  |                                                              |                4 |             12 |
-|  clk_IBUF_BUFG                |                                      |                                                              |                7 |             24 |
-|  clk1m_BUFG                   | master_mod/hand_2[15][5]_i_1_n_0     |                                                              |                5 |             24 |
-|  clk1m_BUFG                   | master_mod/hand_1[15][5]_i_1_n_0     |                                                              |                7 |             24 |
-|  clk1m_BUFG                   | master_mod/hand_0[15][5]_i_1_n_0     |                                                              |                6 |             24 |
-|  clk1m_BUFG                   | master_mod/hand_3[15][5]_i_1_n_0     |                                                              |                5 |             24 |
-|  master_mod/clk1k_mod/clk1k   |                                      |                                                              |                5 |             26 |
-|  master_mod/clk1p0_mod/clk1p0 |                                      | master_mod/display_hand_index[15]_i_1_n_0                    |                4 |             30 |
-| ~clk6p25m_BUFG                |                                      | Oled_Display/frame_counter[16]_i_1_n_0                       |                5 |             34 |
-|  clk1m_BUFG                   | master_mod/discard_tile              |                                                              |                8 |             36 |
-| ~clk6p25m_BUFG                | Oled_Display/delay[0]_i_1_n_0        |                                                              |                5 |             40 |
-|  clk_IBUF_BUFG                |                                      | master_mod/clk1k_mod/clear                                   |                8 |             64 |
-|  clk_IBUF_BUFG                |                                      | master_mod/clk1p0_mod/clear                                  |                8 |             64 |
-|  clk_IBUF_BUFG                |                                      | clk1m_mod/COUNT[0]_i_1__0_n_0                                |                8 |             64 |
-|  clk_IBUF_BUFG                |                                      | clk6p25m_mod/clear                                           |                8 |             64 |
-|  clk1m_BUFG                   |                                      | master_mod/btnC_counter_mod/counter[31]_i_1_n_0              |                7 |             64 |
-|  clk1m_BUFG                   |                                      | master_mod/tile_discarded_counter_mod/counter[31]_i_1__0_n_0 |               10 |             64 |
-| ~clk6p25m_BUFG                | Oled_Display/state                   |                                                              |                8 |             64 |
-| ~clk6p25m_BUFG                |                                      | Oled_Display/spi_word[39]_i_1_n_0                            |               15 |             90 |
-|  clk1m_BUFG                   |                                      |                                                              |              195 |            728 |
-+-------------------------------+--------------------------------------+--------------------------------------------------------------+------------------+----------------+
++--------------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+
+|          Clock Signal          |                      Enable Signal                      |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++--------------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+
+|  mousectl/left                 |                                                         |                                                         |                1 |              2 |
+|  clk1m_BUFG                    |                                                         |                                                         |                1 |              2 |
+| ~clk6p25m_BUFG                 |                                                         |                                                         |                1 |              2 |
+|  clk25m_BUFG                   | uiux_mod/kan_tile_4_x[6]_i_1_n_0                        |                                                         |                1 |              4 |
+|  slave_mod/nolabel_line53/CLK  |                                                         |                                                         |                2 |              6 |
+|  clk_50_000Hz                  | master_mod/uarttx2/E[0]                                 |                                                         |                1 |              8 |
+|  clk_100_000Hz_0               | master_mod/uarttx3/bit_index[3]_i_1__1_n_0              | btnL_IBUF                                               |                1 |              8 |
+|  clk_100_000Hz_0               | master_mod/uarttx1/bit_index[3]_i_1_n_0                 | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uartrx1/baud_counter[3]_i_1__4_n_0           | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uartrx1/bit_index[3]_i_1__2_n_0              | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uartrx2/baud_counter[3]_i_1__5_n_0           | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uartrx2/bit_index[3]_i_1__3_n_0              | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uartrx3/bit_index[3]_i_1__4_n_0              | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uartrx3/baud_counter[3]_i_1__6_n_0           | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uarttx1/baud_counter                         | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uarttx2/baud_counter                         | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz                 | slave_mod/uartrx/tile_count_reg[0][0]                   |                                                         |                2 |              8 |
+|  clk_100_000Hz_0               | master_mod/uarttx3/baud_counter                         | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz                 | slave_mod/uart_slave/baud_counter                       | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz                 | slave_mod/uart_slave/bit_index[3]_i_1__6_n_0            | btnL_IBUF                                               |                1 |              8 |
+|  clk_100_000Hz                 | slave_mod/uartrx/baud_counter[3]_i_1__2_n_0             | btnL_IBUF                                               |                2 |              8 |
+|  clk_100_000Hz                 | slave_mod/uartrx/bit_index[3]_i_1__5_n_0                | btnL_IBUF                                               |                1 |              8 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/shift_frame                  | mousectl/Inst_Ps2Interface/reset_bit_count              |                1 |              8 |
+|  clk_100_000Hz_0               | master_mod/uarttx2/bit_index[3]_i_1__0_n_0              | btnL_IBUF                                               |                1 |              8 |
+|  master_mod/nolabel_line71/CLK | is_master                                               | master_mod/clear                                        |                1 |             10 |
+|  slave_mod/nolabel_line282/CLK | slave_mod/sel                                           | slave_mod/display_index[4]_i_1__0_n_0                   |                1 |             10 |
+|  clk50_BUFG                    | mousectl/E[0]                                           | uiux_mod/blinkUp8_out                                   |                2 |             10 |
+|  mousectl/left                 | uiux_mod/layout[5]_i_1_n_0                              |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[56][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[60][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  slave_mod/nolabel_line53/CLK  | slave_mod/btnC_counter_mod/E[0]                         |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[58][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[5][5]_i_1_n_0                      |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[63][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk50_BUFG                    | uiux_mod/emote_wait[5]_i_1_n_0                          |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[66][5]_i_1_n_0                     |                                                         |                5 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[62][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[61][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[65][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[64][5]_i_1_n_0                     |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[6][5]_i_1_n_0                      |                                                         |                5 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[68][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_100_000Hz                 | slave_mod/uartrx/E[0]                                   |                                                         |                4 |             12 |
+|  clk_100_000Hz                 | slave_mod/uartrx/tile[5]_i_2_n_0                        | slave_mod/uartrx/tile[5]_i_1_n_0                        |                1 |             12 |
+|  clk_100_000Hz                 | slave_mod/one_hot_to_integer_mod/E[0]                   |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[69][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[121][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[70][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[67][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[71][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[76][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk1m_BUFG                    |                                                         | master_mod/btnC_counter_mod/counter[17]_i_1__1_n_0      |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[77][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[73][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk1m_BUFG                    |                                                         | slave_mod/btnC_counter_mod/counter[17]_i_1__0_n_0       |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[74][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[75][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk25m_BUFG                   | uiux_mod/kan_tile_1_x[6]_i_1_n_0                        |                                                         |                1 |             12 |
+|  clk25m_BUFG                   | uiux_mod/kan_tile_3_x[6]_i_1_n_0                        |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[72][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[81][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[78][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[7][5]_i_1_n_0                      |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[80][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[87][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[84][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[85][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[82][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[86][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[83][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[8][5]_i_1_n_0                      |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[88][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[89][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[90][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[91][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[92][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[99][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[95][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[96][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[97][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[98][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[94][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[93][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[9][5]_i_1_n_0                      |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | is_master                                               | master_mod/btnC_counter_mod/SR[0]                       |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[2][5]_i_1_n_0                      |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[31][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[32][5]_i_1_n_0                     |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[30][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[33][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[34][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[35][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[100][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[0][5]_i_1_n_0                      |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[101][5]_i_1_n_0                    |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[102][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[106][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[104][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[109][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[107][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[105][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[108][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[103][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[112][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[10][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[111][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[114][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[110][5]_i_1_n_0                    |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[113][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[117][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[116][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[118][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[115][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[119][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[11][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[126][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[120][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[79][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[122][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[123][5]_i_1_n_0                    |                                                         |                5 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[125][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[124][5]_i_1_n_0                    |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[127][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[128][5]_i_1_n_0                    |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[12][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[129][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[131][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[130][5]_i_1_n_0                    |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[132][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[133][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[135][5]_i_1_n_0                    |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[134][5]_i_1_n_0                    |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[13][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[14][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[17][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[15][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[19][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[18][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[16][5]_i_1_n_0                     |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[1][5]_i_1_n_0                      |                                                         |                1 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[23][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[24][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[20][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[22][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[21][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[26][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[27][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[28][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[29][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[25][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/tx_tile2[5]_i_1_n_0                          |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/tx_tile3                                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/tx_tile1                                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/hand_0[17][5]_i_1_n_0                        |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/hand_0[16][5]_i_1_n_0                        |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[38][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[3][5]_i_1_n_0                      |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[37][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[36][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[39][5]_i_1_n_0                     |                                                         |                5 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[40][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[42][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[41][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[43][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[44][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[4][5]_i_1_n_0                      |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[45][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[48][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[47][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[49][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[46][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[52][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[51][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[55][5]_i_1_n_0                     |                                                         |                2 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[50][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[53][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[54][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[57][5]_i_1_n_0                     |                                                         |                4 |             12 |
+|  clk_50_000Hz                  | master_mod/draw_pile[59][5]_i_1_n_0                     |                                                         |                3 |             12 |
+|  clk_100_000Hz                 |                                                         |                                                         |                3 |             14 |
+|  clk_100_000Hz_0               | master_mod/uarttx3/tx_shift_reg[9]_i_1__2_n_0           | btnL_IBUF                                               |                3 |             14 |
+|  clk50_BUFG                    | uiux_mod/emote_offset[6]_i_1_n_0                        |                                                         |                3 |             14 |
+|  clk_100_000Hz_0               |                                                         |                                                         |                3 |             14 |
+|  clk_100_000Hz_0               | master_mod/uarttx1/tx_shift_reg[9]_i_1__0_n_0           | btnL_IBUF                                               |                2 |             14 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/right_down_reg               |                                                         |                2 |             14 |
+|  clk_100_000Hz                 | slave_mod/uart_slave/tx_shift_reg                       | btnL_IBUF                                               |                2 |             14 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | mousectl/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0 |                2 |             14 |
+|  clk_100_000Hz_0               | master_mod/uarttx2/tx_shift_reg[9]_i_1__1_n_0           | btnL_IBUF                                               |                3 |             14 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/y_inc_reg[0]                 |                                                         |                3 |             16 |
+|  clk_IBUF_BUFG                 | mousectl/write_data                                     |                                                         |                2 |             16 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/x_inc_reg[0]                 |                                                         |                2 |             16 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/load_rx_data                 |                                                         |                3 |             16 |
+|  clk50_BUFG                    |                                                         | uiux_mod/gesture_right[29]_i_1_n_0                      |                4 |             18 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                         |                2 |             20 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | mousectl/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                4 |             22 |
+|  slave_mod/nolabel_line282/CLK | slave_mod/sel                                           |                                                         |                4 |             24 |
+|  clk_IBUF_BUFG                 | mousectl/x_new_reg_n_0                                  |                                                         |                4 |             24 |
+|  clk_IBUF_BUFG                 | mousectl/y_new_reg_n_0                                  |                                                         |                5 |             24 |
+|  clk_50_000Hz                  | master_mod/uarttx3/draw_pile_index_reg[1]_rep__0        |                                                         |                4 |             24 |
+|  clk50_BUFG                    | uiux_mod/start_x0                                       |                                                         |                4 |             26 |
+|  clk_100_000Hz                 |                                                         | slave_mod/debounce_btnL/COUNT[13]                       |                4 |             26 |
+|  clk_100_000Hz                 |                                                         | slave_mod/debounce_btnR/COUNT[13]_i_1_n_0               |                4 |             26 |
+|  clk_50_000Hz                  |                                                         | master_mod/debounce_btnR/COUNT[13]_i_1__1_n_0           |                4 |             26 |
+|  clk_50_000Hz                  |                                                         | master_mod/debounce_btnL/COUNT[13]_i_1__0_n_0           |                4 |             26 |
+|  master_mod/nolabel_line71/CLK | master_mod/led[15]_i_1_n_0                              |                                                         |                3 |             26 |
+|  clk_IBUF_BUFG                 | mousectl/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0 | mousectl/Inst_Ps2Interface/clear                        |                4 |             28 |
+|  clk_100_000Hz                 |                                                         | btnL_IBUF                                               |                8 |             32 |
+| ~clk6p25m_BUFG                 |                                                         | Oled_Display/frame_counter[16]_i_1_n_0                  |                5 |             34 |
+| ~clk6p25m_BUFG                 | Oled_Display/delay[0]_i_1_n_0                           |                                                         |                5 |             40 |
+|  clk50_BUFG                    |                                                         | uiux_mod/gesture_right[31]_i_1_n_0                      |                8 |             44 |
+|  clk_IBUF_BUFG                 |                                                         | mousectl/reset_timeout_cnt_reg_n_0                      |                6 |             48 |
+|  clk1m_BUFG                    |                                                         | master_mod/btnC_counter_mod/counter[31]_i_1__1_n_0      |                8 |             50 |
+|  clk_50_000Hz                  |                                                         |                                                         |               12 |             52 |
+|  clk1m_BUFG                    |                                                         | slave_mod/btnC_counter_mod/counter[31]_i_1__0_n_0       |                9 |             52 |
+|  clk_IBUF_BUFG                 |                                                         | mousectl/reset_periodic_check_cnt__0                    |                5 |             52 |
+|  clk_100_000Hz_0               |                                                         | btnL_IBUF                                               |                9 |             54 |
+|  clk1m_BUFG                    |                                                         | master_mod/tile_discarded_counter_mod/p_0_in__0         |                9 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | master_mod/nolabel_line69/COUNT[0]_i_1__4_n_0           |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | slave_mod/nolabel_line282/COUNT[0]_i_1__8_n_0           |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | slave_mod/nolabel_line51/clear                          |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | slave_mod/nolabel_line53/COUNT[0]_i_1__7_n_0            |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | clk1m_mod/COUNT[0]_i_1__11_n_0                          |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | clk6p25m_mod/COUNT[0]_i_1__12_n_0                       |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | clk50_mod/COUNT[0]_i_1__10_n_0                          |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | clk25m_mod/COUNT[0]_i_1__13_n_0                         |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | clk1p0_mod/clear                                        |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | master_mod/nolabel_line67/COUNT[0]_i_1__2_n_0           |                8 |             64 |
+|  clk_IBUF_BUFG                 |                                                         | master_mod/nolabel_line71/COUNT[0]_i_1__3_n_0           |                8 |             64 |
+| ~clk6p25m_BUFG                 | Oled_Display/FSM_onehot_state[31]_i_1__0_n_0            |                                                         |               10 |             64 |
+|  clk50_BUFG                    |                                                         |                                                         |               20 |             86 |
+| ~clk6p25m_BUFG                 |                                                         | Oled_Display/spi_word[39]_i_1_n_0                       |               15 |             90 |
+|  clk_100_000Hz                 | slave_mod/sel                                           |                                                         |               71 |            170 |
+|  clk25m_BUFG                   |                                                         |                                                         |               76 |            338 |
+|  clk_IBUF_BUFG                 |                                                         |                                                         |              190 |            602 |
+|  clk_50_000Hz                  | is_master                                               |                                                         |              218 |            792 |
++--------------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+
 
 

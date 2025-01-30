@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sun Nov  3 08:28:28 2024
-| Host             : Roderick running 64-bit major release  (build 9200)
+| Date             : Wed Nov  6 17:48:35 2024
+| Host             : DESKTOP-J1LPDNN running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.166        |
+| Total On-Chip Power (W)  | 0.200        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.094        |
+| Dynamic (W)              | 0.128        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.2         |
-| Junction Temperature (C) | 25.8         |
+| Max Ambient (C)          | 84.0         |
+| Junction Temperature (C) | 26.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.043 |     5952 |       --- |             --- |
-|   LUT as Logic |     0.042 |     3537 |     20800 |           17.00 |
-|   F7/F8 Muxes  |    <0.001 |      250 |     32600 |            0.77 |
-|   CARRY4       |    <0.001 |       94 |      8150 |            1.15 |
-|   Register     |    <0.001 |     1667 |     41600 |            4.01 |
-|   Others       |     0.000 |       21 |       --- |             --- |
-|   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |     0.048 |     4156 |       --- |             --- |
-| I/O            |    <0.001 |       50 |       106 |           47.17 |
+| Clocks         |     0.008 |        3 |       --- |             --- |
+| Slice Logic    |     0.059 |    25322 |       --- |             --- |
+|   LUT as Logic |     0.057 |    17373 |     20800 |           83.52 |
+|   F7/F8 Muxes  |    <0.001 |     2968 |     32600 |            9.10 |
+|   CARRY4       |    <0.001 |      379 |      8150 |            4.65 |
+|   Register     |    <0.001 |     2960 |     41600 |            7.12 |
+|   Others       |     0.000 |      105 |       --- |             --- |
+|   BUFG         |     0.000 |        7 |        32 |           21.88 |
+| Signals        |     0.058 |    16700 |       --- |             --- |
+| DSPs           |    <0.001 |        4 |        90 |            4.44 |
+| I/O            |     0.002 |       65 |       106 |           61.32 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.166 |          |           |                 |
+| Total          |     0.200 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.103 |       0.093 |      0.010 |
+| Vccint    |       1.000 |     0.136 |       0.126 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,16 +143,63 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| Top_Student                    |     0.094 |
-|   Oled_Display                 |    <0.001 |
+| Top_Student                    |     0.128 |
+|   Oled_Display                 |     0.015 |
 |   clk1m_mod                    |    <0.001 |
+|   clk1p0_mod                   |    <0.001 |
+|   clk25m_mod                   |    <0.001 |
+|   clk50_mod                    |    <0.001 |
 |   clk6p25m_mod                 |    <0.001 |
-|   master_mod                   |     0.091 |
+|   master_mod                   |     0.067 |
 |     btnC_counter_mod           |    <0.001 |
-|     clk1k_mod                  |    <0.001 |
-|     clk1p0_mod                 |    <0.001 |
+|     debounce_btnL              |    <0.001 |
+|     debounce_btnR              |    <0.001 |
 |     lfsr_mod                   |    <0.001 |
+|     nolabel_line67             |    <0.001 |
+|     nolabel_line69             |    <0.001 |
+|     nolabel_line71             |    <0.001 |
+|     one_hot_to_integer_mod     |    <0.001 |
 |     tile_discarded_counter_mod |    <0.001 |
+|     uartrx1                    |    <0.001 |
+|     uartrx2                    |    <0.001 |
+|     uartrx3                    |    <0.001 |
+|     uarttx1                    |    <0.001 |
+|     uarttx2                    |    <0.001 |
+|     uarttx3                    |    <0.001 |
+|   mousectl                     |     0.004 |
+|     Inst_Ps2Interface          |     0.002 |
+|   pixel_index_to_xy_mod        |    <0.001 |
+|   ps2_clk_IOBUF_inst           |     0.000 |
+|   ps2_data_IOBUF_inst          |     0.000 |
+|   slave_mod                    |     0.002 |
+|     btnC_counter_mod           |    <0.001 |
+|     debounce_btnL              |    <0.001 |
+|     debounce_btnR              |    <0.001 |
+|     nolabel_line282            |    <0.001 |
+|     nolabel_line51             |    <0.001 |
+|     nolabel_line53             |    <0.001 |
+|     one_hot_to_integer_mod     |    <0.001 |
+|     uart_slave                 |    <0.001 |
+|     uartrx                     |    <0.001 |
+|   uiux_mod                     |     0.034 |
+|     incoming_tile              |    <0.001 |
+|     kan_1                      |    <0.001 |
+|     kan_2                      |    <0.001 |
+|     kan_3                      |    <0.001 |
+|     kan_4                      |    <0.001 |
+|     tile_1                     |    <0.001 |
+|     tile_10                    |     0.001 |
+|     tile_11                    |     0.002 |
+|     tile_12                    |    <0.001 |
+|     tile_13                    |    <0.001 |
+|     tile_2                     |    <0.001 |
+|     tile_3                     |     0.001 |
+|     tile_4                     |     0.001 |
+|     tile_5                     |     0.002 |
+|     tile_6                     |    <0.001 |
+|     tile_7                     |     0.001 |
+|     tile_8                     |    <0.001 |
+|     tile_9                     |    <0.001 |
 +--------------------------------+-----------+
 
 

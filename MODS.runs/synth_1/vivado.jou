@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov  3 08:26:25 2024
-# Process ID: 16632
-# Current directory: C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.runs/synth_1
+# Start of session at: Wed Nov  6 17:36:29 2024
+# Process ID: 12532
+# Current directory: C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
-# Log file: C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.runs/synth_1/Top_Student.vds
-# Journal file: C:/Users/rodi3/Documents/EE2026 Project/ee2026_project/MODS.runs/synth_1\vivado.jou
+# Log file: C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.runs/synth_1/Top_Student.vds
+# Journal file: C:/Users/fengy/Desktop/Uni/EE2026/Labs/Project_save/MODS/MODS.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Top_Student.tcl -notrace
