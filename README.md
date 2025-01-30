@@ -1,4 +1,4 @@
-EE2026 — Digital Design Project
+# EE2026 — Digital Design Project
 
 This group project was completed as part of the EE2026 Digital Design course taught at the National University of Singapore (NUS). The goal of the project was to create an application or game using the provided Basys 3 Artix-7 FPGA boards and OLED screens. We were required to utilise the knowledge and technical skills gained from previous labs and assignments to complete this project For more informtion and details, view the full report [here](<Reports/Final Report.pdf>).
 
